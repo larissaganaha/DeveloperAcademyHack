@@ -208,7 +208,7 @@
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSJ-6u-758">
                                                     <rect key="frame" x="606" y="7" width="107" height="30"/>
-                                                    <state key="normal" title="View Transcript"/>
+                                                    <state key="normal" title="Ver Transcrição"/>
                                                     <connections>
                                                         <action selector="transcriptButtonPressed:" destination="WcS-DB-f3M" eventType="touchUpInside" id="VP3-5H-5tR"/>
                                                     </connections>
