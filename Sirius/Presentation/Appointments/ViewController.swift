@@ -10,9 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var updateDataButton: UIButton!
+
     override func viewDidLoad() {
+        updateDataButton.layer.cornerRadius = 23
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {

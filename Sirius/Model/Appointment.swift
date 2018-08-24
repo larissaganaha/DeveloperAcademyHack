@@ -85,7 +85,7 @@ class Appointment: PersistenceObject {
             
             self.transcript = transcript
             
-            self.pacient = Pacient(ID: pacientID, name: name, address: address, telephone: telephone, bornDate: self.pacient.bornDate, height: height, weight: weight, drink: drink, hipertension: hipertension, diabetes: diabetes, smoking: smoking)
+            self.pacient = Pacient(ID: pacientID, name: name, address: address, telephone: telephone, imageURL: nil, bornDate: self.pacient.bornDate, height: height, weight: weight, drink: drink, hipertension: hipertension, diabetes: diabetes, smoking: smoking)
             
             if let dateSinp = dictionary["dateSinp"] as? Date,
                 let imagesSinp = dictionary["imagesSinp"] as? [String],

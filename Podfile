@@ -8,6 +8,7 @@ target 'Sirius' do
   # Pods for Sirius
   pod 'Firebase'
   pod 'FirebaseDatabase'
+  pod 'FirebaseStorage'
 end
 
 target 'SiriusDoctor' do
@@ -17,5 +18,6 @@ target 'SiriusDoctor' do
     # Pods for SiriusDoctor
     pod 'Firebase'
     pod 'FirebaseDatabase'
+    pod 'FirebaseStorage'
     pod 'Kingfisher'
 end
