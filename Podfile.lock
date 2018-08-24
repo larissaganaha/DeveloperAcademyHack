@@ -59,7 +59,7 @@ DEPENDENCIES:
   - Kingfisher
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -85,4 +85,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: add813dc1f78029b7f94545871d2be6c676da312
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

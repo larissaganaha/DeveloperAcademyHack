@@ -46,12 +46,16 @@ extension AppointmentViewController: UITableViewDelegate, UITableViewDataSource 
         case 3:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "relevantImagesCell") as? RelevantImagesTableViewCell else { return UITableViewCell() }
             cell.title.text = "Imagens Relevantes"
-            cell.images = appointment.sinptomLog.images
+            if let log = appointment.sinptomLog?.images {
+                cell.images = log
+            }
             return cell
         case 4:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "relevantImagesCell") as? RelevantImagesTableViewCell else { return UITableViewCell() }
             cell.title.text = "Exames e Laudos Passados"
-            cell.images = appointment.reportLog.images
+            if let log = appointment.reportLog?.images {
+                cell.images = log
+            }
             return cell
         case 5:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "endCell") as? EndTableViewCell else { return UITableViewCell() }
