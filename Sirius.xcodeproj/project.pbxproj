@@ -23,6 +23,7 @@
 		9BFD7084213058B1000443F7 /* Pacient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD708021305660000443F7 /* Pacient.swift */; };
 		9BFD70862130590D000443F7 /* DataLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD70852130590D000443F7 /* DataLog.swift */; };
 		9BFD708821305916000443F7 /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD708721305916000443F7 /* Appointment.swift */; };
+		9BFD708C213059E7000443F7 /* DoctorServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD708B213059E7000443F7 /* DoctorServiceProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		9BFD7082213058A4000443F7 /* PacientServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacientServiceProtocol.swift; sourceTree = "<group>"; };
 		9BFD70852130590D000443F7 /* DataLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLog.swift; sourceTree = "<group>"; };
 		9BFD708721305916000443F7 /* Appointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
+		9BFD708B213059E7000443F7 /* DoctorServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorServiceProtocol.swift; sourceTree = "<group>"; };
 		AE130E09B3761706EF07322A /* Pods-Sirius.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sirius.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sirius/Pods-Sirius.debug.xcconfig"; sourceTree = "<group>"; };
 		BF69C464E089AF600107AC8C /* Pods_Sirius.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sirius.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -106,6 +108,8 @@
 		9BFD706D213055A5000443F7 /* SiriusDoctor */ = {
 			isa = PBXGroup;
 			children = (
+				9BFD7089213059C9000443F7 /* Model */,
+				9BFD708A213059CE000443F7 /* Services */,
 				9BFD706E213055A5000443F7 /* AppDelegate.swift */,
 				9BFD7070213055A5000443F7 /* ViewController.swift */,
 				9BFD7072213055A5000443F7 /* Main.storyboard */,
@@ -130,6 +134,21 @@
 			isa = PBXGroup;
 			children = (
 				9BFD7082213058A4000443F7 /* PacientServiceProtocol.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9BFD7089213059C9000443F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9BFD708A213059CE000443F7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9BFD708B213059E7000443F7 /* DoctorServiceProtocol.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -309,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BFD708C213059E7000443F7 /* DoctorServiceProtocol.swift in Sources */,
 				9BFD7071213055A5000443F7 /* ViewController.swift in Sources */,
 				9BFD7084213058B1000443F7 /* Pacient.swift in Sources */,
 				9BFD706F213055A5000443F7 /* AppDelegate.swift in Sources */,
