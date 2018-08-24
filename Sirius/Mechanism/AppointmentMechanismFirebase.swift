@@ -21,14 +21,16 @@ class AppointmentMechanismFirebase: FirebaseMechanism {
         self.create(dump: Appointment.self, object: appointment, path: path, newObjectID: nil)
     }
     
-    func retrieveAppointment(id: String) {
+    func retrieveAppointment(id: String, completionHandler: @escaping (Appointment?) -> Void) {
         ref?.child("Appointments/\(id)").observeSingleEvent(of: .value, with: { (snapshot) in
             let appointment = snapshot.value as? NSDictionary
             
             if let actualAppointment = appointment {
                 if let newAppointment = Appointment(dictionary: (actualAppointment as? [AnyHashable: Any])!) {
-                    // call delegate
+                    completionHandler(newAppointment)
                 }
+            } else {
+                completionHandler(nil)
             }
         })
     }
