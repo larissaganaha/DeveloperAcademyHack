@@ -31,5 +31,8 @@ class ProfileController: UIViewController {
             element.layer.cornerRadius = 10
         }
     }
+    @IBAction func doneButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "unwindToWaitScreen", sender: nil)
+    }
 
 }
