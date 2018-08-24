@@ -42,13 +42,13 @@ class PacientInfoTableViewCell: UITableViewCell {
 
 extension PacientInfoTableViewCell: VoiceRecognitioniewDelegate {
     func enableMicrophone() {
-        self.recordButton.setTitle("Record", for: .normal)
+        self.recordButton.setImage(#imageLiteral(resourceName: "transcribeButton"), for: .normal)
         self.recordButton.tintColor = .blue
         self.isRecording = false
     }
     
     func disableMicrophone() {
-        self.recordButton.setTitle("Pause", for: .normal)
+        self.recordButton.setImage(#imageLiteral(resourceName: "recordingButton"), for: .normal)
         self.recordButton.tintColor = .red
         self.isRecording = true
     }

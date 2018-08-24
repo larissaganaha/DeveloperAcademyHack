@@ -10,6 +10,7 @@
 		59F03164602557F35BD1A839 /* Pods_Sirius.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF69C464E089AF600107AC8C /* Pods_Sirius.framework */; };
 		9B1989852130775100DABE6E /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1989842130775100DABE6E /* ProfileTableViewCell.swift */; };
 		9B19898721307A6100DABE6E /* PacientInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B19898621307A6100DABE6E /* PacientInfoTableViewCell.swift */; };
+		9B1989892130825B00DABE6E /* PacientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1989882130825B00DABE6E /* PacientTableViewCell.swift */; };
 		9BFD70572130555B000443F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD70562130555B000443F7 /* AppDelegate.swift */; };
 		9BFD70592130555B000443F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD70582130555B000443F7 /* ViewController.swift */; };
 		9BFD705C2130555B000443F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD705A2130555B000443F7 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		3D13AF6C28C4174C34B89D79 /* Pods-Sirius.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sirius.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sirius/Pods-Sirius.release.xcconfig"; sourceTree = "<group>"; };
 		9B1989842130775100DABE6E /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		9B19898621307A6100DABE6E /* PacientInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacientInfoTableViewCell.swift; sourceTree = "<group>"; };
+		9B1989882130825B00DABE6E /* PacientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacientTableViewCell.swift; sourceTree = "<group>"; };
 		9BFD70532130555B000443F7 /* Sirius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sirius.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BFD70562130555B000443F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BFD70582130555B000443F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,12 +101,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9B1989822130773500DABE6E /* Customiews */ = {
+		9B1989822130773500DABE6E /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
 				9BFD70AD2130714E000443F7 /* CardView.swift */,
 			);
-			path = Customiews;
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		9B1989832130773C00DABE6E /* CustomCells */ = {
@@ -112,6 +114,7 @@
 			children = (
 				9B1989842130775100DABE6E /* ProfileTableViewCell.swift */,
 				9B19898621307A6100DABE6E /* PacientInfoTableViewCell.swift */,
+				9B1989882130825B00DABE6E /* PacientTableViewCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -216,7 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				9B1989832130773C00DABE6E /* CustomCells */,
-				9B1989822130773500DABE6E /* Customiews */,
+				9B1989822130773500DABE6E /* CustomViews */,
 				9BFD7072213055A5000443F7 /* Appointment.storyboard */,
 				9BFD7070213055A5000443F7 /* AppointmentViewController.swift */,
 			);
@@ -469,6 +472,7 @@
 				9BFD7084213058B1000443F7 /* Pacient.swift in Sources */,
 				9BFD70A221306052000443F7 /* DoctorMechanismMock.swift in Sources */,
 				9BFD706F213055A5000443F7 /* AppDelegate.swift in Sources */,
+				9B1989892130825B00DABE6E /* PacientTableViewCell.swift in Sources */,
 				9BFD70AA21306601000443F7 /* VoiceRecognitionTestViewController.swift in Sources */,
 				9B19898721307A6100DABE6E /* PacientInfoTableViewCell.swift in Sources */,
 				9BFD709621305F1E000443F7 /* DataMock.swift in Sources */,

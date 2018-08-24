@@ -11,10 +11,17 @@ import UIKit
 class ProfileTableViewCell: UITableViewCell {
     
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var time: UILabel!
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var id: UILabel!
     @IBOutlet weak var telephone: UILabel!
-    @IBOutlet weak var picture: UIImageView!
+    @IBOutlet weak var age: UILabel!
+    @IBOutlet weak var picture: UIImageView! {
+        didSet {
+            picture.layer.cornerRadius = picture.frame.size.width/2
+            picture.clipsToBounds = true
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

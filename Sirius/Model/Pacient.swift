@@ -22,7 +22,7 @@ class Pacient {
     var height: Double
     var weight: Double
     var age: Double {
-        return Date().timeIntervalSince(bornDate)
+        return Date().timeIntervalSince(bornDate) / (3600*24*365)
     }
     
     // Medical info
