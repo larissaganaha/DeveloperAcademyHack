@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import Kingfisher
 
 class RelevantImagesTableViewCell: UITableViewCell {
     
-    var images: [UIImage] = [#imageLiteral(resourceName: "purpleGradient"), #imageLiteral(resourceName: "greenGradient"), #imageLiteral(resourceName: "blueGradient")]
+    var images: [URL] = []
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
             collectionView.dataSource = self
@@ -31,7 +32,7 @@ extension RelevantImagesTableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCollectionViewCell", for: indexPath) as? ImageCollectionViewCell else { return UICollectionViewCell() }
-        cell.image.image = images[indexPath.row]
+        cell.image.kf.setImage(with: images[indexPath.row], placeholder: #imageLiteral(resourceName: "imagePlaceholder"), options: nil, progressBlock: nil, completionHandler: nil)
         return cell
     }
 }
