@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		59F03164602557F35BD1A839 /* Pods_Sirius.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF69C464E089AF600107AC8C /* Pods_Sirius.framework */; };
+		5C5607BF91995186AC6AD4C8 /* Pods_SiriusDoctor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D9C979657F4AD92FDFCF04 /* Pods_SiriusDoctor.framework */; };
 		9B1989852130775100DABE6E /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1989842130775100DABE6E /* ProfileTableViewCell.swift */; };
 		9B19898721307A6100DABE6E /* PacientInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B19898621307A6100DABE6E /* PacientInfoTableViewCell.swift */; };
 		9BB86FE321308C1E001966CC /* RelevantImagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB86FE221308C1E001966CC /* RelevantImagesTableViewCell.swift */; };
@@ -15,13 +16,13 @@
 		9BB86FE821308F24001966CC /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB86FE721308F24001966CC /* InfoTableViewCell.swift */; };
 		9BB86FEA21309010001966CC /* InfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB86FE921309010001966CC /* InfoCollectionViewCell.swift */; };
 		9BB86FEC21309464001966CC /* EndTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB86FEB21309464001966CC /* EndTableViewCell.swift */; };
+		9BB86FED21309747001966CC /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD7070213055A5000443F7 /* AppointmentViewController.swift */; };
 		9BFD70572130555B000443F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD70562130555B000443F7 /* AppDelegate.swift */; };
 		9BFD70592130555B000443F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD70582130555B000443F7 /* ViewController.swift */; };
 		9BFD705C2130555B000443F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD705A2130555B000443F7 /* Main.storyboard */; };
 		9BFD705E2130555C000443F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD705D2130555C000443F7 /* Assets.xcassets */; };
 		9BFD70612130555C000443F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD705F2130555C000443F7 /* LaunchScreen.storyboard */; };
 		9BFD706F213055A5000443F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD706E213055A5000443F7 /* AppDelegate.swift */; };
-		9BFD7071213055A5000443F7 /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD7070213055A5000443F7 /* AppointmentViewController.swift */; };
 		9BFD7074213055A5000443F7 /* Appointment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD7072213055A5000443F7 /* Appointment.storyboard */; };
 		9BFD7076213055A6000443F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD7075213055A6000443F7 /* Assets.xcassets */; };
 		9BFD7079213055A6000443F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD7077213055A6000443F7 /* LaunchScreen.storyboard */; };
@@ -45,10 +46,26 @@
 		9BFD70AA21306601000443F7 /* VoiceRecognitionTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD70A921306601000443F7 /* VoiceRecognitionTestViewController.swift */; };
 		9BFD70AC213069C0000443F7 /* VoiceRecognitionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD70AB213069C0000443F7 /* VoiceRecognitionReference.swift */; };
 		9BFD70AE2130714E000443F7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD70AD2130714E000443F7 /* CardView.swift */; };
+		B1212C3F2130638300771370 /* PacientMechanismFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1212C3E2130638300771370 /* PacientMechanismFirebase.swift */; };
+		B1212C412130684F00771370 /* AppointmentMechanismFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1212C402130684F00771370 /* AppointmentMechanismFirebase.swift */; };
+		B1212C432130730F00771370 /* TestFirebase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1212C422130730F00771370 /* TestFirebase.storyboard */; };
+		B1212C462130739600771370 /* TestFirebaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1212C452130739600771370 /* TestFirebaseViewController.swift */; };
+		B1212C47213073C600771370 /* PacientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD708D21305A6C000443F7 /* PacientService.swift */; };
+		B1212C492130785900771370 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B1212C482130785900771370 /* GoogleService-Info.plist */; };
+		B1212C4B2130789F00771370 /* FirebaseMechanism.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB91ECD621305ECA0077C913 /* FirebaseMechanism.swift */; };
+		B1212C4C213078A100771370 /* PacientMechanismFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1212C3E2130638300771370 /* PacientMechanismFirebase.swift */; };
+		B1212C4D213078A400771370 /* AppointmentMechanismFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1212C402130684F00771370 /* AppointmentMechanismFirebase.swift */; };
+		B1212C4E213078A700771370 /* PacientMechanismMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD709221305BB7000443F7 /* PacientMechanismMock.swift */; };
+		B1212C4F213078B000771370 /* PacientServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD7082213058A4000443F7 /* PacientServiceProtocol.swift */; };
+		CB91ECD721305ECA0077C913 /* FirebaseMechanism.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB91ECD621305ECA0077C913 /* FirebaseMechanism.swift */; };
+		CB91ECD9213086F30077C913 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB91ECD8213086F20077C913 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1969A885DF899E092FD3B8F4 /* Pods-SiriusDoctor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SiriusDoctor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SiriusDoctor/Pods-SiriusDoctor.debug.xcconfig"; sourceTree = "<group>"; };
 		3D13AF6C28C4174C34B89D79 /* Pods-Sirius.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sirius.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sirius/Pods-Sirius.release.xcconfig"; sourceTree = "<group>"; };
+		92D9C979657F4AD92FDFCF04 /* Pods_SiriusDoctor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SiriusDoctor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9672AEF76EAAB636636814B2 /* Pods-SiriusDoctor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SiriusDoctor.release.xcconfig"; path = "Pods/Target Support Files/Pods-SiriusDoctor/Pods-SiriusDoctor.release.xcconfig"; sourceTree = "<group>"; };
 		9B1989842130775100DABE6E /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		9B19898621307A6100DABE6E /* PacientInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacientInfoTableViewCell.swift; sourceTree = "<group>"; };
 		9BB86FE221308C1E001966CC /* RelevantImagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelevantImagesTableViewCell.swift; sourceTree = "<group>"; };
@@ -87,7 +104,14 @@
 		9BFD70AB213069C0000443F7 /* VoiceRecognitionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRecognitionReference.swift; sourceTree = "<group>"; };
 		9BFD70AD2130714E000443F7 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		AE130E09B3761706EF07322A /* Pods-Sirius.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sirius.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sirius/Pods-Sirius.debug.xcconfig"; sourceTree = "<group>"; };
+		B1212C3E2130638300771370 /* PacientMechanismFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacientMechanismFirebase.swift; sourceTree = "<group>"; };
+		B1212C402130684F00771370 /* AppointmentMechanismFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentMechanismFirebase.swift; sourceTree = "<group>"; };
+		B1212C422130730F00771370 /* TestFirebase.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TestFirebase.storyboard; sourceTree = "<group>"; };
+		B1212C452130739600771370 /* TestFirebaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFirebaseViewController.swift; sourceTree = "<group>"; };
+		B1212C482130785900771370 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BF69C464E089AF600107AC8C /* Pods_Sirius.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sirius.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB91ECD621305ECA0077C913 /* FirebaseMechanism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMechanism.swift; sourceTree = "<group>"; };
+		CB91ECD8213086F20077C913 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C5607BF91995186AC6AD4C8 /* Pods_SiriusDoctor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +187,8 @@
 		9BFD70552130555B000443F7 /* Sirius */ = {
 			isa = PBXGroup;
 			children = (
+				B1212C482130785900771370 /* GoogleService-Info.plist */,
+				CB91ECD521305E3B0077C913 /* Mechanism */,
 				9BFD709121305BA6000443F7 /* Mock */,
 				9BFD707E2130564C000443F7 /* Model */,
 				9BFD707F21305652000443F7 /* Services */,
@@ -177,6 +204,7 @@
 		9BFD706D213055A5000443F7 /* SiriusDoctor */ = {
 			isa = PBXGroup;
 			children = (
+				CB91ECD8213086F20077C913 /* GoogleService-Info.plist */,
 				9BFD70A3213063A8000443F7 /* Voice Recognition */,
 				9BFD70A02130603B000443F7 /* Mock */,
 				9BFD708A213059CE000443F7 /* Services */,
@@ -231,6 +259,8 @@
 			children = (
 				9BFD70A6213065B5000443F7 /* VoiceRecognitionTest */,
 				9BFD709A21305F94000443F7 /* Appointment */,
+				B1212C422130730F00771370 /* TestFirebase.storyboard */,
+				B1212C452130739600771370 /* TestFirebaseViewController.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -303,6 +333,8 @@
 			children = (
 				AE130E09B3761706EF07322A /* Pods-Sirius.debug.xcconfig */,
 				3D13AF6C28C4174C34B89D79 /* Pods-Sirius.release.xcconfig */,
+				1969A885DF899E092FD3B8F4 /* Pods-SiriusDoctor.debug.xcconfig */,
+				9672AEF76EAAB636636814B2 /* Pods-SiriusDoctor.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -311,8 +343,19 @@
 			isa = PBXGroup;
 			children = (
 				BF69C464E089AF600107AC8C /* Pods_Sirius.framework */,
+				92D9C979657F4AD92FDFCF04 /* Pods_SiriusDoctor.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB91ECD521305E3B0077C913 /* Mechanism */ = {
+			isa = PBXGroup;
+			children = (
+				CB91ECD621305ECA0077C913 /* FirebaseMechanism.swift */,
+				B1212C3E2130638300771370 /* PacientMechanismFirebase.swift */,
+				B1212C402130684F00771370 /* AppointmentMechanismFirebase.swift */,
+			);
+			path = Mechanism;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,9 +384,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BFD707D213055A6000443F7 /* Build configuration list for PBXNativeTarget "SiriusDoctor" */;
 			buildPhases = (
+				1984DEECAA3C149C2AA36878 /* [CP] Check Pods Manifest.lock */,
 				9BFD7068213055A5000443F7 /* Sources */,
 				9BFD7069213055A5000443F7 /* Frameworks */,
 				9BFD706A213055A5000443F7 /* Resources */,
+				07DCDF7E58CC3B20EECDF082 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -398,6 +443,7 @@
 			files = (
 				9BFD70612130555C000443F7 /* LaunchScreen.storyboard in Resources */,
 				9BFD705E2130555C000443F7 /* Assets.xcassets in Resources */,
+				B1212C492130785900771370 /* GoogleService-Info.plist in Resources */,
 				9BFD709F21306013000443F7 /* Profile.storyboard in Resources */,
 				9BFD705C2130555B000443F7 /* Main.storyboard in Resources */,
 			);
@@ -409,7 +455,10 @@
 			files = (
 				9BFD7079213055A6000443F7 /* LaunchScreen.storyboard in Resources */,
 				9BFD70A8213065C4000443F7 /* VoiceRecognitionTest.storyboard in Resources */,
+				B1212C432130730F00771370 /* TestFirebase.storyboard in Resources */,
 				9BFD7076213055A6000443F7 /* Assets.xcassets in Resources */,
+				9BFD7074213055A5000443F7 /* Appointment.storyboard in Resources */,
+				CB91ECD9213086F30077C913 /* GoogleService-Info.plist in Resources */,
 				9BFD7074213055A5000443F7 /* Appointment.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,6 +466,46 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		07DCDF7E58CC3B20EECDF082 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SiriusDoctor/Pods-SiriusDoctor-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SiriusDoctor/Pods-SiriusDoctor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1984DEECAA3C149C2AA36878 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SiriusDoctor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		34D6FE8E6248D23C806AC244 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -442,13 +531,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Sirius/Pods-Sirius-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -465,10 +554,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BFD709321305BB7000443F7 /* PacientMechanismMock.swift in Sources */,
+				CB91ECD721305ECA0077C913 /* FirebaseMechanism.swift in Sources */,
 				9BFD70592130555B000443F7 /* ViewController.swift in Sources */,
 				9BFD708121305660000443F7 /* Pacient.swift in Sources */,
 				9BFD70862130590D000443F7 /* DataLog.swift in Sources */,
 				9BFD708821305916000443F7 /* Appointment.swift in Sources */,
+				B1212C412130684F00771370 /* AppointmentMechanismFirebase.swift in Sources */,
+				B1212C3F2130638300771370 /* PacientMechanismFirebase.swift in Sources */,
 				9BFD7083213058A4000443F7 /* PacientServiceProtocol.swift in Sources */,
 				9BFD708E21305A6C000443F7 /* PacientService.swift in Sources */,
 				9BFD70572130555B000443F7 /* AppDelegate.swift in Sources */,
@@ -485,21 +577,28 @@
 				9B1989852130775100DABE6E /* ProfileTableViewCell.swift in Sources */,
 				9BFD70A5213063BA000443F7 /* VoiceRecognition.swift in Sources */,
 				9BFD708C213059E7000443F7 /* DoctorServiceProtocol.swift in Sources */,
+				B1212C4C213078A100771370 /* PacientMechanismFirebase.swift in Sources */,
+				9BB86FED21309747001966CC /* AppointmentViewController.swift in Sources */,
 				9BFD709721305F27000443F7 /* DataLog.swift in Sources */,
 				9BFD709021305AF0000443F7 /* DoctorService.swift in Sources */,
+				B1212C4E213078A700771370 /* PacientMechanismMock.swift in Sources */,
 				9BFD709821305F2B000443F7 /* Appointment.swift in Sources */,
-				9BFD7071213055A5000443F7 /* AppointmentViewController.swift in Sources */,
 				9BB86FEA21309010001966CC /* InfoCollectionViewCell.swift in Sources */,
 				9BB86FE321308C1E001966CC /* RelevantImagesTableViewCell.swift in Sources */,
+				B1212C4F213078B000771370 /* PacientServiceProtocol.swift in Sources */,
+				B1212C462130739600771370 /* TestFirebaseViewController.swift in Sources */,
 				9BFD70AE2130714E000443F7 /* CardView.swift in Sources */,
 				9BFD7084213058B1000443F7 /* Pacient.swift in Sources */,
 				9BFD70A221306052000443F7 /* DoctorMechanismMock.swift in Sources */,
+				B1212C4B2130789F00771370 /* FirebaseMechanism.swift in Sources */,
 				9BFD706F213055A5000443F7 /* AppDelegate.swift in Sources */,
 				9BFD70AA21306601000443F7 /* VoiceRecognitionTestViewController.swift in Sources */,
+				B1212C47213073C600771370 /* PacientService.swift in Sources */,
 				9B19898721307A6100DABE6E /* PacientInfoTableViewCell.swift in Sources */,
 				9BFD709621305F1E000443F7 /* DataMock.swift in Sources */,
 				9BB86FE521308CF3001966CC /* ImageCollectionViewCell.swift in Sources */,
 				9BB86FEC21309464001966CC /* EndTableViewCell.swift in Sources */,
+				B1212C4D213078A400771370 /* AppointmentMechanismFirebase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,6 +794,7 @@
 		};
 		9BFD707B213055A6000443F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1969A885DF899E092FD3B8F4 /* Pods-SiriusDoctor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -713,6 +813,7 @@
 		};
 		9BFD707C213055A6000443F7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9672AEF76EAAB636636814B2 /* Pods-SiriusDoctor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

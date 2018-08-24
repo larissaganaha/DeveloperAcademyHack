@@ -10,7 +10,7 @@ import Foundation
 
 protocol PacientServiceProtocol {
     
-    func getPacient() -> Pacient
+    func getPacient(id: String, completionHandler: @escaping (Pacient?) -> Void)
     func savePacient(_ pacient: Pacient)
     func getAppointmentPacient() -> [Appointment]
     func updateAppointment(_ appointment: Appointment)
