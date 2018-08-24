@@ -12,6 +12,7 @@ class TestFirebaseViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
     var pacientService: PacientService! = PacientService()
+    var appointmentService: AppointmentService = AppointmentService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,24 +25,18 @@ class TestFirebaseViewController: UIViewController {
             }
         }
         
-        let pac = Pacient(ID: "2", name: "Bia", address: "a", telephone: "13", bornDate: Date(), height: 1.0, weight: 1.0, drink: false, hipertension: false, diabetes: false, smoking: false)
+        let pac = Pacient(ID: "9", name: "Bia", address: "addr", telephone: "13", bornDate: Date(), height: 1.0, weight: 1.0, drink: false, hipertension: false, diabetes: false, smoking: false)
         pacientService.savePacient(pac)
+        
+        let app = Appointment(pacient: pac, scheduledTime: Date(), transcript: "LALALA SUSHI", sinptomLog: nil, reportLog: nil)
+        appointmentService.saveAppointment(app)
+        
+        appointmentService.getAllAppointments { (apps) in
+            print(apps!)
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
