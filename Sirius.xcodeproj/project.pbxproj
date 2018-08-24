@@ -34,6 +34,9 @@
 		9BFD709F21306013000443F7 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD709E21306013000443F7 /* Profile.storyboard */; };
 		9BFD70A221306052000443F7 /* DoctorMechanismMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD70A121306052000443F7 /* DoctorMechanismMock.swift */; };
 		9BFD70A5213063BA000443F7 /* VoiceRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD70A4213063BA000443F7 /* VoiceRecognition.swift */; };
+		9BFD70A8213065C4000443F7 /* VoiceRecognitionTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD70A7213065C4000443F7 /* VoiceRecognitionTest.storyboard */; };
+		9BFD70AA21306601000443F7 /* VoiceRecognitionTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD70A921306601000443F7 /* VoiceRecognitionTestViewController.swift */; };
+		9BFD70AC213069C0000443F7 /* VoiceRecognitionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD70AB213069C0000443F7 /* VoiceRecognitionReference.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +67,9 @@
 		9BFD709E21306013000443F7 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		9BFD70A121306052000443F7 /* DoctorMechanismMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorMechanismMock.swift; sourceTree = "<group>"; };
 		9BFD70A4213063BA000443F7 /* VoiceRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRecognition.swift; sourceTree = "<group>"; };
+		9BFD70A7213065C4000443F7 /* VoiceRecognitionTest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VoiceRecognitionTest.storyboard; sourceTree = "<group>"; };
+		9BFD70A921306601000443F7 /* VoiceRecognitionTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRecognitionTestViewController.swift; sourceTree = "<group>"; };
+		9BFD70AB213069C0000443F7 /* VoiceRecognitionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRecognitionReference.swift; sourceTree = "<group>"; };
 		AE130E09B3761706EF07322A /* Pods-Sirius.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sirius.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sirius/Pods-Sirius.debug.xcconfig"; sourceTree = "<group>"; };
 		BF69C464E089AF600107AC8C /* Pods_Sirius.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sirius.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -177,6 +183,7 @@
 		9BFD709921305F8B000443F7 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				9BFD70A6213065B5000443F7 /* VoiceRecognitionTest */,
 				9BFD709A21305F94000443F7 /* Appointment */,
 			);
 			path = Presentation;
@@ -229,8 +236,18 @@
 			isa = PBXGroup;
 			children = (
 				9BFD70A4213063BA000443F7 /* VoiceRecognition.swift */,
+				9BFD70AB213069C0000443F7 /* VoiceRecognitionReference.swift */,
 			);
 			path = "Voice Recognition";
+			sourceTree = "<group>";
+		};
+		9BFD70A6213065B5000443F7 /* VoiceRecognitionTest */ = {
+			isa = PBXGroup;
+			children = (
+				9BFD70A7213065C4000443F7 /* VoiceRecognitionTest.storyboard */,
+				9BFD70A921306601000443F7 /* VoiceRecognitionTestViewController.swift */,
+			);
+			path = VoiceRecognitionTest;
 			sourceTree = "<group>";
 		};
 		AE04F28C458B60F5C948C6BC /* Pods */ = {
@@ -343,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BFD7079213055A6000443F7 /* LaunchScreen.storyboard in Resources */,
+				9BFD70A8213065C4000443F7 /* VoiceRecognitionTest.storyboard in Resources */,
 				9BFD7076213055A6000443F7 /* Assets.xcassets in Resources */,
 				9BFD7074213055A5000443F7 /* Main.storyboard in Resources */,
 			);
@@ -377,11 +395,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Sirius/Pods-Sirius-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BFD70AC213069C0000443F7 /* VoiceRecognitionReference.swift in Sources */,
 				9BFD70A5213063BA000443F7 /* VoiceRecognition.swift in Sources */,
 				9BFD708C213059E7000443F7 /* DoctorServiceProtocol.swift in Sources */,
 				9BFD709721305F27000443F7 /* DataLog.swift in Sources */,
@@ -421,6 +442,7 @@
 				9BFD7084213058B1000443F7 /* Pacient.swift in Sources */,
 				9BFD70A221306052000443F7 /* DoctorMechanismMock.swift in Sources */,
 				9BFD706F213055A5000443F7 /* AppDelegate.swift in Sources */,
+				9BFD70AA21306601000443F7 /* VoiceRecognitionTestViewController.swift in Sources */,
 				9BFD709621305F1E000443F7 /* DataMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -620,7 +642,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 32P3VH37WD;
+				DEVELOPMENT_TEAM = 2ECVV26Q6C;
 				INFOPLIST_FILE = SiriusDoctor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -638,7 +660,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 32P3VH37WD;
+				DEVELOPMENT_TEAM = 2ECVV26Q6C;
 				INFOPLIST_FILE = SiriusDoctor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
