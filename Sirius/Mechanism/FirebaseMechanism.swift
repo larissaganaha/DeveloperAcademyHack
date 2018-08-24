@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol PersistenceObject {
+    init?(dictionary: [AnyHashable: Any])
+    func getDictInfo() -> [AnyHashable: Any]
+}
+
 class FirebaseMechanism: NSObject {
     
 }
