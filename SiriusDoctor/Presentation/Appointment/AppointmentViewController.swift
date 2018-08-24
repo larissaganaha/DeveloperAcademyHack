@@ -7,15 +7,24 @@
 //
 
 import UIKit
+import Kingfisher
 
 class AppointmentViewController: UIViewController {
     
     var pacient: Pacient = DataMock.pacient
     var appointment: Appointment = DataMock.appointments[0]
+    var transcript: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.transcript = appointment.transcript
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let viewController = segue.destination as? TranscriptViewController {
+            viewController.transcript = self.transcript
+            viewController.delegate = self
+        }
     }
     
 }
@@ -29,19 +38,25 @@ extension AppointmentViewController: UITableViewDelegate, UITableViewDataSource 
         switch indexPath.row {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "profileCell") as? ProfileTableViewCell else { return UITableViewCell() }
+            cell.delegate = self
             cell.name.text = self.pacient.name
             cell.address.text = self.pacient.address
             cell.id.text = "MEDICAL ID: \(self.pacient.ID)"
             cell.telephone.text = self.pacient.telephone
             let age: Int = Int(pacient.age)
             cell.age.text = "\(age) anos"
+            cell.picture.kf.setImage(with: pacient.realURL, placeholder: #imageLiteral(resourceName: "profilePicturePlaceholder"), options: nil, progressBlock: nil, completionHandler: nil)
             
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "pInfoCell") as? InfoTableViewCell else { return UITableViewCell() }
+            cell.personalInfo = pacient.personalInfo
+            cell.familyHistory = pacient.familyHistory
+            cell.medications = pacient.medicines
             return cell
         case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "appointmentInfoCell") as? PacientInfoTableViewCell else { return UITableViewCell() }
+            cell.delegate = self
             return cell
         case 3:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "relevantImagesCell") as? RelevantImagesTableViewCell else { return UITableViewCell() }
@@ -59,10 +74,33 @@ extension AppointmentViewController: UITableViewDelegate, UITableViewDataSource 
             return cell
         case 5:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "endCell") as? EndTableViewCell else { return UITableViewCell() }
+            cell.delegate = self 
             return cell
         default:
             return UITableViewCell()
         }
     }
-    
+}
+
+extension AppointmentViewController: BackCellDelegate {
+    func backButtonPressed() {
+        // Save State?
+        self.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension AppointmentViewController: EndCellDelegate {
+    func endButtonPressed() {
+        // Save State
+        self.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension AppointmentViewController: TranscriptCellProtocol, TranscriptEditProtocol {
+    func updateTranscript(to text: String) {
+        self.transcript = text
+    }
+    func transcriptButtonPressed() {
+        self.performSegue(withIdentifier: "showTranscript", sender: self)
+    }
 }
