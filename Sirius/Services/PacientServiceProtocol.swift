@@ -12,6 +12,8 @@ protocol PacientServiceProtocol {
     
     func getPacient() -> Pacient
     func savePacient(_ pacient: Pacient)
-    func getConsultaPacient() -> Appointment
+    func getAppointmentPacient() -> [Appointment]
+    func updateAppointment(_ appointment: Appointment)
+    func getWaitTime() -> Date
     
 }
