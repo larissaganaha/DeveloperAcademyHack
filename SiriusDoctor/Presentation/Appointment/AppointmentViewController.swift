@@ -65,7 +65,7 @@ extension AppointmentViewController: UITableViewDelegate, UITableViewDataSource 
             return cell
         case 5:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "endCell") as? EndTableViewCell else { return UITableViewCell() }
-            cell.delegate = self
+            cell.delegate = self 
             return cell
         default:
             return UITableViewCell()
