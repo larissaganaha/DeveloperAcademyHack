@@ -27,15 +27,26 @@ class TestFirebaseViewController: UIViewController {
             }
         }
         
-        let pac = Pacient(ID: "9", name: "Bia", address: "addr", telephone: "13", imageURL: "https://scontent.frao1-2.fna.fbcdn.net/v/t1.0-9/35973177_2086993534706379_3604259674888601600_o.jpg?_nc_cat=0&oh=270eb268ba6807c64da69c399258bf9d&oe=5C323611", bornDate: Date(), height: 1.0, weight: 1.0, drink: false, hipertension: false, diabetes: false, smoking: false)
-        pacientService.savePacient(pac)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd"
         
-        if let imageURL = pac.imageURL {
-            self.image.kf.setImage(with: URL(string: imageURL))
-        }
+        let pac1 = Pacient(ID: "156059", name: "Joana Maria", address: "Rua Roxo Moreira, 157 - Cidade Universitária", telephone: "+55 (13) 99643-2967", imageURL: "https://scontent.frao1-2.fna.fbcdn.net/v/t1.0-9/35973177_2086993534706379_3604259674888601600_o.jpg?_nc_cat=0&oh=270eb268ba6807c64da69c399258bf9d&oe=5C323611", bornDate: formatter.date(from: "1990/10/08")!, height: 1.59, weight: 55.0, drink: true, hipertension: false, diabetes: false, smoking: true)
+        pacientService.savePacient(pac1)
         
-        let app = Appointment(pacient: pac, scheduledTime: Date(), transcript: "LALALA SUSHI", sinptomLog: nil, reportLog: nil)
-        appointmentService.saveAppointment(app)
+        let pac2 = Pacient(ID: "164923", name: "Carlos Figueiredo", address: "Av Paulista, 1000", telephone: "+55 (11) 99176-8970", imageURL: nil, bornDate: formatter.date(from: "1983/06/08")!, height: 1.77, weight: 90.0, drink: true, hipertension: true, diabetes: false, smoking: true)
+        pacientService.savePacient(pac2)
+        
+        let pac3 = Pacient(ID: "155758", name: "Luanda Silva", address: "Rua Alberto de Salvo, 90 - Jardim Santa Genebra II (Barao Geraldo), Campinas - SP", telephone: "+55 (14) 96664-8000", imageURL: nil, bornDate: formatter.date(from: "1995/06/02")!, height: 1.80, weight: 100.0, drink: true, hipertension: false, diabetes: true, smoking: false)
+        pacientService.savePacient(pac3)
+        
+        let app1 = Appointment(pacient: pac1, scheduledTime: formatter.date(from: "2018/12/08")!, transcript: "", sinptomLog: nil, reportLog: nil)
+        appointmentService.saveAppointment(app1)
+        
+        let app2 = Appointment(pacient: pac2, scheduledTime: formatter.date(from: "2019/01/03")!, transcript: "", sinptomLog: nil, reportLog: nil)
+        appointmentService.saveAppointment(app2)
+        
+        let app3 = Appointment(pacient: pac3, scheduledTime: formatter.date(from: "2018/10/31")!, transcript: "", sinptomLog: nil, reportLog: nil)
+        appointmentService.saveAppointment(app3)
         
         appointmentService.getAllAppointments { (apps) in
             print(apps!)
