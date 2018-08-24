@@ -27,6 +27,11 @@ class AppointmentViewController: UIViewController {
         }
     }
     
+    func saveAppointment() {
+        appointment.transcript = self.transcript
+        AppointmentService().saveAppointment(appointment)
+    }
+    
 }
 extension AppointmentViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -84,14 +89,15 @@ extension AppointmentViewController: UITableViewDelegate, UITableViewDataSource 
 
 extension AppointmentViewController: BackCellDelegate {
     func backButtonPressed() {
-        // Save State?
+        self.saveAppointment()
         self.dismiss(animated: true, completion: nil)
     }
 }
 
 extension AppointmentViewController: EndCellDelegate {
     func endButtonPressed() {
-        // Save State
+        self.appointment.isActive = false
+        self.saveAppointment()
         self.dismiss(animated: true, completion: nil)
     }
 }
