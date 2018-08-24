@@ -82,6 +82,9 @@
                                     <constraint firstAttribute="height" constant="46" id="L8Z-eU-Hh7"/>
                                     <constraint firstAttribute="width" secondItem="OVu-jR-w91" secondAttribute="height" multiplier="125:23" id="xcH-VU-NaC"/>
                                 </constraints>
+                                <connections>
+                                    <segue destination="YHd-VR-ZuO" kind="show" id="H7d-ZE-g07"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATUALIZAR DADOS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzh-lM-2im">
                                 <rect key="frame" x="62.5" y="558" width="250" height="20"/>
@@ -132,6 +135,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="b7M-VV-O9A">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="YHd-VR-ZuO" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i4W-Jb-coN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042" y="103"/>
         </scene>
     </scenes>
     <resources>

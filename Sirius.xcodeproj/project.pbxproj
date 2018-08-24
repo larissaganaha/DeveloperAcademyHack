@@ -14,6 +14,7 @@
 		426F922C21307E8100F7C53A /* Poppins-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 426F922B21307E8100F7C53A /* Poppins-Regular.otf */; };
 		426F922D21307E8100F7C53A /* Poppins-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 426F922B21307E8100F7C53A /* Poppins-Regular.otf */; };
 		426F922F213081BB00F7C53A /* KerningLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426F922E213081BB00F7C53A /* KerningLabel.swift */; };
+		426F92312130889D00F7C53A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426F92302130889D00F7C53A /* CardView.swift */; };
 		59F03164602557F35BD1A839 /* Pods_Sirius.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF69C464E089AF600107AC8C /* Pods_Sirius.framework */; };
 		9B1989852130775100DABE6E /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1989842130775100DABE6E /* ProfileTableViewCell.swift */; };
 		9B19898721307A6100DABE6E /* PacientInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B19898621307A6100DABE6E /* PacientInfoTableViewCell.swift */; };
@@ -55,6 +56,7 @@
 		426F922821307E6200F7C53A /* Poppins-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.otf"; sourceTree = "<group>"; };
 		426F922B21307E8100F7C53A /* Poppins-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.otf"; sourceTree = "<group>"; };
 		426F922E213081BB00F7C53A /* KerningLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KerningLabel.swift; sourceTree = "<group>"; };
+		426F92302130889D00F7C53A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		9B1989842130775100DABE6E /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		9B19898621307A6100DABE6E /* PacientInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacientInfoTableViewCell.swift; sourceTree = "<group>"; };
 		9BFD70532130555B000443F7 /* Sirius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sirius.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +112,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		426F9232213088A400F7C53A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				426F92302130889D00F7C53A /* CardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		9B1989822130773500DABE6E /* Customiews */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +160,7 @@
 		9BFD70552130555B000443F7 /* Sirius */ = {
 			isa = PBXGroup;
 			children = (
+				426F9232213088A400F7C53A /* View */,
 				9BFD709121305BA6000443F7 /* Mock */,
 				9BFD707E2130564C000443F7 /* Model */,
 				9BFD707F21305652000443F7 /* Services */,
@@ -471,6 +482,7 @@
 				9BFD7083213058A4000443F7 /* PacientServiceProtocol.swift in Sources */,
 				9BFD708E21305A6C000443F7 /* PacientService.swift in Sources */,
 				9BFD70572130555B000443F7 /* AppDelegate.swift in Sources */,
+				426F92312130889D00F7C53A /* CardView.swift in Sources */,
 				9BFD709521305EDE000443F7 /* DataMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
