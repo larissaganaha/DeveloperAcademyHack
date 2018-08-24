@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ghe-G9-jHe">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Voice Recognition Test View Controller-->
+        <scene sceneID="Twf-ef-zWS">
+            <objects>
+                <viewController id="ghe-G9-jHe" customClass="VoiceRecognitionTestViewController" customModule="SiriusDoctor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="03c-Je-PoJ">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9f-r8-YnU">
+                                <rect key="frame" x="163" y="59" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="recordButtonPressed:" destination="ghe-G9-jHe" eventType="touchUpInside" id="uPh-T9-uLo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAs-IF-1kf">
+                                <rect key="frame" x="20" y="120" width="728" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="remedios encontrados" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vev-Cp-FFW">
+                                <rect key="frame" x="399" y="290.5" width="349" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sintomas encontrados" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsd-6a-50e">
+                                <rect key="frame" x="20" y="290.5" width="349" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Vsd-6a-50e" firstAttribute="leading" secondItem="CJN-Pz-kZJ" secondAttribute="leading" constant="20" id="6eM-ii-vZi"/>
+                            <constraint firstItem="Vev-Cp-FFW" firstAttribute="leading" secondItem="Vsd-6a-50e" secondAttribute="trailing" constant="30" id="DkN-uD-69v"/>
+                            <constraint firstItem="cAs-IF-1kf" firstAttribute="top" secondItem="CJN-Pz-kZJ" secondAttribute="top" constant="100" id="Hyc-WE-0f9"/>
+                            <constraint firstItem="Vev-Cp-FFW" firstAttribute="width" secondItem="Vsd-6a-50e" secondAttribute="width" id="Jk5-ap-Yhp"/>
+                            <constraint firstItem="cAs-IF-1kf" firstAttribute="leading" secondItem="CJN-Pz-kZJ" secondAttribute="leading" constant="20" id="QMo-5P-ov0"/>
+                            <constraint firstItem="CJN-Pz-kZJ" firstAttribute="trailing" secondItem="cAs-IF-1kf" secondAttribute="trailing" constant="20" id="Sjd-nN-LzU"/>
+                            <constraint firstItem="Vsd-6a-50e" firstAttribute="top" secondItem="cAs-IF-1kf" secondAttribute="bottom" constant="150" id="a2B-jH-L3g"/>
+                            <constraint firstItem="CJN-Pz-kZJ" firstAttribute="trailing" secondItem="Vev-Cp-FFW" secondAttribute="trailing" constant="20" id="mU9-QL-cui"/>
+                            <constraint firstItem="Vev-Cp-FFW" firstAttribute="top" secondItem="Vsd-6a-50e" secondAttribute="top" id="swG-EB-Gkf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CJN-Pz-kZJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="cAs-IF-1kf" id="MIc-Hb-RzB"/>
+                        <outlet property="medicineLabel" destination="Vev-Cp-FFW" id="Bvv-0R-2eH"/>
+                        <outlet property="recordButton" destination="o9f-r8-YnU" id="Ka9-V9-HQI"/>
+                        <outlet property="sinptomsLabel" destination="Vsd-6a-50e" id="o10-Da-6mk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DS8-bp-Jas" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="60" y="133"/>
+        </scene>
+    </scenes>
+</document>
