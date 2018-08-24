@@ -7,6 +7,6 @@ target 'Sirius' do
 
   # Pods for Sirius
   pod 'Firebase'
-  pod 'Firebase/Database'
+  pod 'FirebaseDatabase'
 
 end

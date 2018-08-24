@@ -27,13 +27,15 @@
 		9BFD708E21305A6C000443F7 /* PacientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD708D21305A6C000443F7 /* PacientService.swift */; };
 		9BFD709021305AF0000443F7 /* DoctorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD708F21305AF0000443F7 /* DoctorService.swift */; };
 		9BFD709321305BB7000443F7 /* PacientMechanismMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD709221305BB7000443F7 /* PacientMechanismMock.swift */; };
-		CB91ECD721305ECA0077C913 /* FirebaseMechanism.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB91ECD621305ECA0077C913 /* FirebaseMechanism.swift */; };
 		9BFD709521305EDE000443F7 /* DataMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD709421305EDE000443F7 /* DataMock.swift */; };
 		9BFD709621305F1E000443F7 /* DataMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD709421305EDE000443F7 /* DataMock.swift */; };
 		9BFD709721305F27000443F7 /* DataLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD70852130590D000443F7 /* DataLog.swift */; };
 		9BFD709821305F2B000443F7 /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD708721305916000443F7 /* Appointment.swift */; };
 		9BFD709F21306013000443F7 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD709E21306013000443F7 /* Profile.storyboard */; };
 		9BFD70A221306052000443F7 /* DoctorMechanismMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD70A121306052000443F7 /* DoctorMechanismMock.swift */; };
+		B1212C3F2130638300771370 /* PacientMechanismFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1212C3E2130638300771370 /* PacientMechanismFirebase.swift */; };
+		B1212C412130684F00771370 /* AppointmentMechanismFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1212C402130684F00771370 /* AppointmentMechanismFirebase.swift */; };
+		CB91ECD721305ECA0077C913 /* FirebaseMechanism.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB91ECD621305ECA0077C913 /* FirebaseMechanism.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 		9BFD709E21306013000443F7 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		9BFD70A121306052000443F7 /* DoctorMechanismMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorMechanismMock.swift; sourceTree = "<group>"; };
 		AE130E09B3761706EF07322A /* Pods-Sirius.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sirius.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sirius/Pods-Sirius.debug.xcconfig"; sourceTree = "<group>"; };
+		B1212C3E2130638300771370 /* PacientMechanismFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacientMechanismFirebase.swift; sourceTree = "<group>"; };
+		B1212C402130684F00771370 /* AppointmentMechanismFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentMechanismFirebase.swift; sourceTree = "<group>"; };
 		BF69C464E089AF600107AC8C /* Pods_Sirius.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sirius.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB91ECD621305ECA0077C913 /* FirebaseMechanism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMechanism.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -246,6 +250,8 @@
 			isa = PBXGroup;
 			children = (
 				CB91ECD621305ECA0077C913 /* FirebaseMechanism.swift */,
+				B1212C3E2130638300771370 /* PacientMechanismFirebase.swift */,
+				B1212C402130684F00771370 /* AppointmentMechanismFirebase.swift */,
 			);
 			path = Mechanism;
 			sourceTree = "<group>";
@@ -377,11 +383,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Sirius/Pods-Sirius-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,6 +410,8 @@
 				9BFD708121305660000443F7 /* Pacient.swift in Sources */,
 				9BFD70862130590D000443F7 /* DataLog.swift in Sources */,
 				9BFD708821305916000443F7 /* Appointment.swift in Sources */,
+				B1212C412130684F00771370 /* AppointmentMechanismFirebase.swift in Sources */,
+				B1212C3F2130638300771370 /* PacientMechanismFirebase.swift in Sources */,
 				9BFD7083213058A4000443F7 /* PacientServiceProtocol.swift in Sources */,
 				9BFD708E21305A6C000443F7 /* PacientService.swift in Sources */,
 				9BFD70572130555B000443F7 /* AppDelegate.swift in Sources */,
