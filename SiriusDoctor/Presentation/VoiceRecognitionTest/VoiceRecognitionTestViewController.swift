@@ -56,6 +56,9 @@ extension VoiceRecognitionTestViewController: VoiceRecognitioniewDelegate {
         sinptomsLabel.text = VoiceRecognitionReference.identifySimptoms(from: transcript).reduce("", { (result, text) -> String in
             result + "\n" + text
         })
+        medicineLabel.text = VoiceRecognitionReference.identifyMedicines(from: transcript).reduce("", { (result, text) -> String in
+            result + "\n" + text
+        })
         
         
     }
