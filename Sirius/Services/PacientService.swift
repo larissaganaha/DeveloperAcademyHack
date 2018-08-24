@@ -24,7 +24,7 @@ class PacientService: PacientServiceProtocol {
         return PacientMechanisMock.getWaitTime()
     }
     
-    func uploadProfilePhoto(image: UIImage, pacientID: String, completion: (String?) -> Void){
+    func uploadProfilePhoto(image: UIImage, pacientID: String, completion: @escaping (String?) -> Void){
         PacientFirebaseMechanism.shared.uploadImage(profileImage: image, pacientID: pacientID) { (string) in
             if string == nil {
                 print("deu ruim pra subir a foto")
