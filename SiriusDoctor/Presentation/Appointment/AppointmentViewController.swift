@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class AppointmentViewController: UIViewController {
     
@@ -29,12 +30,14 @@ extension AppointmentViewController: UITableViewDelegate, UITableViewDataSource 
         switch indexPath.row {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "profileCell") as? ProfileTableViewCell else { return UITableViewCell() }
+            cell.delegate = self
             cell.name.text = self.pacient.name
             cell.address.text = self.pacient.address
             cell.id.text = "MEDICAL ID: \(self.pacient.ID)"
             cell.telephone.text = self.pacient.telephone
             let age: Int = Int(pacient.age)
             cell.age.text = "\(age) anos"
+            cell.picture.kf.setImage(with: pacient.realURL, placeholder: #imageLiteral(resourceName: "profilePicturePlaceholder"), options: nil, progressBlock: nil, completionHandler: nil)
             
             return cell
         case 1:
@@ -62,10 +65,25 @@ extension AppointmentViewController: UITableViewDelegate, UITableViewDataSource 
             return cell
         case 5:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "endCell") as? EndTableViewCell else { return UITableViewCell() }
+            cell.delegate = self
             return cell
         default:
             return UITableViewCell()
         }
     }
-    
 }
+
+extension AppointmentViewController: BackCellDelegate {
+    func backButtonPressed() {
+        // Save State?
+        self.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension AppointmentViewController: EndCellDelegate {
+    func endButtonPressed() {
+        // Save State
+        self.dismiss(animated: true, completion: nil)
+    }
+}
+

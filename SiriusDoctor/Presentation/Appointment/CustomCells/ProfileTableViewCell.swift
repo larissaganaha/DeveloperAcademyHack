@@ -23,15 +23,12 @@ class ProfileTableViewCell: UITableViewCell {
         }
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    weak var delegate: BackCellDelegate?
+    @IBAction func backButtonPressed(_ sender: Any) {
+        delegate?.backButtonPressed()
     }
+}
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+protocol BackCellDelegate: NSObjectProtocol {
+    func backButtonPressed()
 }
