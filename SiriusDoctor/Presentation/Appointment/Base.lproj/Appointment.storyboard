@@ -206,6 +206,13 @@
                                                         <constraint firstItem="ft6-Z9-rCY" firstAttribute="leading" secondItem="Lky-m9-Z6Z" secondAttribute="leading" constant="8" id="wyf-FP-ei9"/>
                                                     </constraints>
                                                 </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSJ-6u-758">
+                                                    <rect key="frame" x="606" y="7" width="107" height="30"/>
+                                                    <state key="normal" title="View Transcript"/>
+                                                    <connections>
+                                                        <action selector="transcriptButtonPressed:" destination="WcS-DB-f3M" eventType="touchUpInside" id="VP3-5H-5tR"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Lky-m9-Z6Z" secondAttribute="trailing" constant="15" id="0Zy-sz-DEY"/>
@@ -214,10 +221,12 @@
                                                 <constraint firstItem="XZy-TD-8es" firstAttribute="top" secondItem="LuD-Ad-2qi" secondAttribute="bottom" constant="12" id="FjP-Nd-LVS"/>
                                                 <constraint firstItem="Lky-m9-Z6Z" firstAttribute="height" secondItem="XZy-TD-8es" secondAttribute="height" id="Jff-go-WRE"/>
                                                 <constraint firstItem="Lky-m9-Z6Z" firstAttribute="top" secondItem="XZy-TD-8es" secondAttribute="top" id="Kgu-Sr-LDt"/>
+                                                <constraint firstAttribute="trailing" secondItem="XSJ-6u-758" secondAttribute="trailing" constant="15" id="Klq-bp-GNP"/>
                                                 <constraint firstItem="XZy-TD-8es" firstAttribute="leading" secondItem="0Uj-NS-vI7" secondAttribute="leadingMargin" id="Tr7-Hz-Sms"/>
                                                 <constraint firstItem="LuD-Ad-2qi" firstAttribute="leading" secondItem="0Uj-NS-vI7" secondAttribute="leadingMargin" id="a7v-UE-3G5"/>
                                                 <constraint firstItem="XZy-TD-8es" firstAttribute="width" secondItem="Lky-m9-Z6Z" secondAttribute="width" id="drj-2n-RLS"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="XZy-TD-8es" secondAttribute="bottom" constant="8" id="ghu-yj-Y0W"/>
+                                                <constraint firstItem="XSJ-6u-758" firstAttribute="centerY" secondItem="pMI-hr-Z5P" secondAttribute="centerY" id="jH0-Ba-VDA"/>
                                                 <constraint firstItem="pMI-hr-Z5P" firstAttribute="centerY" secondItem="LuD-Ad-2qi" secondAttribute="centerY" id="q06-jf-5tb"/>
                                                 <constraint firstItem="pMI-hr-Z5P" firstAttribute="leading" secondItem="LuD-Ad-2qi" secondAttribute="trailing" constant="26" id="yV4-yC-Jjp"/>
                                             </constraints>
