@@ -10,4 +10,5 @@ import UIKit
 
 class InfoCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
 }

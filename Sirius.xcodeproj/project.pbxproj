@@ -10,8 +10,6 @@
 		59F03164602557F35BD1A839 /* Pods_Sirius.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF69C464E089AF600107AC8C /* Pods_Sirius.framework */; };
 		9B1989852130775100DABE6E /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1989842130775100DABE6E /* ProfileTableViewCell.swift */; };
 		9B19898721307A6100DABE6E /* PacientInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B19898621307A6100DABE6E /* PacientInfoTableViewCell.swift */; };
-		9B1989892130825B00DABE6E /* PacientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1989882130825B00DABE6E /* PacientTableViewCell.swift */; };
-		9B19898B2130856C00DABE6E /* PacientInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B19898A2130856C00DABE6E /* PacientInfoCollectionViewCell.swift */; };
 		9BB86FE321308C1E001966CC /* RelevantImagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB86FE221308C1E001966CC /* RelevantImagesTableViewCell.swift */; };
 		9BB86FE521308CF3001966CC /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB86FE421308CF3001966CC /* ImageCollectionViewCell.swift */; };
 		9BB86FE821308F24001966CC /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB86FE721308F24001966CC /* InfoTableViewCell.swift */; };
@@ -52,8 +50,6 @@
 		3D13AF6C28C4174C34B89D79 /* Pods-Sirius.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sirius.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sirius/Pods-Sirius.release.xcconfig"; sourceTree = "<group>"; };
 		9B1989842130775100DABE6E /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		9B19898621307A6100DABE6E /* PacientInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacientInfoTableViewCell.swift; sourceTree = "<group>"; };
-		9B1989882130825B00DABE6E /* PacientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacientTableViewCell.swift; sourceTree = "<group>"; };
-		9B19898A2130856C00DABE6E /* PacientInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacientInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		9BB86FE221308C1E001966CC /* RelevantImagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelevantImagesTableViewCell.swift; sourceTree = "<group>"; };
 		9BB86FE421308CF3001966CC /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		9BB86FE721308F24001966CC /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -125,7 +121,6 @@
 				9BB86FE621308D30001966CC /* CollectionView */,
 				9B1989842130775100DABE6E /* ProfileTableViewCell.swift */,
 				9B19898621307A6100DABE6E /* PacientInfoTableViewCell.swift */,
-				9B1989882130825B00DABE6E /* PacientTableViewCell.swift */,
 				9BB86FE221308C1E001966CC /* RelevantImagesTableViewCell.swift */,
 				9BB86FE721308F24001966CC /* InfoTableViewCell.swift */,
 			);
@@ -135,7 +130,6 @@
 		9BB86FE621308D30001966CC /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				9B19898A2130856C00DABE6E /* PacientInfoCollectionViewCell.swift */,
 				9BB86FE421308CF3001966CC /* ImageCollectionViewCell.swift */,
 				9BB86FE921309010001966CC /* InfoCollectionViewCell.swift */,
 			);
@@ -498,8 +492,6 @@
 				9BFD7084213058B1000443F7 /* Pacient.swift in Sources */,
 				9BFD70A221306052000443F7 /* DoctorMechanismMock.swift in Sources */,
 				9BFD706F213055A5000443F7 /* AppDelegate.swift in Sources */,
-				9B19898B2130856C00DABE6E /* PacientInfoCollectionViewCell.swift in Sources */,
-				9B1989892130825B00DABE6E /* PacientTableViewCell.swift in Sources */,
 				9BFD70AA21306601000443F7 /* VoiceRecognitionTestViewController.swift in Sources */,
 				9B19898721307A6100DABE6E /* PacientInfoTableViewCell.swift in Sources */,
 				9BFD709621305F1E000443F7 /* DataMock.swift in Sources */,
