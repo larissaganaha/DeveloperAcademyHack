@@ -24,14 +24,16 @@ class PacientFirebaseMechanism: FirebaseMechanism {
         self.create(dump: Pacient.self, object: newPacient, path: path, newObjectID: ID)
     }
     
-    func retrievePacient(id: String) {
+    func retrievePacient(id: String, completionHandler: @escaping (Pacient?) -> Void) {
         ref?.child("Pacients/\(id)").observeSingleEvent(of: .value, with: { (snapshot) in
             let pacient = snapshot.value as? NSDictionary
             
             if let actualPacient = pacient {
                 if let newPacient = Pacient(dictionary: (actualPacient as? [AnyHashable: Any])!) {
-                    // call delegate
+                    completionHandler(newPacient)
                 }
+            } else {
+                completionHandler(nil)
             }
         })
     }

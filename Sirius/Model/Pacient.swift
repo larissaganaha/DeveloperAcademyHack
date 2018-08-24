@@ -8,27 +8,27 @@
 
 import UIKit
 
-class Pacient: PersistenceObject {
-    var ID: String
+class Pacient: NSObject, PersistenceObject {
+    var ID: String = ""
     
     // Personal Info
-    var name: String
-    var address: String
-    var telephone: String
+    var name: String = ""
+    var address: String = ""
+    var telephone: String = ""
     
     // Body info
-    var bornDate: Date
-    var height: Double
-    var weight: Double
+    var bornDate: Date = Date()
+    var height: Double = 1.0
+    var weight: Double = 1.0
     var age: Double {
         return Date().timeIntervalSince(bornDate)
     }
     
     // Medical info
-    var drink: Bool
-    var hipertension: Bool
-    var diabetes: Bool
-    var smoking: Bool
+    var drink: Bool = false
+    var hipertension: Bool = false
+    var diabetes: Bool = false
+    var smoking: Bool = false
     
     // Persistence things
     var dictInfo: [AnyHashable: Any] = [:]
@@ -62,16 +62,17 @@ class Pacient: PersistenceObject {
         ]
     }
     
-    convenience init() {
-        self.init(ID: "12345", name: "", address: "", telephone: "", bornDate: Date(), height: 1.50, weight: 60.0, drink: false, hipertension: false, diabetes: false, smoking: false)
-    }
+//    convenience override init() {
+//        self.init(ID: "12345", name: "", address: "", telephone: "", bornDate: Date(), height: 1.50, weight: 60.0, drink: false, hipertension: false, diabetes: false, smoking: false)
+//    }
     
     required init?(dictionary: [AnyHashable : Any]) {
+        super.init()
+        
         if  let id = dictionary["ID"] as? String,
             let name = dictionary["name"] as? String,
             let address = dictionary["address"] as? String,
             let telephone = dictionary["telephone"] as? String,
-            let bornDate = dictionary["bornDate"] as? Date,
             let height = dictionary["height"] as? Double,
             let weight = dictionary["weight"] as? Double,
             let drink = dictionary["drink"] as? Bool,
@@ -83,17 +84,23 @@ class Pacient: PersistenceObject {
             self.name = name
             self.address = address
             self.telephone = telephone
-            self.bornDate = bornDate
             self.height = height
             self.weight = weight
             self.drink = drink
             self.hipertension = hipertension
             self.diabetes = diabetes
             self.smoking = smoking
-            
             self.dictInfo = dictionary
+            
+            if let born = dictionary["bornDate"] as? String {
+                if let bDate = self.formatDate(date: born) {
+                    self.bornDate = bDate
+                } else {
+                    self.bornDate = Date()
+                }
+            }
         } else {
-            print("Dictionary incomplete to create User object")
+            print("Dictionary incomplete to create Pacient object")
             return nil
         }
     }
@@ -102,4 +109,14 @@ class Pacient: PersistenceObject {
         return self.dictInfo
     }
     
+    func formatDate(date: String) -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        
+        if let formattedDate = dateFormatter.date(from: date) {
+            return formattedDate
+        } else {
+            return nil
+        }
+    }
 }
