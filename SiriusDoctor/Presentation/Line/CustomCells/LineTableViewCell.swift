@@ -10,7 +10,12 @@ import UIKit
 
 class LineTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileImage: UIImageView! {
+        didSet {
+            profileImage.layer.cornerRadius = profileImage.frame.size.width/2
+            profileImage.clipsToBounds = true
+        }
+    }
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var age: UILabel!
