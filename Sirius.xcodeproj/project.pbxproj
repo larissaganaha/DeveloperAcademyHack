@@ -18,6 +18,11 @@
 		9BFD7074213055A5000443F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD7072213055A5000443F7 /* Main.storyboard */; };
 		9BFD7076213055A6000443F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD7075213055A6000443F7 /* Assets.xcassets */; };
 		9BFD7079213055A6000443F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD7077213055A6000443F7 /* LaunchScreen.storyboard */; };
+		9BFD708121305660000443F7 /* Pacient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD708021305660000443F7 /* Pacient.swift */; };
+		9BFD7083213058A4000443F7 /* PacientServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD7082213058A4000443F7 /* PacientServiceProtocol.swift */; };
+		9BFD7084213058B1000443F7 /* Pacient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD708021305660000443F7 /* Pacient.swift */; };
+		9BFD70862130590D000443F7 /* DataLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD70852130590D000443F7 /* DataLog.swift */; };
+		9BFD708821305916000443F7 /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD708721305916000443F7 /* Appointment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +41,10 @@
 		9BFD7075213055A6000443F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BFD7078213055A6000443F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BFD707A213055A6000443F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BFD708021305660000443F7 /* Pacient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pacient.swift; sourceTree = "<group>"; };
+		9BFD7082213058A4000443F7 /* PacientServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacientServiceProtocol.swift; sourceTree = "<group>"; };
+		9BFD70852130590D000443F7 /* DataLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLog.swift; sourceTree = "<group>"; };
+		9BFD708721305916000443F7 /* Appointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
 		AE130E09B3761706EF07322A /* Pods-Sirius.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sirius.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sirius/Pods-Sirius.debug.xcconfig"; sourceTree = "<group>"; };
 		BF69C464E089AF600107AC8C /* Pods_Sirius.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sirius.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -82,6 +91,8 @@
 		9BFD70552130555B000443F7 /* Sirius */ = {
 			isa = PBXGroup;
 			children = (
+				9BFD707E2130564C000443F7 /* Model */,
+				9BFD707F21305652000443F7 /* Services */,
 				9BFD70562130555B000443F7 /* AppDelegate.swift */,
 				9BFD70582130555B000443F7 /* ViewController.swift */,
 				9BFD705A2130555B000443F7 /* Main.storyboard */,
@@ -103,6 +114,24 @@
 				9BFD707A213055A6000443F7 /* Info.plist */,
 			);
 			path = SiriusDoctor;
+			sourceTree = "<group>";
+		};
+		9BFD707E2130564C000443F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9BFD708021305660000443F7 /* Pacient.swift */,
+				9BFD70852130590D000443F7 /* DataLog.swift */,
+				9BFD708721305916000443F7 /* Appointment.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9BFD707F21305652000443F7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9BFD7082213058A4000443F7 /* PacientServiceProtocol.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		AE04F28C458B60F5C948C6BC /* Pods */ = {
@@ -268,6 +297,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BFD70592130555B000443F7 /* ViewController.swift in Sources */,
+				9BFD708121305660000443F7 /* Pacient.swift in Sources */,
+				9BFD70862130590D000443F7 /* DataLog.swift in Sources */,
+				9BFD708821305916000443F7 /* Appointment.swift in Sources */,
+				9BFD7083213058A4000443F7 /* PacientServiceProtocol.swift in Sources */,
 				9BFD70572130555B000443F7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BFD7071213055A5000443F7 /* ViewController.swift in Sources */,
+				9BFD7084213058B1000443F7 /* Pacient.swift in Sources */,
 				9BFD706F213055A5000443F7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,7 +475,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2ECVV26Q6C;
 				INFOPLIST_FILE = Sirius/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = bepid.campinas.Sirius;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -457,7 +494,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2ECVV26Q6C;
 				INFOPLIST_FILE = Sirius/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = bepid.campinas.Sirius;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -472,7 +512,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2ECVV26Q6C;
 				INFOPLIST_FILE = SiriusDoctor/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = bepid.campinas.SiriusDoctor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -487,7 +530,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2ECVV26Q6C;
 				INFOPLIST_FILE = SiriusDoctor/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = bepid.campinas.SiriusDoctor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
