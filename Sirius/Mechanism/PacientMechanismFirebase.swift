@@ -23,16 +23,19 @@ class PacientFirebaseMechanism: FirebaseMechanism {
     }
     
     func retrievePacient(id: String, completionHandler: @escaping (Pacient?) -> Void) {
-        ref?.child("Pacients/\(id)").observeSingleEvent(of: .value, with: { (snapshot) in
-            let pacient = snapshot.value as? NSDictionary
-            
-            if let actualPacient = pacient {
-                if let newPacient = Pacient(dictionary: (actualPacient as? [AnyHashable: Any])!) {
-                    completionHandler(newPacient)
-                }
-            } else {
-                completionHandler(nil)
-            }
-        })
+        self.retrieve(dump: Pacient.self, path: "Pacients/\(id)") { (pacient) in
+            completionHandler(pacient?.first)
+        }
+//        ref?.child("Pacients/\(id)").observeSingleEvent(of: .value, with: { (snapshot) in
+//            let pacient = snapshot.value as? NSDictionary
+//
+//            if let actualPacient = pacient {
+//                if let newPacient = Pacient(dictionary: (actualPacient as? [AnyHashable: Any])!) {
+//                    completionHandler(newPacient)
+//                }
+//            } else {
+//                completionHandler(nil)
+//            }
+//        })
     }
 }

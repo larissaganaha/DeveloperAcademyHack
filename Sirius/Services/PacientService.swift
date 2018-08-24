@@ -19,14 +19,6 @@ class PacientService: PacientServiceProtocol {
 //        PacientMechanisMock.savePacient(pacient)
     }
     
-    func getAppointmentPacient() -> [Appointment] {
-        return PacientMechanisMock.getPacientAppointments()
-    }
-    
-    func updateAppointment(_ appointment: Appointment) {
-        PacientMechanisMock.updateAppointment(appointment)
-    }
-    
     func getWaitTime() -> Date {
         return PacientMechanisMock.getWaitTime()
     }
