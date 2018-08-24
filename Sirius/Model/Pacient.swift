@@ -24,6 +24,22 @@ class Pacient: NSObject, PersistenceObject {
         return Date().timeIntervalSince(bornDate) / (3600*24*365)
     }
     
+    var personalInfo: String {
+        return "Peso: \(weight)\t|\tAltura: \(height)\nIdade: \(age)\n" +
+        "\(drink ? "alcolismo \n" : "")" +
+        "\(smoking ? "tabagismo \n" : "")" +
+        "\(diabetes ? "diabético \n" : "")"
+    }
+    
+    var familyHistory: String {
+        return "\(hipertension ? "Hipertensão \n" : "")" +
+        "\(diabetes ? "Diabetes \n" : "")"
+    }
+    
+    var medicines: String {
+        return " - "
+    }
+    
     // Medical info
     var drink: Bool = false
     var hipertension: Bool = false

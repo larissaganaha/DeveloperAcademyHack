@@ -39,6 +39,9 @@ extension AppointmentViewController: UITableViewDelegate, UITableViewDataSource 
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "pInfoCell") as? InfoTableViewCell else { return UITableViewCell() }
+            cell.personalInfo = pacient.personalInfo
+            cell.familyHistory = pacient.familyHistory
+            cell.medications = pacient.medicines
             return cell
         case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "appointmentInfoCell") as? PacientInfoTableViewCell else { return UITableViewCell() }
