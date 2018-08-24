@@ -18,4 +18,25 @@ class VoiceRecognitionReference {
         "cetoconazol", "xarope", "placebo", "amoxilina", "caminhada", "corrida", "natação"
     ]
     
+    static func identifySimptoms(from text: String) -> [String] {
+        var findings: [String] = []
+        for simptom in self.simptoms {
+            if (text.lowercased().range(of: simptom.lowercased()) != nil) {
+                findings.append(simptom)
+            }
+        }
+        return findings
+    }
+    
+    static func identifyMedicines(from text: String) -> [String] {
+        var findings: [String] = []
+        for medicine in self.medicines {
+            if (text.lowercased().range(of: medicine.lowercased()) != nil) {
+                findings.append(medicine)
+            }
+        }
+        return findings
+    }
+    
+    
 }

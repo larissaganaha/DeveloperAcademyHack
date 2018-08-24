@@ -13,6 +13,9 @@ class VoiceRecognitionTestViewController: UIViewController {
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var label: UILabel!
     
+    @IBOutlet weak var sinptomsLabel: UILabel!
+    @IBOutlet weak var medicineLabel: UILabel!
+    
     var voiceRecognitionMechanism: VoiceRecognition?
     var isRecording: Bool = false
     
@@ -49,5 +52,11 @@ extension VoiceRecognitionTestViewController: VoiceRecognitioniewDelegate {
     
     func finishedTranscript(transcript: String) {
         print(transcript)
+        
+        sinptomsLabel.text = VoiceRecognitionReference.identifySimptoms(from: transcript).reduce("", { (result, text) -> String in
+            result + "\n" + text
+        })
+        
+        
     }
 }
