@@ -1,5 +1,5 @@
 //
-//  VoiceRecognitionTestViewController.swift
+//  PacientTableViewCell.swift
 //  SiriusDoctor
 //
 //  Created by Giovani Nascimento Pereira on 24/08/18.
@@ -8,22 +8,28 @@
 
 import UIKit
 
-class VoiceRecognitionTestViewController: UIViewController {
+class PacientInfoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var recordButton: UIButton!
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var simptomsTextField: UITextView!
+    @IBOutlet weak var medicineTextField: UITextView!
     
-    @IBOutlet weak var sinptomsLabel: UILabel!
-    @IBOutlet weak var medicineLabel: UILabel!
-    
-    var voiceRecognitionMechanism: VoiceRecognition?
+    // Voice Recognition stuff
     var isRecording: Bool = false
+    var transcript: String = ""
+    var voiceRecognitionMechanism: VoiceRecognition?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func awakeFromNib() {
+        super.awakeFromNib()
         self.voiceRecognitionMechanism = VoiceRecognition(viewDelegate: self)
     }
 
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+    
     @IBAction func recordButtonPressed(_ sender: Any) {
         if !isRecording {
             voiceRecognitionMechanism?.startRecording()
@@ -31,9 +37,10 @@ class VoiceRecognitionTestViewController: UIViewController {
             voiceRecognitionMechanism?.stopRecording()
         }
     }
+
 }
 
-extension VoiceRecognitionTestViewController: VoiceRecognitioniewDelegate {
+extension PacientInfoTableViewCell: VoiceRecognitioniewDelegate {
     func enableMicrophone() {
         self.recordButton.setTitle("Record", for: .normal)
         self.recordButton.tintColor = .blue
@@ -47,19 +54,18 @@ extension VoiceRecognitionTestViewController: VoiceRecognitioniewDelegate {
     }
     
     func transcriptedTextDidChange(newText: String) {
-        self.label.text = newText
+        self.transcript = newText
     }
     
     func finishedTranscript(transcript: String) {
         print(transcript)
         
-        sinptomsLabel.text = VoiceRecognitionReference.identifySimptoms(from: transcript).reduce("", { (result, text) -> String in
+        simptomsTextField.text = VoiceRecognitionReference.identifySimptoms(from: transcript).reduce("", { (result, text) -> String in
             result + "\n" + text
         })
-        medicineLabel.text = VoiceRecognitionReference.identifyMedicines(from: transcript).reduce("", { (result, text) -> String in
+        medicineTextField.text = VoiceRecognitionReference.identifyMedicines(from: transcript).reduce("", { (result, text) -> String in
             result + "\n" + text
         })
-        
         
     }
 }
