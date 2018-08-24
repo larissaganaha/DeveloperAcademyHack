@@ -11,13 +11,13 @@ import Foundation
 class DoctorMechanismMock {
     
     static func getAppointments() -> [Appointment] {
-        return DataMock.appointments
+        return DataMock.doctorAppointments
     }
     
     static func saveAppointment(_ appointment: Appointment) {}
     
     static func getPacient(id: String) -> Pacient {
-        return DataMock.pacient
+        return DataMock.doctorPacients.filter({$0.ID == id}).first ?? DataMock.pacient
     }
     
 }
