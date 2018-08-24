@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class TestFirebaseViewController: UIViewController {
 
@@ -28,6 +29,10 @@ class TestFirebaseViewController: UIViewController {
         
         let pac = Pacient(ID: "9", name: "Bia", address: "addr", telephone: "13", imageURL: "https://scontent.frao1-2.fna.fbcdn.net/v/t1.0-9/35973177_2086993534706379_3604259674888601600_o.jpg?_nc_cat=0&oh=270eb268ba6807c64da69c399258bf9d&oe=5C323611", bornDate: Date(), height: 1.0, weight: 1.0, drink: false, hipertension: false, diabetes: false, smoking: false)
         pacientService.savePacient(pac)
+        
+        if let imageURL = pac.imageURL {
+            self.image.kf.setImage(with: URL(string: imageURL))
+        }
         
         let app = Appointment(pacient: pac, scheduledTime: Date(), transcript: "LALALA SUSHI", sinptomLog: nil, reportLog: nil)
         appointmentService.saveAppointment(app)
