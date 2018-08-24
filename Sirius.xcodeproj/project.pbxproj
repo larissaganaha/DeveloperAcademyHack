@@ -26,6 +26,7 @@
 		9BFD708C213059E7000443F7 /* DoctorServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD708B213059E7000443F7 /* DoctorServiceProtocol.swift */; };
 		9BFD708E21305A6C000443F7 /* PacientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD708D21305A6C000443F7 /* PacientService.swift */; };
 		9BFD709021305AF0000443F7 /* DoctorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD708F21305AF0000443F7 /* DoctorService.swift */; };
+		9BFD709321305BB7000443F7 /* PacientMechanismMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD709221305BB7000443F7 /* PacientMechanismMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		9BFD708B213059E7000443F7 /* DoctorServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorServiceProtocol.swift; sourceTree = "<group>"; };
 		9BFD708D21305A6C000443F7 /* PacientService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacientService.swift; sourceTree = "<group>"; };
 		9BFD708F21305AF0000443F7 /* DoctorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorService.swift; sourceTree = "<group>"; };
+		9BFD709221305BB7000443F7 /* PacientMechanismMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacientMechanismMock.swift; sourceTree = "<group>"; };
 		AE130E09B3761706EF07322A /* Pods-Sirius.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sirius.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sirius/Pods-Sirius.debug.xcconfig"; sourceTree = "<group>"; };
 		BF69C464E089AF600107AC8C /* Pods_Sirius.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sirius.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -97,6 +99,7 @@
 		9BFD70552130555B000443F7 /* Sirius */ = {
 			isa = PBXGroup;
 			children = (
+				9BFD709121305BA6000443F7 /* Mock */,
 				9BFD707E2130564C000443F7 /* Model */,
 				9BFD707F21305652000443F7 /* Services */,
 				9BFD70562130555B000443F7 /* AppDelegate.swift */,
@@ -157,6 +160,14 @@
 				9BFD708F21305AF0000443F7 /* DoctorService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		9BFD709121305BA6000443F7 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				9BFD709221305BB7000443F7 /* PacientMechanismMock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		AE04F28C458B60F5C948C6BC /* Pods */ = {
@@ -321,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BFD709321305BB7000443F7 /* PacientMechanismMock.swift in Sources */,
 				9BFD70592130555B000443F7 /* ViewController.swift in Sources */,
 				9BFD708121305660000443F7 /* Pacient.swift in Sources */,
 				9BFD70862130590D000443F7 /* DataLog.swift in Sources */,

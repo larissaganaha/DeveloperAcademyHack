@@ -11,19 +11,19 @@ import Foundation
 class PacientService: PacientServiceProtocol {
     
     func getPacient() -> Pacient {
-        return Pacient()
+        return PacientMechanisMock.getPacient()
     }
     func savePacient(_ pacient: Pacient) {
-        
+        PacientMechanisMock.savePacient(pacient)
     }
     func getAppointmentPacient() -> [Appointment] {
-        return []
+        return PacientMechanisMock.getPacientAppointments()
     }
     func updateAppointment(_ appointment: Appointment) {
         
     }
     func getWaitTime() -> Date {
-        return Date()
+        return PacientMechanisMock.getWaitTime()
     }
     
 }
