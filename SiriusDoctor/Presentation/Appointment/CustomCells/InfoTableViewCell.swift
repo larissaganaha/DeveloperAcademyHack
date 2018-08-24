@@ -11,6 +11,19 @@ import UIKit
 class InfoTableViewCell: UITableViewCell {
     
     var backgrounds: [UIImage] = [#imageLiteral(resourceName: "purpleGradient"), #imageLiteral(resourceName: "greenGradient"), #imageLiteral(resourceName: "blueGradient")]
+    var titles: [String] = ["Informações Pessoais", "Doenças na família", "Medicações"]
+    
+    var personalInfo: String = "personal info"
+    var familyHistory: String = "family history"
+    var medications: String = "medications"
+    
+    var bodies: [String] {
+        var array: [String] = []
+        array.append(personalInfo)
+        array.append(familyHistory)
+        array.append(medications)
+        return array
+    }
 
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
@@ -39,6 +52,8 @@ extension InfoTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "infoCollectionViewCell", for: indexPath) as? InfoCollectionViewCell else { return UICollectionViewCell() }
         cell.image.image = self.backgrounds[indexPath.row]
+        cell.titleLabel.text = self.titles[indexPath.row]
+        cell.bodyLabel.text = self.bodies[indexPath.row]
         return cell
     }
 }

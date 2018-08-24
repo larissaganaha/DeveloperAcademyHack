@@ -138,8 +138,8 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pMI-hr-Z5P">
-                                                    <rect key="frame" x="270" y="8.5" width="227" height="28"/>
-                                                    <state key="normal" title="Transcrever" image="transcribeButton"/>
+                                                    <rect key="frame" x="270" y="8.5" width="131" height="28"/>
+                                                    <state key="normal" image="transcribeButton"/>
                                                     <connections>
                                                         <action selector="recordButtonPressed:" destination="WcS-DB-f3M" eventType="touchUpInside" id="MZI-47-Ujz"/>
                                                     </connections>
@@ -284,7 +284,7 @@
                                             <outlet property="title" destination="avC-tX-4fD" id="GNA-Hs-RX0"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="pInfoCell" rowHeight="250" id="Ib2-fR-aey" customClass="InfoTableViewCell" customModule="SiriusDoctor" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="pInfoCell" rowHeight="250" id="Ib2-fR-aey" customClass="InfoTableViewCell" customModule="SiriusDoctor" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="688" width="728" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ib2-fR-aey" id="QgP-ek-A94">
@@ -347,6 +347,7 @@
                                                                 <constraint firstItem="6bB-H2-TiI" firstAttribute="top" secondItem="gsB-SY-eCn" secondAttribute="topMargin" id="d8C-kH-peT"/>
                                                             </constraints>
                                                             <connections>
+                                                                <outlet property="bodyLabel" destination="lnA-FG-pBr" id="pam-sC-USA"/>
                                                                 <outlet property="image" destination="fQ6-li-ldZ" id="XJV-MX-pdk"/>
                                                                 <outlet property="titleLabel" destination="6bB-H2-TiI" id="W8B-ju-ABu"/>
                                                             </connections>
@@ -365,6 +366,31 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="collectionView" destination="IIr-yc-HPD" id="wIc-NY-YLS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="endCell" rowHeight="119" id="oAn-vh-9Nt" customClass="EndTableViewCell" customModule="SiriusDoctor" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="938" width="728" height="119"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oAn-vh-9Nt" id="Hw4-xa-mJy">
+                                            <rect key="frame" x="0.0" y="0.0" width="728" height="119"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ypx-l7-tOa">
+                                                    <rect key="frame" x="249" y="38" width="231" height="44"/>
+                                                    <state key="normal" image="finishAppointment"/>
+                                                    <connections>
+                                                        <action selector="endButtonPressed:" destination="oAn-vh-9Nt" eventType="touchUpInside" id="CpZ-cg-s9A"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ypx-l7-tOa" firstAttribute="centerX" secondItem="Hw4-xa-mJy" secondAttribute="centerX" id="C2H-9K-VXq"/>
+                                                <constraint firstItem="Ypx-l7-tOa" firstAttribute="top" secondItem="Hw4-xa-mJy" secondAttribute="topMargin" constant="27" id="QUw-EN-pZU"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Ypx-l7-tOa" secondAttribute="bottom" constant="26" id="ymz-OM-J6C"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="endButton" destination="Ypx-l7-tOa" id="4aZ-xd-NAZ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -391,6 +417,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="finishAppointment" width="231" height="44"/>
         <image name="greenGradient" width="191" height="123"/>
         <image name="profilePicturePlaceholder" width="200" height="200"/>
         <image name="transcribeButton" width="131" height="28"/>
