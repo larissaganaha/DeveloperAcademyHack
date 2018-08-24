@@ -32,6 +32,7 @@
 		9BFD709721305F27000443F7 /* DataLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD70852130590D000443F7 /* DataLog.swift */; };
 		9BFD709821305F2B000443F7 /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD708721305916000443F7 /* Appointment.swift */; };
 		9BFD709F21306013000443F7 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD709E21306013000443F7 /* Profile.storyboard */; };
+		9BFD70A221306052000443F7 /* DoctorMechanismMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD70A121306052000443F7 /* DoctorMechanismMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		9BFD709221305BB7000443F7 /* PacientMechanismMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacientMechanismMock.swift; sourceTree = "<group>"; };
 		9BFD709421305EDE000443F7 /* DataMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMock.swift; sourceTree = "<group>"; };
 		9BFD709E21306013000443F7 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		9BFD70A121306052000443F7 /* DoctorMechanismMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorMechanismMock.swift; sourceTree = "<group>"; };
 		AE130E09B3761706EF07322A /* Pods-Sirius.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sirius.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sirius/Pods-Sirius.debug.xcconfig"; sourceTree = "<group>"; };
 		BF69C464E089AF600107AC8C /* Pods_Sirius.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sirius.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -121,7 +123,7 @@
 		9BFD706D213055A5000443F7 /* SiriusDoctor */ = {
 			isa = PBXGroup;
 			children = (
-				9BFD7089213059C9000443F7 /* Model */,
+				9BFD70A02130603B000443F7 /* Mock */,
 				9BFD708A213059CE000443F7 /* Services */,
 				9BFD709921305F8B000443F7 /* Presentation */,
 				9BFD706E213055A5000443F7 /* AppDelegate.swift */,
@@ -149,13 +151,6 @@
 				9BFD708D21305A6C000443F7 /* PacientService.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		9BFD7089213059C9000443F7 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		9BFD708A213059CE000443F7 /* Services */ = {
@@ -217,6 +212,14 @@
 				9BFD709E21306013000443F7 /* Profile.storyboard */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		9BFD70A02130603B000443F7 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				9BFD70A121306052000443F7 /* DoctorMechanismMock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		AE04F28C458B60F5C948C6BC /* Pods */ = {
@@ -404,6 +407,7 @@
 				9BFD709821305F2B000443F7 /* Appointment.swift in Sources */,
 				9BFD7071213055A5000443F7 /* ViewController.swift in Sources */,
 				9BFD7084213058B1000443F7 /* Pacient.swift in Sources */,
+				9BFD70A221306052000443F7 /* DoctorMechanismMock.swift in Sources */,
 				9BFD706F213055A5000443F7 /* AppDelegate.swift in Sources */,
 				9BFD709621305F1E000443F7 /* DataMock.swift in Sources */,
 			);
