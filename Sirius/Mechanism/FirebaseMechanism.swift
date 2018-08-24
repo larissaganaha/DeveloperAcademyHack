@@ -29,11 +29,9 @@ class FirebaseMechanism: NSObject {
             if let dictionary = snapshot.value as? [String: Any] {
                 
                 for key in dictionary.keys {
-                    let objectDict = dictionary[key] as? [String: Any]
+                    guard let objectDict = dictionary[key] as? [String: Any], let newObj = T(dictionary: objectDict) else { return }
                     
-                    let newObj = T(dictionary: objectDict!)
-                    
-                    allObjects.append(newObj!)
+                    allObjects.append(newObj)
                 }
                 
                 handler(allObjects)
