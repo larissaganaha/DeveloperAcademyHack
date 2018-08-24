@@ -10,18 +10,15 @@ import Foundation
 
 class PacientService: PacientServiceProtocol {
     
-    func getPacient() -> Pacient {
-        return PacientMechanisMock.getPacient()
+    func getPacient(id: String, completionHandler: @escaping (Pacient?) -> Void) {
+        PacientFirebaseMechanism.shared.retrievePacient(id: id, completionHandler: completionHandler)
     }
+    
     func savePacient(_ pacient: Pacient) {
-        PacientMechanisMock.savePacient(pacient)
+        PacientFirebaseMechanism.shared.createPacient(pacient: pacient)
+//        PacientMechanisMock.savePacient(pacient)
     }
-    func getAppointmentPacient() -> [Appointment] {
-        return PacientMechanisMock.getPacientAppointments()
-    }
-    func updateAppointment(_ appointment: Appointment) {
-        PacientMechanisMock.updateAppointment(appointment)
-    }
+    
     func getWaitTime() -> Date {
         return PacientMechanisMock.getWaitTime()
     }

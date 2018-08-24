@@ -7,6 +7,15 @@ target 'Sirius' do
 
   # Pods for Sirius
   pod 'Firebase'
-  pod 'Firebase/Database'
+  pod 'FirebaseDatabase'
+end
 
+target 'SiriusDoctor' do
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    use_frameworks!
+      
+    # Pods for SiriusDoctor
+    pod 'Firebase'
+    pod 'FirebaseDatabase'
+    pod 'Kingfisher'
 end

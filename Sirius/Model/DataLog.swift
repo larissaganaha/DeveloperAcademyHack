@@ -8,14 +8,40 @@
 
 import UIKit
 
-class DataLog {
+class DataLog: PersistenceObject {
     var date: Date
-    var images: [UIImage]
+    var images: [URL]
     var texts: [String]
+    var dictInfo: [AnyHashable: Any] = [:]
     
-    init (date: Date, images: [UIImage], texts: [String]) {
+    init (date: Date, images: [String], texts: [String]) {
         self.date = date
-        self.images = images
+        let imageUrls = images.map{URL(string: $0)!}
+        self.images = imageUrls
         self.texts = texts
+        
+        self.dictInfo = [
+            "date": date,
+            "images": imageUrls,
+            "texts": texts
+        ]
+    }
+    
+    required init?(dictionary: [AnyHashable : Any]) {
+        if  let date = dictionary["date"] as? Date,
+            let images = dictionary["images"] as? [String],
+            let texts = dictionary["texts"] as? [String] {
+            self.date = date
+            self.images = images.map{URL(string: $0)!}
+            self.texts = texts
+            self.dictInfo = dictionary
+        } else {
+            print("Dictionary incomplete to create DataLog object")
+            return nil
+        }
+    }
+    
+    func getDictInfo() -> [AnyHashable : Any] {
+        return self.dictInfo
     }
 }
