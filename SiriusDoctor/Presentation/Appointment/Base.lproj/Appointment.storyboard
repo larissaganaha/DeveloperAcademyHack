@@ -372,6 +372,70 @@
                                             <outlet property="title" destination="avC-tX-4fD" id="GNA-Hs-RX0"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="pInfoCell" rowHeight="250" id="Ib2-fR-aey" customClass="InfoTableViewCell" customModule="SiriusDoctor" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="938" width="728" height="250"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ib2-fR-aey" id="QgP-ek-A94">
+                                            <rect key="frame" x="0.0" y="0.0" width="728" height="250"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informações do Paciente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OmV-VY-oQ5">
+                                                    <rect key="frame" x="15" y="11" width="226" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IIr-yc-HPD">
+                                                    <rect key="frame" x="15" y="43" width="698" height="196"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="196" id="DKe-JJ-bq8"/>
+                                                    </constraints>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tKB-Ci-thq">
+                                                        <size key="itemSize" width="268" height="164"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="infoCollectionViewCell" id="gsB-SY-eCn" customClass="InfoCollectionViewCell" customModule="SiriusDoctor" customModuleProvider="target">
+                                                            <rect key="frame" x="10" y="21" width="268" height="164"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                                <rect key="frame" x="0.0" y="0.0" width="268" height="164"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fQ6-li-ldZ">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="268" height="164"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                            </view>
+                                                            <constraints>
+                                                                <constraint firstItem="fQ6-li-ldZ" firstAttribute="top" secondItem="gsB-SY-eCn" secondAttribute="top" id="66p-7O-HnO"/>
+                                                                <constraint firstAttribute="bottom" secondItem="fQ6-li-ldZ" secondAttribute="bottom" id="Njm-IS-Pf5"/>
+                                                                <constraint firstItem="fQ6-li-ldZ" firstAttribute="leading" secondItem="gsB-SY-eCn" secondAttribute="leading" id="YCX-j0-tgW"/>
+                                                                <constraint firstAttribute="trailing" secondItem="fQ6-li-ldZ" secondAttribute="trailing" id="d3t-Lz-j84"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="image" destination="fQ6-li-ldZ" id="XJV-MX-pdk"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="IIr-yc-HPD" firstAttribute="top" secondItem="OmV-VY-oQ5" secondAttribute="bottom" constant="8" id="VJa-DW-CSX"/>
+                                                <constraint firstItem="IIr-yc-HPD" firstAttribute="leading" secondItem="QgP-ek-A94" secondAttribute="leadingMargin" id="a7G-0z-MGh"/>
+                                                <constraint firstItem="IIr-yc-HPD" firstAttribute="bottom" secondItem="QgP-ek-A94" secondAttribute="bottomMargin" id="i2o-Lo-Ep1"/>
+                                                <constraint firstItem="OmV-VY-oQ5" firstAttribute="top" secondItem="QgP-ek-A94" secondAttribute="topMargin" id="k6o-0u-isI"/>
+                                                <constraint firstItem="IIr-yc-HPD" firstAttribute="trailing" secondItem="QgP-ek-A94" secondAttribute="trailingMargin" id="lj7-rj-oL0"/>
+                                                <constraint firstItem="OmV-VY-oQ5" firstAttribute="leading" secondItem="QgP-ek-A94" secondAttribute="leadingMargin" id="mSW-1E-8vr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="collectionView" destination="IIr-yc-HPD" id="wIc-NY-YLS"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="YAW-Wo-amm" id="zrd-jG-mYW"/>
