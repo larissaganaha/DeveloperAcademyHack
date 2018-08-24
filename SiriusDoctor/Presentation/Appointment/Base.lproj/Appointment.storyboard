@@ -80,6 +80,10 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYG-i8-kCJ">
+                                                            <rect key="frame" x="647" y="5" width="46" height="30"/>
+                                                            <state key="normal" title="Button"/>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -95,8 +99,10 @@
                                                         <constraint firstAttribute="trailing" secondItem="YYr-tV-Wmf" secondAttribute="trailing" constant="10" id="ZMt-6T-S1i"/>
                                                         <constraint firstItem="GZd-Li-9RY" firstAttribute="leading" secondItem="JWx-H1-A31" secondAttribute="leading" id="ZT5-t0-XFe"/>
                                                         <constraint firstItem="YYr-tV-Wmf" firstAttribute="leading" secondItem="GZd-Li-9RY" secondAttribute="leading" id="aQQ-sU-eIr"/>
+                                                        <constraint firstItem="GYG-i8-kCJ" firstAttribute="top" secondItem="9GL-Bt-Abc" secondAttribute="top" constant="5" id="aeP-GM-3SF"/>
                                                         <constraint firstItem="nWY-To-GkB" firstAttribute="top" secondItem="JWx-H1-A31" secondAttribute="top" id="d42-Fl-NNg"/>
                                                         <constraint firstItem="En8-bV-kIi" firstAttribute="top" secondItem="GZd-Li-9RY" secondAttribute="top" id="eVc-qD-V9E"/>
+                                                        <constraint firstAttribute="trailing" secondItem="GYG-i8-kCJ" secondAttribute="trailing" constant="5" id="ejT-Hi-5zt"/>
                                                         <constraint firstItem="7un-4M-gxF" firstAttribute="leading" secondItem="9GL-Bt-Abc" secondAttribute="leading" constant="20" id="fWp-GU-BfI"/>
                                                         <constraint firstItem="z6c-7A-pDq" firstAttribute="top" secondItem="9GL-Bt-Abc" secondAttribute="top" constant="50" id="gZt-zb-F0B"/>
                                                         <constraint firstAttribute="trailing" secondItem="En8-bV-kIi" secondAttribute="trailing" constant="10" id="hEZ-Dl-48J"/>
