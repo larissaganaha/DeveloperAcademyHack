@@ -20,7 +20,7 @@ class PacientService: PacientServiceProtocol {
         return PacientMechanisMock.getPacientAppointments()
     }
     func updateAppointment(_ appointment: Appointment) {
-        
+        PacientMechanisMock.updateAppointment(appointment)
     }
     func getWaitTime() -> Date {
         return PacientMechanisMock.getWaitTime()
