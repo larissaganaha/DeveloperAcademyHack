@@ -9,6 +9,7 @@
 import UIKit
 
 class Appointment: PersistenceObject {
+    var id: String = ""
     var pacient: Pacient = Pacient()
     var scheduledTime: Date = Date()
     var transcript: String = ""
@@ -26,6 +27,7 @@ class Appointment: PersistenceObject {
         
         self.dictInfo = [
             "ID": pacient.ID,
+            "id": id,
             "name": pacient.name,
             "address": pacient.address,
             "telephone": pacient.telephone,
@@ -69,7 +71,10 @@ class Appointment: PersistenceObject {
             let drink = dictionary["drink"] as? Bool,
             let hipertension = dictionary["hipertension"] as? Bool,
             let diabetes = dictionary["diabetes"] as? Bool,
-            let smoking = dictionary["smoking"] as? Bool {
+            let smoking = dictionary["smoking"] as? Bool,
+            let id = dictionary["id"] as? String {
+            
+            self.id = id
             
             if let sched = dictionary["scheduledTime"] as? String {
                 if let schedTime = self.formatDate(date: sched) {

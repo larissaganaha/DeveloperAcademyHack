@@ -63,18 +63,18 @@ extension AppointmentViewController: UITableViewDelegate, UITableViewDataSource 
             cell.familyHistory = pacient.familyHistory
             cell.medications = pacient.medicines
             return cell
-        case 2:
+        case 4:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "appointmentInfoCell") as? PacientInfoTableViewCell else { return UITableViewCell() }
             cell.delegate = self
             return cell
-        case 3:
+        case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "relevantImagesCell") as? RelevantImagesTableViewCell else { return UITableViewCell() }
             cell.title.text = "Imagens Relevantes"
             if let log = appointment.sinptomLog?.images {
                 cell.images = log.map { URL(string: $0)!}
             }
             return cell
-        case 4:
+        case 3:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "relevantImagesCell") as? RelevantImagesTableViewCell else { return UITableViewCell() }
             cell.title.text = "Exames e Laudos Passados"
             if let log = appointment.reportLog?.images {
