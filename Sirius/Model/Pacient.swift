@@ -25,11 +25,15 @@ class Pacient: NSObject, PersistenceObject {
         return Date().timeIntervalSince(bornDate) / (3600*24*365)
     }
     
+    var realURL: URL? {
+        return URL(string: imageURL ?? "")
+    }
+    
     var personalInfo: String {
-        return "Peso: \(weight)\t|\tAltura: \(height)\nIdade: \(age)\n" +
-        "\(drink ? "alcolismo \n" : "")" +
-        "\(smoking ? "tabagismo \n" : "")" +
-        "\(diabetes ? "diabético \n" : "")"
+        return "Peso: \(weight)\t| Altura: \(height)\nIdade: \(Int(age))\n" +
+        "\(drink ? "Alcolismo \n" : "")" +
+        "\(smoking ? "Tabagismo \n" : "")" +
+        "\(diabetes ? "Diabético \n" : "")"
     }
     
     var familyHistory: String {

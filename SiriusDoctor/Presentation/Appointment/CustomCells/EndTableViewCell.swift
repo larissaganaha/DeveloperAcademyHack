@@ -11,6 +11,7 @@ import UIKit
 class EndTableViewCell: UITableViewCell {
 
     @IBOutlet weak var endButton: UIButton!
+    weak var delegate: EndCellDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,7 +23,11 @@ class EndTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     @IBAction func endButtonPressed(_ sender: Any) {
-        print("END SESSION")
+        delegate?.endButtonPressed()
     }
     
+}
+
+protocol EndCellDelegate: NSObjectProtocol {
+    func endButtonPressed()
 }
