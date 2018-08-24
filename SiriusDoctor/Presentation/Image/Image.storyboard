@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iP1-Gh-P0t">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image View Controller-->
+        <scene sceneID="mkB-lK-Soj">
+            <objects>
+                <viewController id="iP1-Gh-P0t" customClass="ImageViewController" customModule="SiriusDoctor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eVr-Ui-Qls">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ox7-Hk-Qq5">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="z3U-RX-39X">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cu-9P-rje">
+                                            <rect key="frame" x="708" y="30" width="30" height="44"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                            <state key="normal" title="X">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="backButtonPressed:" destination="iP1-Gh-P0t" eventType="touchUpInside" id="uDU-Hs-VQc"/>
+                                            </connections>
+                                        </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J5H-el-249">
+                                            <rect key="frame" x="50" y="79" width="668" height="895"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="J5H-el-249" firstAttribute="top" secondItem="7cu-9P-rje" secondAttribute="bottom" constant="5" id="Yb7-JF-sly"/>
+                                        <constraint firstItem="J5H-el-249" firstAttribute="leading" secondItem="z3U-RX-39X" secondAttribute="leading" constant="50" id="b9f-OC-tnl"/>
+                                        <constraint firstAttribute="trailing" secondItem="J5H-el-249" secondAttribute="trailing" constant="50" id="nke-cx-Wvc"/>
+                                        <constraint firstAttribute="bottom" secondItem="J5H-el-249" secondAttribute="bottom" constant="50" id="tBV-Wd-uzH"/>
+                                        <constraint firstItem="7cu-9P-rje" firstAttribute="top" secondItem="z3U-RX-39X" secondAttribute="top" constant="30" id="wY0-pU-Wt9"/>
+                                        <constraint firstAttribute="trailing" secondItem="7cu-9P-rje" secondAttribute="trailing" constant="30" id="y7P-wG-c6g"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ox7-Hk-Qq5" firstAttribute="leading" secondItem="1SN-Zc-ePX" secondAttribute="leading" id="CKR-8E-UuH"/>
+                            <constraint firstItem="Ox7-Hk-Qq5" firstAttribute="top" secondItem="eVr-Ui-Qls" secondAttribute="top" id="Ea1-vg-lxX"/>
+                            <constraint firstItem="Ox7-Hk-Qq5" firstAttribute="bottom" secondItem="1SN-Zc-ePX" secondAttribute="bottom" id="qc6-R0-klJ"/>
+                            <constraint firstItem="Ox7-Hk-Qq5" firstAttribute="trailing" secondItem="1SN-Zc-ePX" secondAttribute="trailing" id="rqz-vU-7Y0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1SN-Zc-ePX"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="J5H-el-249" id="YYZ-Jd-l7a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cik-yb-cgs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8238.28125" y="257.8125"/>
+        </scene>
+    </scenes>
+</document>

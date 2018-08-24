@@ -25,6 +25,10 @@ class AppointmentViewController: UIViewController {
             viewController.transcript = self.transcript
             viewController.delegate = self
         }
+        if let viewController = segue.destination as? ImageViewController,
+            let image = sender as? UIImage {
+            viewController.image = image
+        }
     }
     
     func saveAppointment() {
@@ -76,6 +80,7 @@ extension AppointmentViewController: UITableViewDelegate, UITableViewDataSource 
             if let log = appointment.reportLog?.images {
                 cell.images = log
             }
+            cell.delegate = self
             return cell
         case 5:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "endCell") as? EndTableViewCell else { return UITableViewCell() }
@@ -108,5 +113,11 @@ extension AppointmentViewController: TranscriptCellProtocol, TranscriptEditProto
     }
     func transcriptButtonPressed() {
         self.performSegue(withIdentifier: "showTranscript", sender: self)
+    }
+}
+
+extension AppointmentViewController: RelevantImagesProtocol {
+    func imageSelected(_ image: UIImage?) {
+        self.performSegue(withIdentifier: "showImage", sender: image)
     }
 }

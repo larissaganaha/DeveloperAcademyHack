@@ -430,6 +430,7 @@
                     <size key="freeformSize" width="768" height="2000"/>
                     <connections>
                         <segue destination="Z6H-lC-kAQ" kind="presentation" identifier="showTranscript" modalPresentationStyle="overFullScreen" id="bqp-29-RaC"/>
+                        <segue destination="tV7-m3-UWQ" kind="presentation" identifier="showImage" modalPresentationStyle="overFullScreen" id="kGW-JM-cUr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wmU-ni-RIw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -443,6 +444,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E2A-ko-ObI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="958" y="311"/>
+        </scene>
+        <!--Image-->
+        <scene sceneID="rJo-5a-zVs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Image" id="tV7-m3-UWQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eCd-Ba-ncd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="947" y="339"/>
         </scene>
     </scenes>
     <resources>

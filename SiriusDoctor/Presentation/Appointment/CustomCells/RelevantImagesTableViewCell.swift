@@ -11,10 +11,12 @@ import Kingfisher
 
 class RelevantImagesTableViewCell: UITableViewCell {
     
+    weak var delegate: RelevantImagesProtocol?
     var images: [URL] = []
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
             collectionView.dataSource = self
+            collectionView.delegate = self
         }
     }
     @IBOutlet weak var title: UILabel!
@@ -25,7 +27,7 @@ class RelevantImagesTableViewCell: UITableViewCell {
     }
 }
 
-extension RelevantImagesTableViewCell: UICollectionViewDataSource {
+extension RelevantImagesTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.images.count
     }
@@ -35,4 +37,13 @@ extension RelevantImagesTableViewCell: UICollectionViewDataSource {
         cell.image.kf.setImage(with: images[indexPath.row], placeholder: #imageLiteral(resourceName: "imagePlaceholder"), options: nil, progressBlock: nil, completionHandler: nil)
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? ImageCollectionViewCell else { return }
+        delegate?.imageSelected(cell.image.image)
+    }
+}
+
+protocol RelevantImagesProtocol: NSObjectProtocol {
+    func imageSelected(_ image: UIImage?)
 }
