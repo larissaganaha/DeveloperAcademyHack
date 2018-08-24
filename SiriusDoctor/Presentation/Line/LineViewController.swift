@@ -39,7 +39,6 @@ class LineViewController: UIViewController {
             viewController.pacient = appointment.pacient
         }
     }
-
 }
 
 extension LineViewController: UITableViewDataSource, UITableViewDelegate {
