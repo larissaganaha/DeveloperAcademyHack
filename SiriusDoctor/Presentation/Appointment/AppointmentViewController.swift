@@ -20,7 +20,7 @@ class AppointmentViewController: UIViewController {
 }
 extension AppointmentViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -42,9 +42,21 @@ extension AppointmentViewController: UITableViewDelegate, UITableViewDataSource 
         case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "appointmentInfoCell") as? PacientInfoTableViewCell else { return UITableViewCell() }
             return cell
+        case 3:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "relevantImagesCell") as? RelevantImagesTableViewCell else { return UITableViewCell() }
+            cell.title.text = "Imagens Relevantes"
+            return cell
+        case 4:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "relevantImagesCell") as? RelevantImagesTableViewCell else { return UITableViewCell() }
+            cell.title.text = "Exames e Laudos Passados"
+            return cell
         default:
             return UITableViewCell()
         }
     }
+    
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 250
+//    }
     
 }

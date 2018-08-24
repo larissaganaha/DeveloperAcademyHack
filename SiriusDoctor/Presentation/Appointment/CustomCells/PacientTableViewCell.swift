@@ -9,6 +9,8 @@
 import UIKit
 
 class PacientTableViewCell: UITableViewCell {
+    
+    private var cellColor: [UIImage] = [#imageLiteral(resourceName: "purpleGradient"), #imageLiteral(resourceName: "blueGradient"), #imageLiteral(resourceName: "greenGradient")]
 
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
@@ -27,6 +29,7 @@ class PacientTableViewCell: UITableViewCell {
 extension PacientTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
+        print("loading")
         return 1
     }
     
@@ -35,6 +38,9 @@ extension PacientTableViewCell: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "pacientInfoCollectionViwCell", for: indexPath) as? PacientInfoCollectionViewCell else { return UICollectionViewCell ()}
+        cell.backgroundImageView.image = cellColor[indexPath.row]
+        return cell
     }
 }
