@@ -17,4 +17,5 @@ target 'SiriusDoctor' do
     # Pods for SiriusDoctor
     pod 'Firebase'
     pod 'FirebaseDatabase'
+    pod 'Kingfisher'
 end

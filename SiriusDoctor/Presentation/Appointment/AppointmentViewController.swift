@@ -11,6 +11,7 @@ import UIKit
 class AppointmentViewController: UIViewController {
     
     var pacient: Pacient = DataMock.pacient
+    var appointment: Appointment = DataMock.appointments[0]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,10 +46,16 @@ extension AppointmentViewController: UITableViewDelegate, UITableViewDataSource 
         case 3:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "relevantImagesCell") as? RelevantImagesTableViewCell else { return UITableViewCell() }
             cell.title.text = "Imagens Relevantes"
+            if let log = appointment.sinptomLog?.images {
+                cell.images = log
+            }
             return cell
         case 4:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "relevantImagesCell") as? RelevantImagesTableViewCell else { return UITableViewCell() }
             cell.title.text = "Exames e Laudos Passados"
+            if let log = appointment.reportLog?.images {
+                cell.images = log
+            }
             return cell
         case 5:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "endCell") as? EndTableViewCell else { return UITableViewCell() }

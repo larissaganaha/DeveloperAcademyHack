@@ -9,5 +9,10 @@
 import UIKit
 
 class ImageCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var image: UIImageView! {
+        didSet {
+            image.layer.cornerRadius = 10
+            image.clipsToBounds = true
+        }
+    }
 }
