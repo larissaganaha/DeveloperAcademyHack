@@ -10,23 +10,34 @@ import UIKit
 
 class LineViewController: UIViewController {
     
-    var appointments: [Appointment] = DataMock.doctorAppointments
-
+    var appointments: [Appointment] = []
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activity: UIActivityIndicatorView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        activity.startAnimating()
+        AppointmentService().getAllAppointments { (appointments) in
+            if let app = appointments {
+                self.appointments = app
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    self.activity.stopAnimating()
+                }
+            }
+        }
     }
-
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let viewController = segue.destination as? AppointmentViewController,
+            let appointment = sender as? Appointment {
+            viewController.appointment = appointment
+            viewController.pacient = appointment.pacient
+        }
     }
-    */
 
 }
 
@@ -49,8 +60,15 @@ extension LineViewController: UITableViewDataSource, UITableViewDelegate {
         cell.name.text = app.pacient.name
         cell.age.text = "\(Int(app.pacient.age))"
         
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        cell.time.text = "Horário da Consulta: \(dateFormatter.string(from: app.scheduledTime))"
+        
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "appointmentSegue", sender: self.appointments[indexPath.row - 1])
+    }
     
 }
