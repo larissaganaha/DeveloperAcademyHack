@@ -6,5 +6,6 @@ target 'Sirius' do
   use_frameworks!
 
   # Pods for Sirius
+  pod 'Firebase'
 
 end

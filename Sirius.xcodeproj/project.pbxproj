@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59F03164602557F35BD1A839 /* Pods_Sirius.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF69C464E089AF600107AC8C /* Pods_Sirius.framework */; };
 		9BFD70572130555B000443F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD70562130555B000443F7 /* AppDelegate.swift */; };
 		9BFD70592130555B000443F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD70582130555B000443F7 /* ViewController.swift */; };
 		9BFD705C2130555B000443F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD705A2130555B000443F7 /* Main.storyboard */; };
 		9BFD705E2130555C000443F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD705D2130555C000443F7 /* Assets.xcassets */; };
 		9BFD70612130555C000443F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD705F2130555C000443F7 /* LaunchScreen.storyboard */; };
+		9BFD706F213055A5000443F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD706E213055A5000443F7 /* AppDelegate.swift */; };
+		9BFD7071213055A5000443F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD7070213055A5000443F7 /* ViewController.swift */; };
+		9BFD7074213055A5000443F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD7072213055A5000443F7 /* Main.storyboard */; };
+		9BFD7076213055A6000443F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD7075213055A6000443F7 /* Assets.xcassets */; };
+		9BFD7079213055A6000443F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD7077213055A6000443F7 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D13AF6C28C4174C34B89D79 /* Pods-Sirius.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sirius.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sirius/Pods-Sirius.release.xcconfig"; sourceTree = "<group>"; };
 		9BFD70532130555B000443F7 /* Sirius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sirius.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BFD70562130555B000443F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BFD70582130555B000443F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,10 +29,27 @@
 		9BFD705D2130555C000443F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BFD70602130555C000443F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BFD70622130555C000443F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BFD706C213055A5000443F7 /* SiriusDoctor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiriusDoctor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BFD706E213055A5000443F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9BFD7070213055A5000443F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9BFD7073213055A5000443F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9BFD7075213055A6000443F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9BFD7078213055A6000443F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9BFD707A213055A6000443F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE130E09B3761706EF07322A /* Pods-Sirius.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sirius.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sirius/Pods-Sirius.debug.xcconfig"; sourceTree = "<group>"; };
+		BF69C464E089AF600107AC8C /* Pods_Sirius.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sirius.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9BFD70502130555B000443F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59F03164602557F35BD1A839 /* Pods_Sirius.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BFD7069213055A5000443F7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,7 +63,10 @@
 			isa = PBXGroup;
 			children = (
 				9BFD70552130555B000443F7 /* Sirius */,
+				9BFD706D213055A5000443F7 /* SiriusDoctor */,
 				9BFD70542130555B000443F7 /* Products */,
+				AE04F28C458B60F5C948C6BC /* Pods */,
+				BDD97A8E0761911442A43FF6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -47,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				9BFD70532130555B000443F7 /* Sirius.app */,
+				9BFD706C213055A5000443F7 /* SiriusDoctor.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +92,36 @@
 			path = Sirius;
 			sourceTree = "<group>";
 		};
+		9BFD706D213055A5000443F7 /* SiriusDoctor */ = {
+			isa = PBXGroup;
+			children = (
+				9BFD706E213055A5000443F7 /* AppDelegate.swift */,
+				9BFD7070213055A5000443F7 /* ViewController.swift */,
+				9BFD7072213055A5000443F7 /* Main.storyboard */,
+				9BFD7075213055A6000443F7 /* Assets.xcassets */,
+				9BFD7077213055A6000443F7 /* LaunchScreen.storyboard */,
+				9BFD707A213055A6000443F7 /* Info.plist */,
+			);
+			path = SiriusDoctor;
+			sourceTree = "<group>";
+		};
+		AE04F28C458B60F5C948C6BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AE130E09B3761706EF07322A /* Pods-Sirius.debug.xcconfig */,
+				3D13AF6C28C4174C34B89D79 /* Pods-Sirius.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BDD97A8E0761911442A43FF6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF69C464E089AF600107AC8C /* Pods_Sirius.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +129,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BFD70652130555C000443F7 /* Build configuration list for PBXNativeTarget "Sirius" */;
 			buildPhases = (
+				34D6FE8E6248D23C806AC244 /* [CP] Check Pods Manifest.lock */,
 				9BFD704F2130555B000443F7 /* Sources */,
 				9BFD70502130555B000443F7 /* Frameworks */,
 				9BFD70512130555B000443F7 /* Resources */,
+				F14033C357CF20404BEFAEDC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -82,6 +142,23 @@
 			name = Sirius;
 			productName = Sirius;
 			productReference = 9BFD70532130555B000443F7 /* Sirius.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9BFD706B213055A5000443F7 /* SiriusDoctor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BFD707D213055A6000443F7 /* Build configuration list for PBXNativeTarget "SiriusDoctor" */;
+			buildPhases = (
+				9BFD7068213055A5000443F7 /* Sources */,
+				9BFD7069213055A5000443F7 /* Frameworks */,
+				9BFD706A213055A5000443F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SiriusDoctor;
+			productName = SiriusDoctor;
+			productReference = 9BFD706C213055A5000443F7 /* SiriusDoctor.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -95,6 +172,9 @@
 				ORGANIZATIONNAME = "Giovani Nascimento Pereira";
 				TargetAttributes = {
 					9BFD70522130555B000443F7 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					9BFD706B213055A5000443F7 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
@@ -113,6 +193,7 @@
 			projectRoot = "";
 			targets = (
 				9BFD70522130555B000443F7 /* Sirius */,
+				9BFD706B213055A5000443F7 /* SiriusDoctor */,
 			);
 		};
 /* End PBXProject section */
@@ -128,7 +209,58 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9BFD706A213055A5000443F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BFD7079213055A6000443F7 /* LaunchScreen.storyboard in Resources */,
+				9BFD7076213055A6000443F7 /* Assets.xcassets in Resources */,
+				9BFD7074213055A5000443F7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34D6FE8E6248D23C806AC244 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sirius-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F14033C357CF20404BEFAEDC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Sirius/Pods-Sirius-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sirius/Pods-Sirius-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9BFD704F2130555B000443F7 /* Sources */ = {
@@ -137,6 +269,15 @@
 			files = (
 				9BFD70592130555B000443F7 /* ViewController.swift in Sources */,
 				9BFD70572130555B000443F7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BFD7068213055A5000443F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BFD7071213055A5000443F7 /* ViewController.swift in Sources */,
+				9BFD706F213055A5000443F7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +296,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				9BFD70602130555C000443F7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9BFD7072213055A5000443F7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BFD7073213055A5000443F7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9BFD7077213055A6000443F7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9BFD7078213055A6000443F7 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -278,15 +435,13 @@
 		};
 		9BFD70662130555C000443F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE130E09B3761706EF07322A /* Pods-Sirius.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2ECVV26Q6C;
 				INFOPLIST_FILE = Sirius/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bepid.campinas.Sirius;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -296,16 +451,44 @@
 		};
 		9BFD70672130555C000443F7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D13AF6C28C4174C34B89D79 /* Pods-Sirius.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2ECVV26Q6C;
 				INFOPLIST_FILE = Sirius/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = bepid.campinas.Sirius;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9BFD707B213055A6000443F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ECVV26Q6C;
+				INFOPLIST_FILE = SiriusDoctor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = bepid.campinas.SiriusDoctor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9BFD707C213055A6000443F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2ECVV26Q6C;
+				INFOPLIST_FILE = SiriusDoctor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = bepid.campinas.SiriusDoctor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -329,6 +512,15 @@
 			buildConfigurations = (
 				9BFD70662130555C000443F7 /* Debug */,
 				9BFD70672130555C000443F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BFD707D213055A6000443F7 /* Build configuration list for PBXNativeTarget "SiriusDoctor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BFD707B213055A6000443F7 /* Debug */,
+				9BFD707C213055A6000443F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
