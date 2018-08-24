@@ -33,6 +33,7 @@
 		9BFD709821305F2B000443F7 /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD708721305916000443F7 /* Appointment.swift */; };
 		9BFD709F21306013000443F7 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD709E21306013000443F7 /* Profile.storyboard */; };
 		9BFD70A221306052000443F7 /* DoctorMechanismMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD70A121306052000443F7 /* DoctorMechanismMock.swift */; };
+		9BFD70A5213063BA000443F7 /* VoiceRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD70A4213063BA000443F7 /* VoiceRecognition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		9BFD709421305EDE000443F7 /* DataMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMock.swift; sourceTree = "<group>"; };
 		9BFD709E21306013000443F7 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		9BFD70A121306052000443F7 /* DoctorMechanismMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorMechanismMock.swift; sourceTree = "<group>"; };
+		9BFD70A4213063BA000443F7 /* VoiceRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRecognition.swift; sourceTree = "<group>"; };
 		AE130E09B3761706EF07322A /* Pods-Sirius.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sirius.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sirius/Pods-Sirius.debug.xcconfig"; sourceTree = "<group>"; };
 		BF69C464E089AF600107AC8C /* Pods_Sirius.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sirius.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -123,6 +125,7 @@
 		9BFD706D213055A5000443F7 /* SiriusDoctor */ = {
 			isa = PBXGroup;
 			children = (
+				9BFD70A3213063A8000443F7 /* Voice Recognition */,
 				9BFD70A02130603B000443F7 /* Mock */,
 				9BFD708A213059CE000443F7 /* Services */,
 				9BFD709921305F8B000443F7 /* Presentation */,
@@ -220,6 +223,14 @@
 				9BFD70A121306052000443F7 /* DoctorMechanismMock.swift */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		9BFD70A3213063A8000443F7 /* Voice Recognition */ = {
+			isa = PBXGroup;
+			children = (
+				9BFD70A4213063BA000443F7 /* VoiceRecognition.swift */,
+			);
+			path = "Voice Recognition";
 			sourceTree = "<group>";
 		};
 		AE04F28C458B60F5C948C6BC /* Pods */ = {
@@ -401,6 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BFD70A5213063BA000443F7 /* VoiceRecognition.swift in Sources */,
 				9BFD708C213059E7000443F7 /* DoctorServiceProtocol.swift in Sources */,
 				9BFD709721305F27000443F7 /* DataLog.swift in Sources */,
 				9BFD709021305AF0000443F7 /* DoctorService.swift in Sources */,
@@ -571,7 +583,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 32P3VH37WD;
+				DEVELOPMENT_TEAM = 2ECVV26Q6C;
 				INFOPLIST_FILE = Sirius/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -590,7 +602,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 32P3VH37WD;
+				DEVELOPMENT_TEAM = 2ECVV26Q6C;
 				INFOPLIST_FILE = Sirius/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
