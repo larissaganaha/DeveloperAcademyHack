@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		59F03164602557F35BD1A839 /* Pods_Sirius.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF69C464E089AF600107AC8C /* Pods_Sirius.framework */; };
+		9B1989852130775100DABE6E /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1989842130775100DABE6E /* ProfileTableViewCell.swift */; };
 		9BFD70572130555B000443F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD70562130555B000443F7 /* AppDelegate.swift */; };
 		9BFD70592130555B000443F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD70582130555B000443F7 /* ViewController.swift */; };
 		9BFD705C2130555B000443F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD705A2130555B000443F7 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		3D13AF6C28C4174C34B89D79 /* Pods-Sirius.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sirius.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sirius/Pods-Sirius.release.xcconfig"; sourceTree = "<group>"; };
+		9B1989842130775100DABE6E /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		9BFD70532130555B000443F7 /* Sirius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sirius.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BFD70562130555B000443F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BFD70582130555B000443F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B1989822130773500DABE6E /* Customiews */ = {
+			isa = PBXGroup;
+			children = (
+				9BFD70AD2130714E000443F7 /* CardView.swift */,
+			);
+			path = Customiews;
+			sourceTree = "<group>";
+		};
+		9B1989832130773C00DABE6E /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				9B1989842130775100DABE6E /* ProfileTableViewCell.swift */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
 		9BFD704A2130555B000443F7 = {
 			isa = PBXGroup;
 			children = (
@@ -194,9 +212,10 @@
 		9BFD709A21305F94000443F7 /* Appointment */ = {
 			isa = PBXGroup;
 			children = (
+				9B1989832130773C00DABE6E /* CustomCells */,
+				9B1989822130773500DABE6E /* Customiews */,
 				9BFD7072213055A5000443F7 /* Appointment.storyboard */,
 				9BFD7070213055A5000443F7 /* AppointmentViewController.swift */,
-				9BFD70AD2130714E000443F7 /* CardView.swift */,
 			);
 			path = Appointment;
 			sourceTree = "<group>";
@@ -436,6 +455,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BFD70AC213069C0000443F7 /* VoiceRecognitionReference.swift in Sources */,
+				9B1989852130775100DABE6E /* ProfileTableViewCell.swift in Sources */,
 				9BFD70A5213063BA000443F7 /* VoiceRecognition.swift in Sources */,
 				9BFD708C213059E7000443F7 /* DoctorServiceProtocol.swift in Sources */,
 				9BFD709721305F27000443F7 /* DataLog.swift in Sources */,
