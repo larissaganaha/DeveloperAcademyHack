@@ -14,6 +14,7 @@ class ProfileTableViewCell: UITableViewCell {
     @IBOutlet weak var address: UILabel!
     @IBOutlet weak var id: UILabel!
     @IBOutlet weak var telephone: UILabel!
+    @IBOutlet weak var picture: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

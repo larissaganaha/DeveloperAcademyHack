@@ -20,7 +20,7 @@ class AppointmentViewController: UIViewController {
 }
 extension AppointmentViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -33,6 +33,9 @@ extension AppointmentViewController: UITableViewDelegate, UITableViewDataSource 
             cell.id.text = "MEDICAL ID: \(self.pacient.ID)"
             cell.telephone.text = self.pacient.telephone
             
+            return cell
+        case 1:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "pacientInfoCell") as? PacientInfoTableViewCell else { return UITableViewCell() }
             return cell
         default:
             return UITableViewCell()
