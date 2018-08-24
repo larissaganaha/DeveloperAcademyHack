@@ -44,13 +44,13 @@
 		B1212C462130739600771370 /* TestFirebaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1212C452130739600771370 /* TestFirebaseViewController.swift */; };
 		B1212C47213073C600771370 /* PacientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD708D21305A6C000443F7 /* PacientService.swift */; };
 		B1212C492130785900771370 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B1212C482130785900771370 /* GoogleService-Info.plist */; };
-		B1212C4A2130785C00771370 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B1212C482130785900771370 /* GoogleService-Info.plist */; };
 		B1212C4B2130789F00771370 /* FirebaseMechanism.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB91ECD621305ECA0077C913 /* FirebaseMechanism.swift */; };
 		B1212C4C213078A100771370 /* PacientMechanismFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1212C3E2130638300771370 /* PacientMechanismFirebase.swift */; };
 		B1212C4D213078A400771370 /* AppointmentMechanismFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1212C402130684F00771370 /* AppointmentMechanismFirebase.swift */; };
 		B1212C4E213078A700771370 /* PacientMechanismMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD709221305BB7000443F7 /* PacientMechanismMock.swift */; };
 		B1212C4F213078B000771370 /* PacientServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD7082213058A4000443F7 /* PacientServiceProtocol.swift */; };
 		CB91ECD721305ECA0077C913 /* FirebaseMechanism.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB91ECD621305ECA0077C913 /* FirebaseMechanism.swift */; };
+		CB91ECD9213086F30077C913 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB91ECD8213086F20077C913 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +95,7 @@
 		B1212C482130785900771370 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BF69C464E089AF600107AC8C /* Pods_Sirius.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sirius.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB91ECD621305ECA0077C913 /* FirebaseMechanism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMechanism.swift; sourceTree = "<group>"; };
+		CB91ECD8213086F20077C913 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +121,6 @@
 		9BFD704A2130555B000443F7 = {
 			isa = PBXGroup;
 			children = (
-				B1212C482130785900771370 /* GoogleService-Info.plist */,
 				9BFD70552130555B000443F7 /* Sirius */,
 				9BFD706D213055A5000443F7 /* SiriusDoctor */,
 				9BFD70542130555B000443F7 /* Products */,
@@ -141,6 +141,7 @@
 		9BFD70552130555B000443F7 /* Sirius */ = {
 			isa = PBXGroup;
 			children = (
+				B1212C482130785900771370 /* GoogleService-Info.plist */,
 				CB91ECD521305E3B0077C913 /* Mechanism */,
 				9BFD709121305BA6000443F7 /* Mock */,
 				9BFD707E2130564C000443F7 /* Model */,
@@ -157,6 +158,7 @@
 		9BFD706D213055A5000443F7 /* SiriusDoctor */ = {
 			isa = PBXGroup;
 			children = (
+				CB91ECD8213086F20077C913 /* GoogleService-Info.plist */,
 				9BFD70A3213063A8000443F7 /* Voice Recognition */,
 				9BFD70A02130603B000443F7 /* Mock */,
 				9BFD708A213059CE000443F7 /* Services */,
@@ -408,7 +410,7 @@
 				B1212C432130730F00771370 /* TestFirebase.storyboard in Resources */,
 				9BFD7076213055A6000443F7 /* Assets.xcassets in Resources */,
 				9BFD7074213055A5000443F7 /* Main.storyboard in Resources */,
-				B1212C4A2130785C00771370 /* GoogleService-Info.plist in Resources */,
+				CB91ECD9213086F30077C913 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
