@@ -13,10 +13,18 @@ class AppointmentViewController: UIViewController {
     
     var pacient: Pacient = DataMock.pacient
     var appointment: Appointment = DataMock.appointments[0]
+    var transcript: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.transcript = appointment.transcript
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let viewController = segue.destination as? TranscriptViewController {
+            viewController.transcript = self.transcript
+            viewController.delegate = self
+        }
     }
     
 }
@@ -48,6 +56,7 @@ extension AppointmentViewController: UITableViewDelegate, UITableViewDataSource 
             return cell
         case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "appointmentInfoCell") as? PacientInfoTableViewCell else { return UITableViewCell() }
+            cell.delegate = self
             return cell
         case 3:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "relevantImagesCell") as? RelevantImagesTableViewCell else { return UITableViewCell() }
@@ -87,3 +96,11 @@ extension AppointmentViewController: EndCellDelegate {
     }
 }
 
+extension AppointmentViewController: TranscriptCellProtocol, TranscriptEditProtocol {
+    func updateTranscript(to text: String) {
+        self.transcript = text
+    }
+    func transcriptButtonPressed() {
+        self.performSegue(withIdentifier: "showTranscript", sender: self)
+    }
+}

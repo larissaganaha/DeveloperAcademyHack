@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YF7-9t-kFK">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Transcript View Controller-->
+        <scene sceneID="914-Ku-SKr">
+            <objects>
+                <viewController id="YF7-9t-kFK" customClass="TranscriptViewController" customModule="SiriusDoctor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JWf-Wn-dXS">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rSq-cD-E16">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="y7w-ah-7rw">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="....." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mfi-gb-OQM">
+                                            <rect key="frame" x="30" y="84" width="708" height="915"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transcript" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3H-EM-Cij">
+                                            <rect key="frame" x="30" y="40" width="728" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tDw-ar-9li">
+                                            <rect key="frame" x="708" y="30" width="30" height="44"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                            <state key="normal" title="X">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="backButtonPressed:" destination="YF7-9t-kFK" eventType="touchUpInside" id="NQM-My-h66"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="mfi-gb-OQM" firstAttribute="leading" secondItem="y7w-ah-7rw" secondAttribute="leading" constant="30" id="61x-Di-KP1"/>
+                                        <constraint firstItem="S3H-EM-Cij" firstAttribute="leading" secondItem="y7w-ah-7rw" secondAttribute="leading" constant="30" id="8Om-jk-Va3"/>
+                                        <constraint firstAttribute="bottom" secondItem="mfi-gb-OQM" secondAttribute="bottom" constant="25" id="8j6-p4-Ro6"/>
+                                        <constraint firstItem="mfi-gb-OQM" firstAttribute="top" secondItem="S3H-EM-Cij" secondAttribute="bottom" constant="20" id="AiJ-kk-R5f"/>
+                                        <constraint firstAttribute="trailing" secondItem="mfi-gb-OQM" secondAttribute="trailing" constant="30" id="HQ3-cr-BEy"/>
+                                        <constraint firstItem="tDw-ar-9li" firstAttribute="top" secondItem="y7w-ah-7rw" secondAttribute="top" constant="30" id="VN4-sv-Zai"/>
+                                        <constraint firstItem="S3H-EM-Cij" firstAttribute="top" secondItem="y7w-ah-7rw" secondAttribute="top" constant="40" id="dAb-vR-Uwb"/>
+                                        <constraint firstAttribute="trailing" secondItem="tDw-ar-9li" secondAttribute="trailing" constant="30" id="qni-No-Yqb"/>
+                                        <constraint firstAttribute="trailing" secondItem="S3H-EM-Cij" secondAttribute="trailing" constant="10" id="tbx-NM-W8Q"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rSq-cD-E16" firstAttribute="trailing" secondItem="Fe4-TP-Zpa" secondAttribute="trailing" id="PRS-1k-pKz"/>
+                            <constraint firstItem="rSq-cD-E16" firstAttribute="top" secondItem="JWf-Wn-dXS" secondAttribute="top" id="RFN-Fm-Qfm"/>
+                            <constraint firstItem="rSq-cD-E16" firstAttribute="leading" secondItem="Fe4-TP-Zpa" secondAttribute="leading" id="Vdk-Ny-MNG"/>
+                            <constraint firstItem="rSq-cD-E16" firstAttribute="bottom" secondItem="Fe4-TP-Zpa" secondAttribute="bottom" id="efT-EE-lIq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fe4-TP-Zpa"/>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="mfi-gb-OQM" id="oPs-WO-LKa"/>
+                        <outlet property="titleLabel" destination="S3H-EM-Cij" id="bS8-b0-udv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bNt-mU-Ok7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="78.90625" y="169.921875"/>
+        </scene>
+    </scenes>
+</document>
