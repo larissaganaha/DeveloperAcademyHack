@@ -21,7 +21,7 @@ class Pacient: NSObject, PersistenceObject {
     var height: Double = 1.0
     var weight: Double = 1.0
     var age: Double {
-        return Date().timeIntervalSince(bornDate)
+        return Date().timeIntervalSince(bornDate) / (3600*24*365)
     }
     
     // Medical info
