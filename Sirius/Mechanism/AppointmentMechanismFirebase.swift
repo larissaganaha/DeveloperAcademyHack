@@ -15,23 +15,42 @@ class AppointmentMechanismFirebase: FirebaseMechanism {
         super.init()
     }
     
-    func createAppointment(pacient: Pacient, scheduledTime: Date, transcript: String, sinptomLog: DataLog, reportLog: DataLog) {
-        let newAppointment = Appointment(pacient: pacient, scheduledTime: scheduledTime, transcript: transcript, sinptomLog: sinptomLog, reportLog: reportLog)
-        
+    func createAppointment(appointment: Appointment) {
         let path = "Appointments"
         
-        self.create(dump: Appointment.self, object: newAppointment, path: path, newObjectID: nil)
+        self.create(dump: Appointment.self, object: appointment, path: path, newObjectID: nil)
     }
     
-    func retrieveAppointment(id: String) {
-        ref?.child("Appointments/\(id)").observeSingleEvent(of: .value, with: { (snapshot) in
-            let appointment = snapshot.value as? NSDictionary
+//    func retrieveAppointment(id: String, completionHandler: @escaping (Appointment?) -> Void) {
+//        self.retrieve(dump: Appointment.self, path: "Appointments/\(id)") { (appointments) in
+//            completionHandler(appointments?.first)
+//        }
+//
+////        ref?.child("Appointments/\(id)").observeSingleEvent(of: .value, with: { (snapshot) in
+////            let appointment = snapshot.value as? NSDictionary
+////
+////            if let actualAppointment = appointment {
+////                if let newAppointment = Appointment(dictionary: (actualAppointment as? [AnyHashable: Any])!) {
+////                    completionHandler(newAppointment)
+////                }
+////            } else {
+////                completionHandler(nil)
+////            }
+////        })
+//    }
+    
+    func retrieveAppointments(from pacientID: String, completionHandler: @escaping ([Appointment]?) -> Void) {
+        self.retrieve(dump: Appointment.self, path: "Appointments") { (appointments) in
+            let pacientsAppoints = appointments?.filter{$0.pacient.ID == pacientID}
             
-            if let actualAppointment = appointment {
-                if let newAppointment = Appointment(dictionary: (actualAppointment as? [AnyHashable: Any])!) {
-                    // call delegate
-                }
-            }
-        })
+            completionHandler(pacientsAppoints)
+        }
+    }
+    
+    func retrieveAllActiveAppointments(completionHandler: @escaping ([Appointment]?) -> Void) {
+        self.retrieve(dump: Appointment.self, path: "Appointments") { (appointments) in
+            let activeAppointments = appointments?.filter { $0.isActive }
+            completionHandler(activeAppointments)
+        }
     }
 }

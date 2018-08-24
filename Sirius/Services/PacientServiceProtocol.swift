@@ -12,8 +12,6 @@ protocol PacientServiceProtocol {
     
     func getPacient(id: String, completionHandler: @escaping (Pacient?) -> Void)
     func savePacient(_ pacient: Pacient)
-    func getAppointmentPacient() -> [Appointment]
-    func updateAppointment(_ appointment: Appointment)
     func getWaitTime() -> Date
     
 }

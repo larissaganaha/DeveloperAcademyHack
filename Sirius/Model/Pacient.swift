@@ -66,6 +66,10 @@ class Pacient: NSObject, PersistenceObject {
 //        self.init(ID: "12345", name: "", address: "", telephone: "", bornDate: Date(), height: 1.50, weight: 60.0, drink: false, hipertension: false, diabetes: false, smoking: false)
 //    }
     
+    override init () {
+        super.init()
+    }
+    
     required init?(dictionary: [AnyHashable : Any]) {
         super.init()
         
