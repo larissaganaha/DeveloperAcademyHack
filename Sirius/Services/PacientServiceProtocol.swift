@@ -11,7 +11,7 @@ import Foundation
 protocol PacientServiceProtocol {
     
     func getPacient() -> Pacient
-    func savePaacient(_ pacient: Pacient)
+    func savePacient(_ pacient: Pacient)
     func getConsultaPacient() -> Appointment
     
 }
