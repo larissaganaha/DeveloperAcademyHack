@@ -17,7 +17,6 @@
 		9BFD705E2130555C000443F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD705D2130555C000443F7 /* Assets.xcassets */; };
 		9BFD70612130555C000443F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD705F2130555C000443F7 /* LaunchScreen.storyboard */; };
 		9BFD706F213055A5000443F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD706E213055A5000443F7 /* AppDelegate.swift */; };
-		9BFD7071213055A5000443F7 /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD7070213055A5000443F7 /* AppointmentViewController.swift */; };
 		9BFD7074213055A5000443F7 /* Appointment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD7072213055A5000443F7 /* Appointment.storyboard */; };
 		9BFD7076213055A6000443F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD7075213055A6000443F7 /* Assets.xcassets */; };
 		9BFD7079213055A6000443F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD7077213055A6000443F7 /* LaunchScreen.storyboard */; };
@@ -40,6 +39,7 @@
 		9BFD70A8213065C4000443F7 /* VoiceRecognitionTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD70A7213065C4000443F7 /* VoiceRecognitionTest.storyboard */; };
 		9BFD70AA21306601000443F7 /* VoiceRecognitionTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD70A921306601000443F7 /* VoiceRecognitionTestViewController.swift */; };
 		9BFD70AC213069C0000443F7 /* VoiceRecognitionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD70AB213069C0000443F7 /* VoiceRecognitionReference.swift */; };
+		9BFD70AE2130714E000443F7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD70AD2130714E000443F7 /* CardView.swift */; };
 		B1212C3F2130638300771370 /* PacientMechanismFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1212C3E2130638300771370 /* PacientMechanismFirebase.swift */; };
 		B1212C412130684F00771370 /* AppointmentMechanismFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1212C402130684F00771370 /* AppointmentMechanismFirebase.swift */; };
 		B1212C432130730F00771370 /* TestFirebase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1212C422130730F00771370 /* TestFirebase.storyboard */; };
@@ -53,7 +53,6 @@
 		B1212C4F213078B000771370 /* PacientServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD7082213058A4000443F7 /* PacientServiceProtocol.swift */; };
 		CB91ECD721305ECA0077C913 /* FirebaseMechanism.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB91ECD621305ECA0077C913 /* FirebaseMechanism.swift */; };
 		CB91ECD9213086F30077C913 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB91ECD8213086F20077C913 /* GoogleService-Info.plist */; };
-		9BFD70AE2130714E000443F7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD70AD2130714E000443F7 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -434,7 +433,7 @@
 				9BFD70A8213065C4000443F7 /* VoiceRecognitionTest.storyboard in Resources */,
 				B1212C432130730F00771370 /* TestFirebase.storyboard in Resources */,
 				9BFD7076213055A6000443F7 /* Assets.xcassets in Resources */,
-				9BFD7074213055A5000443F7 /* Main.storyboard in Resources */,
+				9BFD7074213055A5000443F7 /* Appointment.storyboard in Resources */,
 				CB91ECD9213086F30077C913 /* GoogleService-Info.plist in Resources */,
 				9BFD7074213055A5000443F7 /* Appointment.storyboard in Resources */,
 			);
@@ -560,8 +559,6 @@
 				9BFD709821305F2B000443F7 /* Appointment.swift in Sources */,
 				B1212C4F213078B000771370 /* PacientServiceProtocol.swift in Sources */,
 				B1212C462130739600771370 /* TestFirebaseViewController.swift in Sources */,
-				9BFD7071213055A5000443F7 /* ViewController.swift in Sources */,
-				9BFD7071213055A5000443F7 /* AppointmentViewController.swift in Sources */,
 				9BFD70AE2130714E000443F7 /* CardView.swift in Sources */,
 				9BFD7084213058B1000443F7 /* Pacient.swift in Sources */,
 				9BFD70A221306052000443F7 /* DoctorMechanismMock.swift in Sources */,
