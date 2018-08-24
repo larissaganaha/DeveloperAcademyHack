@@ -20,6 +20,13 @@ class AppointmentViewController: UIViewController {
         self.transcript = appointment.transcript
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let viewController = segue.destination as? TranscriptViewController {
+            viewController.transcript = self.transcript
+            viewController.delegate = self
+        }
+    }
+    
 }
 extension AppointmentViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -89,11 +96,11 @@ extension AppointmentViewController: EndCellDelegate {
     }
 }
 
-extension AppointmentViewController: TranscriptCellProtocol {
+extension AppointmentViewController: TranscriptCellProtocol, TranscriptEditProtocol {
     func updateTranscript(to text: String) {
         self.transcript = text
     }
     func transcriptButtonPressed() {
-        
+        self.performSegue(withIdentifier: "showTranscript", sender: self)
     }
 }

@@ -428,10 +428,21 @@
                         <viewLayoutGuide key="safeArea" id="Srt-iQ-EId"/>
                     </view>
                     <size key="freeformSize" width="768" height="2000"/>
+                    <connections>
+                        <segue destination="Z6H-lC-kAQ" kind="presentation" identifier="showTranscript" modalPresentationStyle="overFullScreen" id="bqp-29-RaC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wmU-ni-RIw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="542.96875" y="310.546875"/>
+        </scene>
+        <!--Transcript-->
+        <scene sceneID="rr4-Xw-8rM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Transcript" id="Z6H-lC-kAQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E2A-ko-ObI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="958" y="311"/>
         </scene>
     </scenes>
     <resources>
