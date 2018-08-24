@@ -20,9 +20,10 @@ class FirebaseMechanism: NSObject {
     override init() {
         super.init()
         ref = Database.database().reference()
+        
     }
     
-    func retrieveAll<T: PersistenceObject>(dump: T.Type, path: String, handler: @escaping ([T]?) -> Void) {
+    func retrieve<T: PersistenceObject>(dump: T.Type, path: String, handler: @escaping ([T]?) -> Void) {
         var allObjects: [T] = []
         
         ref?.child(path).observeSingleEvent(of: .value, with: { (snapshot) in

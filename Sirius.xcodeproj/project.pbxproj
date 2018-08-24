@@ -53,6 +53,8 @@
 		B1212C4F213078B000771370 /* PacientServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD7082213058A4000443F7 /* PacientServiceProtocol.swift */; };
 		CB91ECD721305ECA0077C913 /* FirebaseMechanism.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB91ECD621305ECA0077C913 /* FirebaseMechanism.swift */; };
 		CB91ECD9213086F30077C913 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB91ECD8213086F20077C913 /* GoogleService-Info.plist */; };
+		CBC069F521308D6E004B2D70 /* AppointmentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC069F421308D6E004B2D70 /* AppointmentService.swift */; };
+		CBC069F621308D73004B2D70 /* AppointmentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC069F421308D6E004B2D70 /* AppointmentService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +103,7 @@
 		BF69C464E089AF600107AC8C /* Pods_Sirius.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sirius.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB91ECD621305ECA0077C913 /* FirebaseMechanism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMechanism.swift; sourceTree = "<group>"; };
 		CB91ECD8213086F20077C913 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CBC069F421308D6E004B2D70 /* AppointmentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +211,7 @@
 			children = (
 				9BFD7082213058A4000443F7 /* PacientServiceProtocol.swift */,
 				9BFD708D21305A6C000443F7 /* PacientService.swift */,
+				CBC069F421308D6E004B2D70 /* AppointmentService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -540,6 +544,7 @@
 				9BFD7083213058A4000443F7 /* PacientServiceProtocol.swift in Sources */,
 				9BFD708E21305A6C000443F7 /* PacientService.swift in Sources */,
 				9BFD70572130555B000443F7 /* AppDelegate.swift in Sources */,
+				CBC069F521308D6E004B2D70 /* AppointmentService.swift in Sources */,
 				9BFD709521305EDE000443F7 /* DataMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -565,6 +570,7 @@
 				B1212C4B2130789F00771370 /* FirebaseMechanism.swift in Sources */,
 				9BFD706F213055A5000443F7 /* AppDelegate.swift in Sources */,
 				9BFD70AA21306601000443F7 /* VoiceRecognitionTestViewController.swift in Sources */,
+				CBC069F621308D73004B2D70 /* AppointmentService.swift in Sources */,
 				B1212C47213073C600771370 /* PacientService.swift in Sources */,
 				9B19898721307A6100DABE6E /* PacientInfoTableViewCell.swift in Sources */,
 				9BFD709621305F1E000443F7 /* DataMock.swift in Sources */,

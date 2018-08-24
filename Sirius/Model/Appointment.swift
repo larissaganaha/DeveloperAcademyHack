@@ -14,6 +14,7 @@ class Appointment: PersistenceObject {
     var transcript: String
     var sinptomLog: DataLog
     var reportLog: DataLog
+    var isActive: Bool = true
     var dictInfo: [AnyHashable: Any] = [:]
     
     init (pacient: Pacient, scheduledTime: Date, transcript: String, sinptomLog: DataLog, reportLog: DataLog) {
@@ -42,7 +43,8 @@ class Appointment: PersistenceObject {
             "textsSinp": sinptomLog.texts,
             "dateReport": reportLog.date,
             "imagesReport": reportLog.images,
-            "textsReport": reportLog.texts
+            "textsReport": reportLog.texts,
+            "isActive": true
         ]
     }
     
@@ -74,6 +76,8 @@ class Appointment: PersistenceObject {
             
             self.reportLog = DataLog(date: dateReport, images: imagesReport, texts: textsReport)
             self.sinptomLog = DataLog(date: dateSinp, images: imagesSinp, texts: textsSinp)
+            
+            self.isActive = true
             
             self.dictInfo = dictionary
         } else {
