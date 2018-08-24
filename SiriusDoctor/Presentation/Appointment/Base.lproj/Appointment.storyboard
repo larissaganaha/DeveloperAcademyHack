@@ -21,14 +21,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vmQ-uc-Pix">
-                                <rect key="frame" x="20" y="20" width="728" height="1980"/>
+                                <rect key="frame" x="0.0" y="20" width="768" height="1980"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="profileCell" rowHeight="210" id="5A3-i6-oUg" customClass="ProfileTableViewCell" customModule="SiriusDoctor" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="728" height="210"/>
+                                        <rect key="frame" x="0.0" y="28" width="768" height="210"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5A3-i6-oUg" id="voh-o8-Hfq">
-                                            <rect key="frame" x="0.0" y="0.0" width="728" height="210"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="210"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9GL-Bt-Abc">
@@ -81,7 +81,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYG-i8-kCJ">
-                                                            <rect key="frame" x="5" y="5" width="41" height="30"/>
+                                                            <rect key="frame" x="0.0" y="5" width="41" height="30"/>
                                                             <state key="normal" title="Voltar"/>
                                                             <connections>
                                                                 <action selector="backButtonPressed:" destination="5A3-i6-oUg" eventType="touchUpInside" id="2wZ-8Y-Rjh"/>
@@ -100,7 +100,7 @@
                                                         <constraint firstItem="JWx-H1-A31" firstAttribute="top" secondItem="z6c-7A-pDq" secondAttribute="bottom" constant="8" id="LHW-iA-6oU"/>
                                                         <constraint firstItem="nWY-To-GkB" firstAttribute="leading" secondItem="JWx-H1-A31" secondAttribute="trailing" constant="20" id="QjJ-bk-S8f"/>
                                                         <constraint firstAttribute="trailing" secondItem="nWY-To-GkB" secondAttribute="trailing" constant="10" id="Rbf-X9-QHz"/>
-                                                        <constraint firstItem="GYG-i8-kCJ" firstAttribute="leading" secondItem="9GL-Bt-Abc" secondAttribute="leading" constant="5" id="Yof-nI-MBO"/>
+                                                        <constraint firstItem="GYG-i8-kCJ" firstAttribute="leading" secondItem="9GL-Bt-Abc" secondAttribute="leading" id="Yof-nI-MBO"/>
                                                         <constraint firstAttribute="trailing" secondItem="YYr-tV-Wmf" secondAttribute="trailing" constant="10" id="ZMt-6T-S1i"/>
                                                         <constraint firstItem="GZd-Li-9RY" firstAttribute="leading" secondItem="JWx-H1-A31" secondAttribute="leading" id="ZT5-t0-XFe"/>
                                                         <constraint firstItem="YYr-tV-Wmf" firstAttribute="leading" secondItem="GZd-Li-9RY" secondAttribute="leading" id="aQQ-sU-eIr"/>
@@ -134,10 +134,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="appointmentInfoCell" rowHeight="250" id="WcS-DB-f3M" customClass="PacientInfoTableViewCell" customModule="SiriusDoctor" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="238" width="728" height="250"/>
+                                        <rect key="frame" x="0.0" y="238" width="768" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WcS-DB-f3M" id="0Uj-NS-vI7">
-                                            <rect key="frame" x="0.0" y="0.0" width="728" height="250"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="250"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informações da Consulta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LuD-Ad-2qi">
@@ -238,10 +238,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="relevantImagesCell" rowHeight="200" id="A1a-WO-FNJ" customClass="RelevantImagesTableViewCell" customModule="SiriusDoctor" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="488" width="728" height="200"/>
+                                        <rect key="frame" x="0.0" y="488" width="768" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A1a-WO-FNJ" id="wE0-7O-Z5y">
-                                            <rect key="frame" x="0.0" y="0.0" width="728" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imagens Relevantes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avC-tX-4fD">
@@ -303,10 +303,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="pInfoCell" rowHeight="250" id="Ib2-fR-aey" customClass="InfoTableViewCell" customModule="SiriusDoctor" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="688" width="728" height="250"/>
+                                        <rect key="frame" x="0.0" y="688" width="768" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ib2-fR-aey" id="QgP-ek-A94">
-                                            <rect key="frame" x="0.0" y="0.0" width="728" height="250"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="250"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informações do Paciente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OmV-VY-oQ5">
@@ -387,10 +387,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="endCell" rowHeight="119" id="oAn-vh-9Nt" customClass="EndTableViewCell" customModule="SiriusDoctor" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="938" width="728" height="119"/>
+                                        <rect key="frame" x="0.0" y="938" width="768" height="119"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oAn-vh-9Nt" id="Hw4-xa-mJy">
-                                            <rect key="frame" x="0.0" y="0.0" width="728" height="119"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="119"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ypx-l7-tOa">
@@ -420,10 +420,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="vmQ-uc-Pix" secondAttribute="trailing" id="9jy-0A-V8L"/>
+                            <constraint firstItem="vmQ-uc-Pix" firstAttribute="leading" secondItem="Srt-iQ-EId" secondAttribute="leading" id="OQA-kE-1yb"/>
+                            <constraint firstItem="vmQ-uc-Pix" firstAttribute="trailing" secondItem="Srt-iQ-EId" secondAttribute="trailing" id="X4y-eE-XjQ"/>
                             <constraint firstItem="vmQ-uc-Pix" firstAttribute="top" secondItem="phx-ho-aoF" secondAttribute="topMargin" id="XbR-aE-jJA"/>
                             <constraint firstAttribute="bottomMargin" secondItem="vmQ-uc-Pix" secondAttribute="bottom" id="pcQ-Z0-0uE"/>
-                            <constraint firstItem="vmQ-uc-Pix" firstAttribute="leading" secondItem="phx-ho-aoF" secondAttribute="leadingMargin" id="qJK-aK-eMY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Srt-iQ-EId"/>
                     </view>
