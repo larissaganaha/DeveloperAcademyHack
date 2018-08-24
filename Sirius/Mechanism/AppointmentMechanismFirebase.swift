@@ -16,19 +16,14 @@ class AppointmentMechanismFirebase: FirebaseMechanism {
     }
     
     func createAppointment(pacient: Pacient, scheduledTime: Date, transcript: String, sinptomLog: DataLog, reportLog: DataLog) {
-        let newAppointment = Appointment(dictionary: [
-            "pacient": pacient,
-            "scheduledTime": scheduledTime,
-            "transcript": transcript,
-            "sinptomLog": sinptomLog,
-            "reportLog": reportLog])
+        let newAppointment = Appointment(pacient: pacient, scheduledTime: scheduledTime, transcript: transcript, sinptomLog: sinptomLog, reportLog: reportLog)
         
         let path = "Appointments"
         
-        self.create(dump: Appointment.self, object: newAppointment, path: path, newObjectID: id)
+        self.create(dump: Appointment.self, object: newAppointment, path: path, newObjectID: nil)
     }
     
-    func retrievePacient(id: String) {
+    func retrieveAppointment(id: String) {
         ref?.child("Appointments/\(id)").observeSingleEvent(of: .value, with: { (snapshot) in
             let appointment = snapshot.value as? NSDictionary
             
