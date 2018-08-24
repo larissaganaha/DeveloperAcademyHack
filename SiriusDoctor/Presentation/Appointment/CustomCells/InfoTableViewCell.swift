@@ -10,7 +10,7 @@ import UIKit
 
 class InfoTableViewCell: UITableViewCell {
     
-    var backgrounds: [UIImage] = [#imageLiteral(resourceName: "purpleGradient"), #imageLiteral(resourceName: "greenGradient"), #imageLiteral(resourceName: "blueGradient")]
+    var backgrounds: [UIImage] = [#imageLiteral(resourceName: "purpleGradient"), #imageLiteral(resourceName: "blueGradient"), #imageLiteral(resourceName: "greenGradient")]
     var titles: [String] = ["Informações Pessoais", "Doenças na família", "Medicações"]
     
     var personalInfo: String = "personal info"

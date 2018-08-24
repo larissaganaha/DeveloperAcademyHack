@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		426F922621307E4F00F7C53A /* Poppins-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 426F922521307E4F00F7C53A /* Poppins-Medium.otf */; };
+		426F922721307E4F00F7C53A /* Poppins-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 426F922521307E4F00F7C53A /* Poppins-Medium.otf */; };
+		426F922921307E6300F7C53A /* Poppins-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 426F922821307E6200F7C53A /* Poppins-SemiBold.otf */; };
+		426F922A21307E6300F7C53A /* Poppins-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 426F922821307E6200F7C53A /* Poppins-SemiBold.otf */; };
+		426F922C21307E8100F7C53A /* Poppins-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 426F922B21307E8100F7C53A /* Poppins-Regular.otf */; };
+		426F922D21307E8100F7C53A /* Poppins-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 426F922B21307E8100F7C53A /* Poppins-Regular.otf */; };
+		426F922F213081BB00F7C53A /* KerningLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426F922E213081BB00F7C53A /* KerningLabel.swift */; };
+		426F92312130889D00F7C53A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426F92302130889D00F7C53A /* CardView.swift */; };
+		426F9234213093F800F7C53A /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426F9233213093F800F7C53A /* ProfileController.swift */; };
 		59F03164602557F35BD1A839 /* Pods_Sirius.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF69C464E089AF600107AC8C /* Pods_Sirius.framework */; };
 		5C5607BF91995186AC6AD4C8 /* Pods_SiriusDoctor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D9C979657F4AD92FDFCF04 /* Pods_SiriusDoctor.framework */; };
 		9B1989852130775100DABE6E /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1989842130775100DABE6E /* ProfileTableViewCell.swift */; };
@@ -17,6 +26,8 @@
 		9BB86FEA21309010001966CC /* InfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB86FE921309010001966CC /* InfoCollectionViewCell.swift */; };
 		9BB86FEC21309464001966CC /* EndTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB86FEB21309464001966CC /* EndTableViewCell.swift */; };
 		9BB86FED21309747001966CC /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD7070213055A5000443F7 /* AppointmentViewController.swift */; };
+		9BB86FEF21309F4C001966CC /* AppointmentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB86FEE21309F42001966CC /* AppointmentService.swift */; };
+		9BB86FF021309F5D001966CC /* AppointmentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB86FEE21309F42001966CC /* AppointmentService.swift */; };
 		9BFD70572130555B000443F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD70562130555B000443F7 /* AppDelegate.swift */; };
 		9BFD70592130555B000443F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD70582130555B000443F7 /* ViewController.swift */; };
 		9BFD705C2130555B000443F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFD705A2130555B000443F7 /* Main.storyboard */; };
@@ -59,8 +70,6 @@
 		B1212C4F213078B000771370 /* PacientServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD7082213058A4000443F7 /* PacientServiceProtocol.swift */; };
 		CB91ECD721305ECA0077C913 /* FirebaseMechanism.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB91ECD621305ECA0077C913 /* FirebaseMechanism.swift */; };
 		CB91ECD9213086F30077C913 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB91ECD8213086F20077C913 /* GoogleService-Info.plist */; };
-		CBC069F521308D6E004B2D70 /* AppointmentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC069F421308D6E004B2D70 /* AppointmentService.swift */; };
-		CBC069F621308D73004B2D70 /* AppointmentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC069F421308D6E004B2D70 /* AppointmentService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +77,12 @@
 		3D13AF6C28C4174C34B89D79 /* Pods-Sirius.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sirius.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sirius/Pods-Sirius.release.xcconfig"; sourceTree = "<group>"; };
 		92D9C979657F4AD92FDFCF04 /* Pods_SiriusDoctor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SiriusDoctor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9672AEF76EAAB636636814B2 /* Pods-SiriusDoctor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SiriusDoctor.release.xcconfig"; path = "Pods/Target Support Files/Pods-SiriusDoctor/Pods-SiriusDoctor.release.xcconfig"; sourceTree = "<group>"; };
+		426F922521307E4F00F7C53A /* Poppins-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.otf"; sourceTree = "<group>"; };
+		426F922821307E6200F7C53A /* Poppins-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.otf"; sourceTree = "<group>"; };
+		426F922B21307E8100F7C53A /* Poppins-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.otf"; sourceTree = "<group>"; };
+		426F922E213081BB00F7C53A /* KerningLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KerningLabel.swift; sourceTree = "<group>"; };
+		426F92302130889D00F7C53A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		426F9233213093F800F7C53A /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		9B1989842130775100DABE6E /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 		9B19898621307A6100DABE6E /* PacientInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacientInfoTableViewCell.swift; sourceTree = "<group>"; };
 		9BB86FE221308C1E001966CC /* RelevantImagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelevantImagesTableViewCell.swift; sourceTree = "<group>"; };
@@ -75,6 +90,7 @@
 		9BB86FE721308F24001966CC /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
 		9BB86FE921309010001966CC /* InfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		9BB86FEB21309464001966CC /* EndTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndTableViewCell.swift; sourceTree = "<group>"; };
+		9BB86FEE21309F42001966CC /* AppointmentService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentService.swift; sourceTree = "<group>"; };
 		9BFD70532130555B000443F7 /* Sirius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sirius.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BFD70562130555B000443F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BFD70582130555B000443F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,7 +130,6 @@
 		BF69C464E089AF600107AC8C /* Pods_Sirius.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sirius.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB91ECD621305ECA0077C913 /* FirebaseMechanism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMechanism.swift; sourceTree = "<group>"; };
 		CB91ECD8213086F20077C913 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		CBC069F421308D6E004B2D70 /* AppointmentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +152,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9B1989822130773500DABE6E /* CustomViews */ = {
+		426F9232213088A400F7C53A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				426F92302130889D00F7C53A /* CardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9B1989822130773500DABE6E /* Customiews */ = {
 			isa = PBXGroup;
 			children = (
 				9BFD70AD2130714E000443F7 /* CardView.swift */,
@@ -192,6 +215,7 @@
 			children = (
 				B1212C482130785900771370 /* GoogleService-Info.plist */,
 				CB91ECD521305E3B0077C913 /* Mechanism */,
+				426F9232213088A400F7C53A /* View */,
 				9BFD709121305BA6000443F7 /* Mock */,
 				9BFD707E2130564C000443F7 /* Model */,
 				9BFD707F21305652000443F7 /* Services */,
@@ -199,6 +223,9 @@
 				9BFD70562130555B000443F7 /* AppDelegate.swift */,
 				9BFD705D2130555C000443F7 /* Assets.xcassets */,
 				9BFD705F2130555C000443F7 /* LaunchScreen.storyboard */,
+				426F922521307E4F00F7C53A /* Poppins-Medium.otf */,
+				426F922B21307E8100F7C53A /* Poppins-Regular.otf */,
+				426F922821307E6200F7C53A /* Poppins-SemiBold.otf */,
 				9BFD70622130555C000443F7 /* Info.plist */,
 			);
 			path = Sirius;
@@ -233,9 +260,9 @@
 		9BFD707F21305652000443F7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				9BB86FEE21309F42001966CC /* AppointmentService.swift */,
 				9BFD7082213058A4000443F7 /* PacientServiceProtocol.swift */,
 				9BFD708D21305A6C000443F7 /* PacientService.swift */,
-				CBC069F421308D6E004B2D70 /* AppointmentService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -293,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				9BFD70582130555B000443F7 /* ViewController.swift */,
+				426F922E213081BB00F7C53A /* KerningLabel.swift */,
 				9BFD705A2130555B000443F7 /* Main.storyboard */,
 			);
 			path = Appointments;
@@ -302,6 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				9BFD709E21306013000443F7 /* Profile.storyboard */,
+				426F9233213093F800F7C53A /* ProfileController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -447,9 +476,12 @@
 			files = (
 				9BFD70612130555C000443F7 /* LaunchScreen.storyboard in Resources */,
 				9BFD705E2130555C000443F7 /* Assets.xcassets in Resources */,
+				426F922921307E6300F7C53A /* Poppins-SemiBold.otf in Resources */,
 				B1212C492130785900771370 /* GoogleService-Info.plist in Resources */,
 				9BFD709F21306013000443F7 /* Profile.storyboard in Resources */,
 				9BFD705C2130555B000443F7 /* Main.storyboard in Resources */,
+				426F922C21307E8100F7C53A /* Poppins-Regular.otf in Resources */,
+				426F922621307E4F00F7C53A /* Poppins-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,10 +492,13 @@
 				9BFD7079213055A6000443F7 /* LaunchScreen.storyboard in Resources */,
 				9BFD70A8213065C4000443F7 /* VoiceRecognitionTest.storyboard in Resources */,
 				B1212C432130730F00771370 /* TestFirebase.storyboard in Resources */,
+				426F922A21307E6300F7C53A /* Poppins-SemiBold.otf in Resources */,
 				9BFD7076213055A6000443F7 /* Assets.xcassets in Resources */,
 				9BFD7074213055A5000443F7 /* Appointment.storyboard in Resources */,
 				CB91ECD9213086F30077C913 /* GoogleService-Info.plist in Resources */,
 				9BFD7074213055A5000443F7 /* Appointment.storyboard in Resources */,
+				426F922D21307E8100F7C53A /* Poppins-Regular.otf in Resources */,
+				426F922721307E4F00F7C53A /* Poppins-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,12 +515,14 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -563,13 +600,16 @@
 				9BFD708121305660000443F7 /* Pacient.swift in Sources */,
 				9BFD70862130590D000443F7 /* DataLog.swift in Sources */,
 				9BFD708821305916000443F7 /* Appointment.swift in Sources */,
+				426F922F213081BB00F7C53A /* KerningLabel.swift in Sources */,
 				B1212C412130684F00771370 /* AppointmentMechanismFirebase.swift in Sources */,
 				B1212C3F2130638300771370 /* PacientMechanismFirebase.swift in Sources */,
 				9BFD7083213058A4000443F7 /* PacientServiceProtocol.swift in Sources */,
 				9BFD708E21305A6C000443F7 /* PacientService.swift in Sources */,
 				9BFD70572130555B000443F7 /* AppDelegate.swift in Sources */,
-				CBC069F521308D6E004B2D70 /* AppointmentService.swift in Sources */,
+				426F92312130889D00F7C53A /* CardView.swift in Sources */,
+				9BB86FEF21309F4C001966CC /* AppointmentService.swift in Sources */,
 				9BFD709521305EDE000443F7 /* DataMock.swift in Sources */,
+				426F9234213093F800F7C53A /* ProfileController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,9 +638,9 @@
 				B1212C4B2130789F00771370 /* FirebaseMechanism.swift in Sources */,
 				9BFD706F213055A5000443F7 /* AppDelegate.swift in Sources */,
 				9BFD70AA21306601000443F7 /* VoiceRecognitionTestViewController.swift in Sources */,
-				CBC069F621308D73004B2D70 /* AppointmentService.swift in Sources */,
 				B1212C47213073C600771370 /* PacientService.swift in Sources */,
 				9B19898721307A6100DABE6E /* PacientInfoTableViewCell.swift in Sources */,
+				9BB86FF021309F5D001966CC /* AppointmentService.swift in Sources */,
 				9BFD709621305F1E000443F7 /* DataMock.swift in Sources */,
 				9BB86FE521308CF3001966CC /* ImageCollectionViewCell.swift in Sources */,
 				9BB86FEC21309464001966CC /* EndTableViewCell.swift in Sources */,
