@@ -15,13 +15,11 @@ class PacientFirebaseMechanism: FirebaseMechanism {
         super.init()
     }
     
-    func createPacient(ID: String, name: String, address: String, telephone: String, bornDate: Date, height: Double, weight: Double,
-                       drink: Bool, hipertension: Bool, diabetes: Bool, smoking: Bool) {
-        let newPacient = Pacient(ID: ID, name: name, address: address, telephone: telephone, bornDate: bornDate, height: height, weight: weight, drink: drink, hipertension: hipertension, diabetes: diabetes, smoking: smoking)
+    func createPacient(pacient: Pacient) {
         
         let path = "Pacients"
         
-        self.create(dump: Pacient.self, object: newPacient, path: path, newObjectID: ID)
+        self.create(dump: Pacient.self, object: pacient, path: path, newObjectID: pacient.ID)
     }
     
     func retrievePacient(id: String, completionHandler: @escaping (Pacient?) -> Void) {

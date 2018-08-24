@@ -52,7 +52,7 @@ class Pacient: NSObject, PersistenceObject {
             "name": name,
             "address": address,
             "telephone": telephone,
-            "bornDate": bornDate,
+            "bornDate": bornDate.toString(dateFormat: "dd-MM-yyyy"),
             "height": height,
             "weight": weight,
             "drink": drink,
@@ -119,4 +119,13 @@ class Pacient: NSObject, PersistenceObject {
             return nil
         }
     }
+}
+
+extension Date {
+    func toString(dateFormat format  : String ) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        return dateFormatter.string(from: self)
+    }
+    
 }

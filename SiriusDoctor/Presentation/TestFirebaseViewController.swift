@@ -23,6 +23,9 @@ class TestFirebaseViewController: UIViewController {
                 }
             }
         }
+        
+        let pac = Pacient(ID: "2", name: "Bia", address: "a", telephone: "13", bornDate: Date(), height: 1.0, weight: 1.0, drink: false, hipertension: false, diabetes: false, smoking: false)
+        pacientService.savePacient(pac)
     }
 
     override func didReceiveMemoryWarning() {
