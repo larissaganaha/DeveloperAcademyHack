@@ -50,4 +50,6 @@ class Pacient {
         self.init(ID: "12345", name: "", address: "", telephone: "", bornDate: Date(), height: 1.50, weight: 60.0, drink: false, hipertension: false, diabetes: false, smoking: false)
     }
     
+    
+    
 }
