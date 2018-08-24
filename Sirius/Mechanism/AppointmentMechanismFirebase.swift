@@ -15,12 +15,10 @@ class AppointmentMechanismFirebase: FirebaseMechanism {
         super.init()
     }
     
-    func createAppointment(pacient: Pacient, scheduledTime: Date, transcript: String, sinptomLog: DataLog, reportLog: DataLog) {
-        let newAppointment = Appointment(pacient: pacient, scheduledTime: scheduledTime, transcript: transcript, sinptomLog: sinptomLog, reportLog: reportLog)
-        
+    func createAppointment(appointment: Appointment) {
         let path = "Appointments"
         
-        self.create(dump: Appointment.self, object: newAppointment, path: path, newObjectID: nil)
+        self.create(dump: Appointment.self, object: appointment, path: path, newObjectID: nil)
     }
     
     func retrieveAppointment(id: String) {
