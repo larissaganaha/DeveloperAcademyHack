@@ -11,7 +11,7 @@ import Foundation
 class VoiceRecognitionReference {
     
     static let simptoms: [String] = [
-        "tosse", "dor de cabeça", "dor de ouvido", "diarréia", "tremedeira", "braço quebrado", "dor intermitente", "dor aguda", "secreção", "catarro", "tosse seca", "vermelhidão", "roxo", "coceira", "perda de cabelo", "perca de cabelo", "visão laser", "dor nas costas", "olhos vermelhos", "lágrima", "olho lacrimejando", "dor nas juntas", "dor no joelho", "dor nos joelhos", "visão embaçada", "vista embaçada", "visão turva", "dificuldade de respirar", "respiração forçada", "língua presa", "sangue", "nariz sangrando", "sangramento nasal", "alergia", "muito sensível", "hipersensibilidade", "dor nos olhos"
+        "tosse", "dor de cabeça", "dor de ouvido", "diarréia", "tremedeira", "braço quebrado", "dor intermitente", "dor aguda", "secreção", "catarro", "tosse seca", "vermelhidão", "roxo", "coceira", "perda de cabelo", "perca de cabelo", "visão laser", "dor nas costas", "olhos vermelhos", "lágrima", "olho lacrimejando", "dor nas juntas", "dor no joelho", "dor nos joelhos", "visão embaçada", "vista embaçada", "visão turva", "dificuldade de respirar", "respiração forçada", "língua presa", "sangue", "nariz sangrando", "sangramento nasal", "alergia", "muito sensível", "hipersensibilidade", "dor nos olhos", "melanoma", "mancha na pele", "carcinoma"
     ]
     
     static let medicines: [String] = [

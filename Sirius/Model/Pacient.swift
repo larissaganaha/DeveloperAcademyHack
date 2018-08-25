@@ -88,10 +88,6 @@ class Pacient: NSObject, PersistenceObject {
         }
     }
     
-//    convenience override init() {
-//        self.init(ID: "12345", name: "", address: "", telephone: "", bornDate: Date(), height: 1.50, weight: 60.0, drink: false, hipertension: false, diabetes: false, smoking: false)
-//    }
-    
     override init () {
         super.init()
     }
@@ -99,7 +95,7 @@ class Pacient: NSObject, PersistenceObject {
     required init?(dictionary: [AnyHashable : Any]) {
         super.init()
         
-        if  let id = dictionary["ID"] as? String,
+        if  let ID = dictionary["ID"] as? String,
             let name = dictionary["name"] as? String,
             let address = dictionary["address"] as? String,
             let telephone = dictionary["telephone"] as? String,
@@ -110,7 +106,7 @@ class Pacient: NSObject, PersistenceObject {
             let diabetes = dictionary["diabetes"] as? Bool,
             let smoking = dictionary["smoking"] as? Bool {
             
-            self.ID = id
+            self.ID = ID
             self.name = name
             self.address = address
             self.telephone = telephone

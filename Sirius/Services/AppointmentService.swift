@@ -25,7 +25,7 @@ class AppointmentService: NSObject {
     }
     
     //Chamamos quando o médico quer ver todos os appointments
-    func getAllAppointments(completionHandler: @escaping ([Appointment]?) -> Void) {
+    func getAllActiveAppointments(completionHandler: @escaping ([Appointment]?) -> Void) {
         AppointmentMechanismFirebase.shared.retrieveAllActiveAppointments(completionHandler: completionHandler)
     }
 }

@@ -11,6 +11,8 @@ import Kingfisher
 
 class AppointmentViewController: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
+    
     var pacient: Pacient = DataMock.pacient
     var appointment: Appointment = DataMock.appointments[0]
     var transcript: String = ""
@@ -33,7 +35,34 @@ class AppointmentViewController: UIViewController {
     
     func saveAppointment() {
         appointment.transcript = self.transcript
+        appointment.dictInfo["transcript"] = self.transcript
         AppointmentService().saveAppointment(appointment)
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        let userInfo = notification.userInfo ?? [:]
+        let height = (userInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue.size.height
+        
+        self.tableView.contentInset.bottom = height
+        self.tableView.scrollIndicatorInsets.bottom = height
+        self.tableView.scrollToRow(at: IndexPath(row: 6, section: 0), at: .top, animated: true)
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        self.tableView.contentInset.bottom = 0
+        self.tableView.scrollIndicatorInsets.bottom = 0
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
     }
     
 }
@@ -113,6 +142,7 @@ extension AppointmentViewController: BackCellDelegate {
 extension AppointmentViewController: EndCellDelegate {
     func endButtonPressed() {
         self.appointment.isActive = false
+        self.appointment.dictInfo["isActive"] = false
         self.saveAppointment()
         self.dismiss(animated: true, completion: nil)
     }
