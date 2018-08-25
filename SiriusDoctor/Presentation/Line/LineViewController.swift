@@ -32,7 +32,9 @@ class LineViewController: UIViewController {
         activity.startAnimating()
         AppointmentService().getAllActiveAppointments { (appointments) in
             if let app = appointments {
-                self.appointments = app
+                self.appointments = app.sorted(by: { (app1, app2) -> Bool in
+                    return app1.scheduledTime.compare(app2.scheduledTime) == ComparisonResult.orderedDescending
+                })
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                     self.activity.stopAnimating()
