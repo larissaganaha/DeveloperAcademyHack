@@ -37,7 +37,7 @@ class HomeScreenController: UIViewController {
                         LagTimeService.getLagTime(completion: { (lagtime) in
                             let hours = lagtime!/60
                             if  hours > 0 {
-                                self.lagTimeLabel.text = "\(hours)h \(lagtime!%60) min"
+                                self.lagTimeLabel.text = "\(hours)h\(lagtime!%60)min"
                             } else {
                                 self.lagTimeLabel.text = "00h\(lagtime!) min"
                             }
