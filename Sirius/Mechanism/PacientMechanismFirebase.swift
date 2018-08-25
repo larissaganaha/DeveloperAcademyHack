@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import Firebase
+import FirebaseStorage
 
 class PacientFirebaseMechanism: FirebaseMechanism {
     static let shared = PacientFirebaseMechanism()
