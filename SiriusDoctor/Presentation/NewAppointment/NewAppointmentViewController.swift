@@ -42,7 +42,7 @@ class NewAppointmentViewController: UIViewController {
             return
         }
         
-        let appointment = Appointment(id: UUID().uuidString, pacient: pacient2, scheduledTime: datePicker.date, transcript: "", sinptomLog: nil, reportLog: nil)
+        let appointment = Appointment(id: UUID().uuidString, pacient: pacient2, scheduledTime: datePicker.date, transcript: "", sinptomLog: DataLog(date: Date(), images: [], texts: []), reportLog: DataLog(date: Date(), images: [], texts: []))
         AppointmentService().saveAppointment(appointment)
         self.dismiss(animated: true, completion: nil)
     }
