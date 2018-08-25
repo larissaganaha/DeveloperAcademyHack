@@ -39,8 +39,8 @@ class LineViewController: UIViewController {
                 }
             }
         }
-        
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self,
+        //Atualizar o lag time a cada 5 minutos
+        timer = Timer.scheduledTimer(timeInterval: 300, target: self,
                                      selector: #selector(updateLagTime),
                                      userInfo: nil, repeats: true)
     }
@@ -56,17 +56,12 @@ class LineViewController: UIViewController {
     
     @objc func updateLagTime(){
         //Possible lag será horário atual - (horário final da primeira consulta da fila + 20 minutos)
-        var possibleLag2 = 0
-        
-        let bla = Date().addingTimeInterval(200)
+        var possibleLag = 0
         
         if self.appointments.count > 0{
-            //bla - Date()
-            possibleLag2 = bla.minutes(from: Date())
-//            possibleLag2 = Date().minutes(from: self.appointments[0].scheduledTime)
-            print(possibleLag2)
+            //Date() - scheduledTime
+            possibleLag = Date().minutes(from: self.appointments[0].scheduledTime)
         }
-        let possibleLag = Calendar.current.component(.second, from: Date())
         
         //Se possibleLag > 0, há atraso
         if possibleLag > 0 {
