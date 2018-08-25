@@ -9,6 +9,7 @@ target 'Sirius' do
   pod 'Firebase'
   pod 'FirebaseDatabase'
   pod 'FirebaseStorage'
+  pod 'Kingfisher'
 end
 
 target 'SiriusDoctor' do
