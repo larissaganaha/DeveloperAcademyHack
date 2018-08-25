@@ -23,22 +23,31 @@ class NextAppointmentController: UIViewController {
     @IBOutlet weak var symptomsTextField: UITextField!
     @IBOutlet weak var addPhotoButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var noImageLabel: UILabel!
+    @IBOutlet weak var noImageLabel1: UILabel!
+    @IBOutlet weak var noImageLabel2: UILabel!
     @IBOutlet weak var finishButton: UIButton!
     @IBOutlet weak var sinptomsLabel: UILabel!
     
-    var images: [UIImage] = []
+    @IBOutlet weak var collectionViewPhotos: UICollectionView!
+    @IBOutlet weak var collectionViewExams: UICollectionView!
+    
+    var photos: [UIImage] = []
+    
+    var exams: [UIImage] = []
 
     var pacient: Pacient?
     
     var appointment: Appointment!
+    
+    var wasPhotosPressed: Bool = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
         addPhotoButton.layer.cornerRadius = 17
         finishButton.layer.cornerRadius = 20
         symptomsTextField.delegate = self
-        noImageLabel.isHidden = true
+        noImageLabel1.isHidden = true
+        noImageLabel2.isHidden = true
         
         if let textsLog = appointment.sinptomLog?.texts {
             self.sinptomsLabel.text = textsLog.reduce("", { (result, string) -> String in
@@ -96,6 +105,16 @@ extension NextAppointmentController: UITextFieldDelegate {
 
 extension NextAppointmentController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBAction func addPhotoPressed(_ sender: Any) {
+        self.wasPhotosPressed = true
+        openLibrary()
+    }
+    
+    @IBAction func addExamPressed(_ sender: Any) {
+        self.wasPhotosPressed = false
+        openLibrary()
+    }
+    
+    private func openLibrary() {
         let photos = PHPhotoLibrary.authorizationStatus()
         if photos == .notDetermined || photos == .authorized {
             PHPhotoLibrary.requestAuthorization({ status in
@@ -103,7 +122,7 @@ extension NextAppointmentController: UIImagePickerControllerDelegate, UINavigati
                     let picker = UIImagePickerController()
                     picker.delegate = self
                     picker.allowsEditing = true
-
+                    
                     self.present(picker, animated: true, completion: nil)
                 } else {
                     self.alert(message: "No permission to access photo library") {_ in }
@@ -120,8 +139,6 @@ extension NextAppointmentController: UIImagePickerControllerDelegate, UINavigati
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
         var selectedImageFromPicker: UIImage?
-        //        let userID = Auth.auth().currentUser?.uid
-
         if let editedImage = info["UIImagePickerControllerEditedImage"] as? UIImage {
             selectedImageFromPicker = editedImage
         } else if let originalImage = info["UIImagePickerControllerOriginalImage"] as? UIImage {
@@ -129,8 +146,13 @@ extension NextAppointmentController: UIImagePickerControllerDelegate, UINavigati
         }
 
         if let selectedImage = selectedImageFromPicker {
-            self.images.append(selectedImage)
-            collectionView.reloadData()
+            if self.wasPhotosPressed {
+                self.photos.append(selectedImage)
+                collectionViewPhotos.reloadData()
+            } else {
+                self.exams.append(selectedImage)
+                collectionViewExams.reloadData()
+            }
         }
         dismiss(animated: true, completion: nil)
     }
@@ -138,21 +160,41 @@ extension NextAppointmentController: UIImagePickerControllerDelegate, UINavigati
 
 extension NextAppointmentController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let numberOfItens = self.images.count
-        if (numberOfItens == 0) {
-            self.noImageLabel.isHidden = false
+        if collectionView == self.collectionViewPhotos {
+            let numberOfItens = self.photos.count
+            if (numberOfItens == 0) {
+                self.noImageLabel1.isHidden = false
+            } else {
+                self.noImageLabel1.isHidden = true
+            }
+            return self.photos.count
         } else {
-            self.noImageLabel.isHidden = true
+            let numberOfItens = self.exams.count
+            if (numberOfItens == 0) {
+                self.noImageLabel2.isHidden = false
+            } else {
+                self.noImageLabel2.isHidden = true
+            }
+            return self.exams.count
         }
-        return self.images.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? GalleryColletionCell {
-            cell.photoImage.image = self.images[indexPath.row]
-            cell.photoImage.layer.cornerRadius = 10
-            return cell
+        if collectionView == self.collectionViewPhotos {
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? GalleryColletionCell {
+                cell.photoImage.image = self.photos[indexPath.row]
+                cell.photoImage.layer.cornerRadius = 10
+                return cell
+            }
+            return GalleryColletionCell()
+        } else {
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? GalleryColletionCell {
+                cell.photoImage.image = self.exams[indexPath.row]
+                cell.photoImage.layer.cornerRadius = 10
+                return cell
+            }
         }
-        return GalleryColletionCell()
+        
+        return UICollectionViewCell()
     }
 }
