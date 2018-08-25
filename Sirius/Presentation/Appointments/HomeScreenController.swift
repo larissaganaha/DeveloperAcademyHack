@@ -31,11 +31,21 @@ class HomeScreenController: UIViewController {
                 
                 AppointmentMechanismFirebase.shared.retrieveAppointments(from: pacient.ID, completionHandler: { (appointments) in
                     if let appointments = appointments {
-                        let activeAppointsFilter = appointments.filter{ $0.isActive }
-                        self.activeAppoints = activeAppointsFilter.sorted(by: { (app1, app2) -> Bool in
-                            return app1.scheduledTime.compare(app2.scheduledTime) == ComparisonResult.orderedDescending
+                        self.activeAppoints = appointments.filter{ $0.isActive }.sorted(by: { (app1, app2) -> Bool in
+                            return app1.scheduledTime.compare(app2.scheduledTime) == ComparisonResult.orderedAscending
                         })
-                        self.unactiveAppoints = appointments.filter{ !$0.isActive}
+                        self.unactiveAppoints = appointments.filter{ !$0.isActive }.sorted(by: { (app1, app2) -> Bool in
+                            return app1.scheduledTime.compare(app2.scheduledTime) == ComparisonResult.orderedAscending
+                        })
+                        
+                        LagTimeService.getLagTime(completion: { (lagtime) in
+                            let hours = lagtime!/60
+                            if  hours > 0 {
+                                self.lagTimeLabel.text = "\(hours)h \(lagtime!%60) min"
+                            } else {
+                                self.lagTimeLabel.text = "00h\(lagtime!) min"
+                            }
+                        })
                         
                         self.reloadNextAppointmentLabels()
                         
@@ -59,16 +69,14 @@ class HomeScreenController: UIViewController {
             let order = Calendar.current.compare(Date(), to: firstAppoint.scheduledTime, toGranularity: .day)
             switch order {
             case .orderedSame:
+                lagTimeLabel.isHidden = false
+                lagTimeTitleLabel.isHidden = false
+            case .orderedAscending:
                 lagTimeLabel.isHidden = true
                 lagTimeTitleLabel.isHidden = true
-            case .orderedAscending:
-                print("orderedAscending")
-                // do nothing yet
-                return
             case .orderedDescending:
-                print("orderedDescending")
-                // do nothing yet
-                return
+                lagTimeLabel.isHidden = true
+                lagTimeTitleLabel.isHidden = true
             }
         }
     }
