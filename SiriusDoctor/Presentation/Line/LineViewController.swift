@@ -45,6 +45,11 @@ class LineViewController: UIViewController {
                                      userInfo: nil, repeats: true)
     }
     
+    @IBAction func createAppointment(_ sender: Any) {
+        performSegue(withIdentifier: "createAppointment", sender: self)
+    }
+    
+    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let viewController = segue.destination as? AppointmentViewController,
@@ -112,6 +117,7 @@ extension LineViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 { return }
         self.performSegue(withIdentifier: "appointmentSegue", sender: self.appointments[indexPath.row - 1])
     }
     
