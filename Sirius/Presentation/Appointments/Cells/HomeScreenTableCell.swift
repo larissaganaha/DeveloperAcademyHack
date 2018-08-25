@@ -27,6 +27,8 @@ class HomeScreenTableCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func unwindToWaitHomeScreen(segue:UIStoryboardSegue) { }
+
 }
 
 extension HomeScreenTableCell: UICollectionViewDelegate, UICollectionViewDataSource {

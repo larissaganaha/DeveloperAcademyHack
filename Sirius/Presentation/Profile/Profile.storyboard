@@ -402,8 +402,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="35" id="Orc-VP-3sS"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <state key="normal" title="X">
-                                                    <color key="titleColor" red="0.36862745098039218" green="0.74509803921568629" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" red="0.35686274509999999" green="0.67843137249999996" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="doneButtonPressed:" destination="w38-gK-WkP" eventType="touchUpInside" id="h6Q-je-c5C"/>
@@ -482,13 +483,13 @@
                         <outletCollection property="editButtons" destination="2dU-TH-9LR" collectionClass="NSMutableArray" id="QQe-jV-ioL"/>
                         <outletCollection property="editButtons" destination="pyj-7i-ihC" collectionClass="NSMutableArray" id="6Ne-uw-Goq"/>
                         <outletCollection property="editButtons" destination="xrN-8d-0U4" collectionClass="NSMutableArray" id="EYl-Bg-dsg"/>
-                        <segue destination="V8w-Ru-GrH" kind="unwind" identifier="unwindToWaitScreen" unwindAction="unwindToWaitScreenWithSegue:" id="6et-O1-r3u"/>
+                        <segue destination="V8w-Ru-GrH" kind="unwind" identifier="unwindToHome" unwindAction="unwindToHomeScreenWithSegue:" id="hNh-0B-v7W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VY2-lS-Y8v" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="V8w-Ru-GrH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-2399.1999999999998" y="-1057.8710644677662"/>
+            <point key="canvasLocation" x="-604" y="-30"/>
         </scene>
     </scenes>
     <resources>

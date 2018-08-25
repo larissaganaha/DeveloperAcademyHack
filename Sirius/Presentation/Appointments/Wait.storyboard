@@ -20,14 +20,6 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Profile-->
-        <scene sceneID="OV8-pd-g2b">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Profile" id="2Ll-be-dOr" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TIp-cY-glX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1042" y="103"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="lSy-D2-A6y">
             <objects>
@@ -56,7 +48,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEMPO DE ESPERA PREVISTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUb-i9-eq4" customClass="KerningLabel" customModule="Sirius" customModuleProvider="target">
-                                                <rect key="frame" x="74" y="239.5" width="227" height="18.5"/>
+                                                <rect key="frame" x="74" y="270" width="227" height="18.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="13"/>
                                                 <color key="textColor" red="0.2268310016" green="0.22315456980000001" blue="0.2292668269" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -67,13 +59,13 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="42 min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISz-ZN-8gy">
-                                                <rect key="frame" x="20" y="258.5" width="335" height="77"/>
+                                                <rect key="frame" x="20" y="289" width="335" height="77"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="55"/>
                                                 <color key="textColor" red="0.3294117647" green="0.45715493369999999" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEU LUGAR NA FILA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAd-2k-4ji" customClass="KerningLabel" customModule="Sirius" customModuleProvider="target">
-                                                <rect key="frame" x="110.5" y="369" width="154.5" height="18.5"/>
+                                                <rect key="frame" x="110.5" y="402.5" width="154.5" height="18.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="13"/>
                                                 <color key="textColor" red="0.2268310016" green="0.22315456980000001" blue="0.2292668269" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -84,7 +76,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVF-gm-hmQ">
-                                                <rect key="frame" x="20" y="387" width="335" height="77"/>
+                                                <rect key="frame" x="20" y="420.5" width="335" height="77"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="55"/>
                                                 <color key="textColor" red="0.3294117647" green="0.45715493369999999" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -102,18 +94,15 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGS-eD-Gcj">
-                                                <rect key="frame" x="62" y="501.5" width="250" height="46"/>
+                                                <rect key="frame" x="62" y="537.5" width="250" height="46"/>
                                                 <color key="backgroundColor" red="0.40784313729999999" green="0.55294117649999996" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="46" id="Ix3-X5-Hbr"/>
                                                     <constraint firstAttribute="width" secondItem="VGS-eD-Gcj" secondAttribute="height" multiplier="125:23" id="R5g-jO-1JN"/>
                                                 </constraints>
-                                                <connections>
-                                                    <segue destination="2Ll-be-dOr" kind="show" id="lKJ-m4-gdB"/>
-                                                </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATUALIZAR DADOS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bm3-GH-Xoz">
-                                                <rect key="frame" x="62" y="514.5" width="250" height="20"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATUALIZAR CONSULTA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bm3-GH-Xoz">
+                                                <rect key="frame" x="62" y="550.5" width="250" height="20"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -150,7 +139,7 @@
                                             <constraint firstItem="f6w-gS-7QI" firstAttribute="top" secondItem="Bx8-kS-t4e" secondAttribute="top" constant="30" id="G6Z-hb-MYm"/>
                                             <constraint firstItem="HAd-2k-4ji" firstAttribute="top" secondItem="ISz-ZN-8gy" secondAttribute="bottom" multiplier="1.1" id="Hvq-E6-2Do"/>
                                             <constraint firstItem="Bm3-GH-Xoz" firstAttribute="width" secondItem="VGS-eD-Gcj" secondAttribute="width" id="Lls-yp-7i1"/>
-                                            <constraint firstItem="EUb-i9-eq4" firstAttribute="top" secondItem="CnI-7F-EBp" secondAttribute="bottom" multiplier="1.2" id="Rd0-rx-xxQ"/>
+                                            <constraint firstItem="EUb-i9-eq4" firstAttribute="top" secondItem="CnI-7F-EBp" secondAttribute="bottom" multiplier="1.35" id="Rd0-rx-xxQ"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="f6w-gS-7QI" secondAttribute="trailing" constant="280" id="RsX-wF-jK9"/>
                                             <constraint firstItem="ISz-ZN-8gy" firstAttribute="top" secondItem="EUb-i9-eq4" secondAttribute="bottom" id="SZM-Ml-8M6"/>
                                             <constraint firstItem="yVF-gm-hmQ" firstAttribute="centerX" secondItem="Bx8-kS-t4e" secondAttribute="centerX" id="Sf3-Qi-ago"/>
@@ -193,7 +182,6 @@
                     <connections>
                         <outlet property="goBackButton" destination="f6w-gS-7QI" id="nHg-ur-GCK"/>
                         <outlet property="updateDataButton" destination="VGS-eD-Gcj" id="gSW-ff-N4q"/>
-                        <segue destination="COA-9T-w7C" kind="unwind" identifier="unwindToWaitScreen" unwindAction="unwindToWaitScreenWithSegue:" id="M7l-D7-ldi"/>
                         <segue destination="COA-9T-w7C" kind="unwind" identifier="unwindToHomeScreen" unwindAction="unwindToHomeScreenWithSegue:" id="kg5-ml-Owg"/>
                     </connections>
                 </viewController>

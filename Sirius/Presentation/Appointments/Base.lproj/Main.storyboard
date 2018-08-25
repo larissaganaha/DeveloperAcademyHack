@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,6 +16,14 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Profile-->
+        <scene sceneID="ijh-0b-O2G">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="gSe-Jf-CZb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="js8-HV-lgn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="455" y="-127"/>
+        </scene>
         <!--Wait-->
         <scene sceneID="pig-Z9-7kG">
             <objects>
@@ -46,9 +55,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="259"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RiG-tj-oZj" customClass="CardView" customModule="Sirius" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RiG-tj-oZj" customClass="CardView" customModule="Sirius" customModuleProvider="target">
                                             <rect key="frame" x="38" y="79" width="299" height="167"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vd8-oX-YiM">
                                                     <rect key="frame" x="54" y="46" width="142" height="74"/>
@@ -60,6 +68,9 @@
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="167" id="aij-zi-yQm"/>
+                                            </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="endColor">
                                                     <color key="value" red="0.98431372549999996" green="0.94550497570000003" blue="0.37591840850000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -70,15 +81,36 @@
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Próxima consulta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ew0-hR-jKe">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Próxima consulta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ew0-hR-jKe">
                                             <rect key="frame" x="38" y="47" width="152" height="24"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4T-1v-8D0">
+                                            <rect key="frame" x="309" y="27" width="38" height="38"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="38" id="Nbv-Kt-mHk"/>
+                                                <constraint firstAttribute="width" secondItem="w4T-1v-8D0" secondAttribute="height" multiplier="1:1" id="xAi-vs-qwx"/>
+                                            </constraints>
+                                            <state key="normal" title="Button" image="userProfile"/>
+                                            <connections>
+                                                <segue destination="gSe-Jf-CZb" kind="show" id="Gu2-uT-Z9B"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" red="0.38431372549999998" green="0.67843137249999996" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="w4T-1v-8D0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Anr-Nh-ENH" secondAttribute="leading" constant="309" id="0d9-zN-iAJ"/>
+                                        <constraint firstItem="RiG-tj-oZj" firstAttribute="leading" secondItem="Anr-Nh-ENH" secondAttribute="leading" constant="38" id="7Zb-Ie-sGS"/>
+                                        <constraint firstItem="Ew0-hR-jKe" firstAttribute="top" secondItem="Anr-Nh-ENH" secondAttribute="top" constant="47" id="Esb-tc-DnB"/>
+                                        <constraint firstItem="RiG-tj-oZj" firstAttribute="top" secondItem="Ew0-hR-jKe" secondAttribute="bottom" constant="8" id="Pn4-rA-wdV"/>
+                                        <constraint firstAttribute="trailing" secondItem="w4T-1v-8D0" secondAttribute="trailing" constant="28" id="Vkl-sC-iJn"/>
+                                        <constraint firstItem="Ew0-hR-jKe" firstAttribute="leading" secondItem="Anr-Nh-ENH" secondAttribute="leading" constant="38" id="Xiv-1r-J8U"/>
+                                        <constraint firstItem="w4T-1v-8D0" firstAttribute="top" secondItem="Anr-Nh-ENH" secondAttribute="top" constant="27" id="fUm-Ut-ATK"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ew0-hR-jKe" secondAttribute="trailing" constant="185" id="fnG-4J-vCD"/>
+                                        <constraint firstAttribute="trailing" secondItem="RiG-tj-oZj" secondAttribute="trailing" constant="38" id="oi7-Of-SCo"/>
+                                    </constraints>
                                 </view>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="oLc-HB-cvA">
                                     <rect key="frame" x="0.0" y="426" width="375" height="14"/>
@@ -110,9 +142,8 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="158" height="128"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EYu-wT-Ct3" customClass="CardView" customModule="Sirius" customModuleProvider="target">
-                                                                        <rect key="frame" x="5" y="10" width="147" height="103"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EYu-wT-Ct3" customClass="CardView" customModule="Sirius" customModuleProvider="target">
+                                                                        <rect key="frame" x="5" y="10" width="148" height="103"/>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="color" keyPath="startColor">
@@ -125,6 +156,12 @@
                                                                     </view>
                                                                 </subviews>
                                                             </view>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="EYu-wT-Ct3" secondAttribute="trailing" constant="5" id="csp-eh-JB9"/>
+                                                                <constraint firstItem="EYu-wT-Ct3" firstAttribute="top" secondItem="hcz-Ga-zCn" secondAttribute="top" constant="10" id="def-O4-bfY"/>
+                                                                <constraint firstAttribute="bottom" secondItem="EYu-wT-Ct3" secondAttribute="bottom" constant="15" id="dr5-Yb-alB"/>
+                                                                <constraint firstItem="EYu-wT-Ct3" firstAttribute="leading" secondItem="hcz-Ga-zCn" secondAttribute="leading" constant="5" id="yyd-AV-QwA"/>
+                                                            </constraints>
                                                             <size key="customSize" width="158" height="128"/>
                                                         </collectionViewCell>
                                                     </cells>
@@ -164,4 +201,7 @@
             <point key="canvasLocation" x="-303.19999999999999" y="125.4872563718141"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="userProfile" width="241" height="241"/>
+    </resources>
 </document>

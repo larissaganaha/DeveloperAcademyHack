@@ -19,7 +19,6 @@ class HomeScreenController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
 
     @IBAction func unwindToHomeScreen(segue:UIStoryboardSegue) { }
 

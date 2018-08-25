@@ -15,7 +15,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         updateDataButton.layer.cornerRadius = 23
-        goBackButton.layer.cornerRadius = 15
+        goBackButton.layer.cornerRadius = 12
         super.viewDidLoad()
     }
 

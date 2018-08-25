@@ -32,7 +32,7 @@ class ProfileController: UIViewController {
         }
     }
     @IBAction func doneButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "unwindToWaitScreen", sender: nil)
+        performSegue(withIdentifier: "unwindToHome", sender: nil)
     }
 
 }
