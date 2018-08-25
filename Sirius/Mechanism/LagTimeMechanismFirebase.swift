@@ -27,4 +27,10 @@ class LagTimeMechanismFirebase: FirebaseMechanism {
             completion(snapshot.value as? Int)
         })
     }
+    
+    func getLagTime(completion: @escaping (Int?) -> Void) {
+        self.retrieve(dump: LagTime.self, path: "LagTime") { (lagTime) in
+            completion(lagTime?.first?.lagTime)
+        }
+    }
 }

@@ -10,16 +10,28 @@ import UIKit
 import Photos
 
 class NextAppointmentController: UIViewController {
-
+    @IBOutlet weak var pacientImage: UIImageView! {
+        didSet {
+            pacientImage.layer.cornerRadius = pacientImage.frame.size.width/2
+        }
+    }
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var idLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    
     @IBOutlet weak var symptomsTextField: UITextField!
     @IBOutlet weak var addPhotoButton: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var noImageLabel: UILabel!
     @IBOutlet weak var finishButton: UIButton!
-
+    @IBOutlet weak var sinptomsLabel: UILabel!
+    
     var images: [UIImage] = []
 
-    var pacient:Pacient?
+    var pacient: Pacient?
+    
+    var appointment: Appointment!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,29 +39,61 @@ class NextAppointmentController: UIViewController {
         finishButton.layer.cornerRadius = 20
         symptomsTextField.delegate = self
         noImageLabel.isHidden = true
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        if let textsLog = appointment.sinptomLog?.texts {
+            self.sinptomsLabel.text = textsLog.reduce("", { (result, string) -> String in
+                return result + ", \(string)"
+            })
+        } else {
+            self.sinptomsLabel.text = ""
+        }
+        
+        reloadLabels()
     }
 
     @IBAction func finishedPressed(_ sender: Any) {
+        updateAppointment()
         performSegue(withIdentifier: "unwindToHomeScreen", sender: nil)
     }
-
-
-
+    
+    private func reloadLabels() {
+        if let pacient = self.pacient, let app = self.appointment {
+            self.nameLabel.text = pacient.name
+            self.pacientImage.kf.setImage(with: pacient.realURL)
+            self.idLabel.text = pacient.ID
+            let hour = Calendar.current.component(.hour, from: app.scheduledTime)
+            let minute = Calendar.current.component(.minute, from: app.scheduledTime)
+            self.timeLabel.text = "Horário da consulta: \(hour)h\(minute)min"
+        }
+    }
+    
+    func updateAppointment() {
+        var sinpLog: DataLog
+        if let log = self.appointment.sinptomLog {
+            sinpLog = log
+        } else {
+            sinpLog = DataLog(date: Date(), images: [], texts: [])
+        }
+        
+        guard let info = sinptomsLabel.text?.components(separatedBy: ",") else { return }
+        sinpLog.texts = info
+        
+        self.appointment.sinptomLog = sinpLog
+//        AppointmentService().saveAppointment(appointment)
+    }
 }
 
 extension NextAppointmentController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let text = textField.text {
+            self.sinptomsLabel.text?.append(", ")
+            self.sinptomsLabel.text?.append(text)
+        }
         self.view.endEditing(true)
         return false
     }
 }
+
 extension NextAppointmentController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBAction func addPhotoPressed(_ sender: Any) {
         let photos = PHPhotoLibrary.authorizationStatus()
@@ -111,6 +155,4 @@ extension NextAppointmentController: UICollectionViewDataSource, UICollectionVie
         }
         return GalleryColletionCell()
     }
-
-
 }

@@ -8,10 +8,16 @@
 
 import UIKit
 import Photos
+import Kingfisher
 
 class ProfileController: UIViewController {
 
-    @IBOutlet weak var pacientImage: UIImageView!
+    @IBOutlet weak var pacientImage: UIImageView! {
+        didSet {
+            pacientImage.layer.cornerRadius = pacientImage.frame.size.width/2
+        }
+    }
+    
     @IBOutlet var editButtons: [UIButton]!
     
     @IBOutlet weak var nameLabel: UILabel!
@@ -64,6 +70,7 @@ class ProfileController: UIViewController {
     
     private func reloadLabels() {
         if let pacient = self.pacient {
+            self.pacientImage.kf.setImage(with: pacient.realURL)
             self.nameLabel.text = pacient.name
             self.idLabel.text = pacient.ID
             self.bornDateLabel.text = "\(pacient.bornDate.toString(dateFormat: "dd/MM/yyyy"))"

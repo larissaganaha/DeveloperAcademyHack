@@ -10,13 +10,19 @@ import UIKit
 
 class HomeScreenTableCell: UITableViewCell {
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView! {
+        didSet {
+            collectionView.delegate = self
+            collectionView.dataSource = self
+        }
+    }
+    
+    var appoints: [Appointment] = [] {
+        didSet { self.collectionView.reloadData() }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
-
-        self.collectionView.delegate = self
-        self.collectionView.dataSource = self
 
         // Initialization code
     }
@@ -33,11 +39,17 @@ class HomeScreenTableCell: UITableViewCell {
 
 extension HomeScreenTableCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return self.appoints.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as? AppointmentCollectionCell {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd/MM/yyy"
+            let timeFormatter = DateFormatter()
+            timeFormatter.dateFormat = "hh:mm"
+            cell.date.text = dateFormatter.string(from: appoints[indexPath.row].scheduledTime)
+            cell.time.text = timeFormatter.string(from: appoints[indexPath.row].scheduledTime)
             return cell
         }
         return AppointmentCollectionCell()

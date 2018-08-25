@@ -48,7 +48,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEMPO DE ESPERA PREVISTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUb-i9-eq4" customClass="KerningLabel" customModule="Sirius" customModuleProvider="target">
-                                                <rect key="frame" x="95" y="270" width="185.5" height="15.5"/>
+                                                <rect key="frame" x="74.5" y="270" width="227" height="18.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="13"/>
                                                 <color key="textColor" red="0.2268310016" green="0.22315456980000001" blue="0.2292668269" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -59,13 +59,13 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="42 min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISz-ZN-8gy">
-                                                <rect key="frame" x="20" y="286" width="335" height="64.5"/>
+                                                <rect key="frame" x="20" y="289" width="335" height="77"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="55"/>
                                                 <color key="textColor" red="0.37254901959999998" green="0.68235294120000001" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEU LUGAR NA FILA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAd-2k-4ji" customClass="KerningLabel" customModule="Sirius" customModuleProvider="target">
-                                                <rect key="frame" x="125.5" y="385.5" width="125" height="15.5"/>
+                                                <rect key="frame" x="111" y="402.5" width="154.5" height="18.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="13"/>
                                                 <color key="textColor" red="0.2268310016" green="0.22315456980000001" blue="0.2292668269" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -76,7 +76,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVF-gm-hmQ">
-                                                <rect key="frame" x="20" y="400.5" width="335" height="64.5"/>
+                                                <rect key="frame" x="20" y="420.5" width="335" height="77"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="55"/>
                                                 <color key="textColor" red="0.37254901959999998" green="0.68235294120000001" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -94,7 +94,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6w-gS-7QI">
-                                                <rect key="frame" x="20" y="30" width="70" height="26"/>
+                                                <rect key="frame" x="20" y="30" width="70" height="29"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="nG4-Mw-Pwt"/>
@@ -163,14 +163,6 @@
                 <exit id="COA-9T-w7C" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-303.19999999999999" y="125.4872563718141"/>
-        </scene>
-        <!--NextAppointment-->
-        <scene sceneID="mCc-ex-3mc">
-            <objects>
-                <viewControllerPlaceholder storyboardName="NextAppointment" id="uG5-co-lrh" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rue-57-5bv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="382" y="125"/>
         </scene>
     </scenes>
     <resources>
