@@ -9,18 +9,16 @@
 import UIKit
 
 class NextAppointmentController: UIViewController {
-
+    
     @IBOutlet weak var goBackButton: UIButton!
     @IBOutlet weak var symptomsTextField: UITextField!
     @IBOutlet weak var addPhotoButton: UIButton!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         goBackButton.layer.cornerRadius = 12
         addPhotoButton.layer.cornerRadius = 17
         symptomsTextField.delegate = self
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
