@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     @IBAction func goBackPressed(_ sender: Any) {
         performSegue(withIdentifier: "unwindToHomeScreen", sender: nil)
     }
+    
     @IBAction func unwindToWaitScreen(segue:UIStoryboardSegue) { }
 
 }

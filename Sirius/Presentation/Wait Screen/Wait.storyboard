@@ -100,6 +100,9 @@
                                                     <constraint firstAttribute="height" constant="46" id="Ix3-X5-Hbr"/>
                                                     <constraint firstAttribute="width" secondItem="VGS-eD-Gcj" secondAttribute="height" multiplier="125:23" id="R5g-jO-1JN"/>
                                                 </constraints>
+                                                <connections>
+                                                    <segue destination="uG5-co-lrh" kind="show" id="US5-8D-cLJ"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATUALIZAR CONSULTA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bm3-GH-Xoz">
                                                 <rect key="frame" x="62" y="550.5" width="250" height="20"/>
@@ -119,7 +122,7 @@
                                                     <constraint firstAttribute="width" constant="70" id="nG4-Mw-Pwt"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
-                                                <state key="normal" title="Go back">
+                                                <state key="normal" title="Voltar">
                                                     <color key="titleColor" red="0.37647058823529411" green="0.72941176470588232" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -189,6 +192,14 @@
                 <exit id="COA-9T-w7C" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-303.19999999999999" y="125.4872563718141"/>
+        </scene>
+        <!--NextAppointment-->
+        <scene sceneID="mCc-ex-3mc">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rue-57-5bv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="NextAppointment" id="uG5-co-lrh" sceneMemberID="viewController"/>
+            </objects>
+            <point key="canvasLocation" x="382" y="125"/>
         </scene>
     </scenes>
     <resources>
