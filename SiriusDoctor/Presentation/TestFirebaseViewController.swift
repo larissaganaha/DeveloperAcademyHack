@@ -48,9 +48,6 @@ class TestFirebaseViewController: UIViewController {
         let app3 = Appointment(id: UUID().uuidString, pacient: pac3, scheduledTime: formatter.date(from: "2018/10/31")!, transcript: "", sinptomLog: DataLog(date: Date(), images: ["https://tudoela.com/wp-content/uploads/2018/04/hematoma-subungueal-2.jpg"], texts: ["bati o pé gente olha que horror!"]), reportLog: DataLog(date: Date(), images: [], texts: []))
         appointmentService.saveAppointment(app3)
         
-        appointmentService.getAllAppointments { (apps) in
-            print(apps!)
-        }
     }
 
     override func didReceiveMemoryWarning() {
