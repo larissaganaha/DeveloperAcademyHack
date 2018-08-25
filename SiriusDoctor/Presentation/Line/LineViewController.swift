@@ -21,9 +21,16 @@ class LineViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        reloadData()
+    }
+    
+    func reloadData() {
         activity.startAnimating()
-        AppointmentService().getAllAppointments { (appointments) in
+        AppointmentService().getAllActiveAppointments { (appointments) in
             if let app = appointments {
                 self.appointments = app
                 DispatchQueue.main.async {
@@ -99,7 +106,7 @@ extension LineViewController: UITableViewDataSource, UITableViewDelegate {
         let app = appointments[indexPath.row - 1]
         cell.id.text = "Medical ID: \(app.pacient.ID)"
         cell.name.text = app.pacient.name
-        cell.age.text = "\(Int(app.pacient.age))"
+        cell.age.text = "\(Int(app.pacient.age)) anos"
         cell.profileImage.kf.setImage(with: app.pacient.realURL, placeholder: #imageLiteral(resourceName: "profilePicturePlaceholder"), options: nil, progressBlock: nil, completionHandler: nil)
         
         let dateFormatter = DateFormatter()

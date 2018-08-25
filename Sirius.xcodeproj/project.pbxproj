@@ -16,6 +16,13 @@
 		426F922F213081BB00F7C53A /* KerningLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426F922E213081BB00F7C53A /* KerningLabel.swift */; };
 		426F92312130889D00F7C53A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426F92302130889D00F7C53A /* CardView.swift */; };
 		426F9234213093F800F7C53A /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426F9233213093F800F7C53A /* ProfileController.swift */; };
+		426F92382130B81400F7C53A /* Wait.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 426F92372130B81400F7C53A /* Wait.storyboard */; };
+		426F923C2130BA7E00F7C53A /* HomeScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426F923B2130BA7E00F7C53A /* HomeScreenController.swift */; };
+		426F923E2130CC3700F7C53A /* HomeScreenTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426F923D2130CC3700F7C53A /* HomeScreenTableCell.swift */; };
+		426F92412130CE8900F7C53A /* AppointmentCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426F92402130CE8900F7C53A /* AppointmentCollectionCell.swift */; };
+		426F92462130E9F100F7C53A /* NextAppointment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 426F92452130E9F100F7C53A /* NextAppointment.storyboard */; };
+		426F924A2130EABE00F7C53A /* NextAppointmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426F92492130EABE00F7C53A /* NextAppointmentController.swift */; };
+		426F924F2130F9A600F7C53A /* GalleryColletionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426F924E2130F9A600F7C53A /* GalleryColletionCell.swift */; };
 		59F03164602557F35BD1A839 /* Pods_Sirius.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF69C464E089AF600107AC8C /* Pods_Sirius.framework */; };
 		5C5607BF91995186AC6AD4C8 /* Pods_SiriusDoctor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D9C979657F4AD92FDFCF04 /* Pods_SiriusDoctor.framework */; };
 		9B1989852130775100DABE6E /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1989842130775100DABE6E /* ProfileTableViewCell.swift */; };
@@ -95,6 +102,13 @@
 		426F922E213081BB00F7C53A /* KerningLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KerningLabel.swift; sourceTree = "<group>"; };
 		426F92302130889D00F7C53A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		426F9233213093F800F7C53A /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		426F92372130B81400F7C53A /* Wait.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Wait.storyboard; sourceTree = "<group>"; };
+		426F923B2130BA7E00F7C53A /* HomeScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenController.swift; sourceTree = "<group>"; };
+		426F923D2130CC3700F7C53A /* HomeScreenTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenTableCell.swift; sourceTree = "<group>"; };
+		426F92402130CE8900F7C53A /* AppointmentCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentCollectionCell.swift; sourceTree = "<group>"; };
+		426F92452130E9F100F7C53A /* NextAppointment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NextAppointment.storyboard; sourceTree = "<group>"; };
+		426F92492130EABE00F7C53A /* NextAppointmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextAppointmentController.swift; sourceTree = "<group>"; };
+		426F924E2130F9A600F7C53A /* GalleryColletionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryColletionCell.swift; sourceTree = "<group>"; };
 		92D9C979657F4AD92FDFCF04 /* Pods_SiriusDoctor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SiriusDoctor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9672AEF76EAAB636636814B2 /* Pods-SiriusDoctor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SiriusDoctor.release.xcconfig"; path = "Pods/Target Support Files/Pods-SiriusDoctor/Pods-SiriusDoctor.release.xcconfig"; sourceTree = "<group>"; };
 		9B1989842130775100DABE6E /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
@@ -180,9 +194,46 @@
 		426F9232213088A400F7C53A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				426F922E213081BB00F7C53A /* KerningLabel.swift */,
 				426F92302130889D00F7C53A /* CardView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		426F923F2130CC3B00F7C53A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				426F923D2130CC3700F7C53A /* HomeScreenTableCell.swift */,
+				426F92402130CE8900F7C53A /* AppointmentCollectionCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		426F92472130E9F800F7C53A /* Next Appointment */ = {
+			isa = PBXGroup;
+			children = (
+				426F92452130E9F100F7C53A /* NextAppointment.storyboard */,
+				426F92492130EABE00F7C53A /* NextAppointmentController.swift */,
+				426F924B2130F8FF00F7C53A /* Cells */,
+			);
+			path = "Next Appointment";
+			sourceTree = "<group>";
+		};
+		426F92482130EA5200F7C53A /* Wait Screen */ = {
+			isa = PBXGroup;
+			children = (
+				9BFD70582130555B000443F7 /* ViewController.swift */,
+				426F92372130B81400F7C53A /* Wait.storyboard */,
+			);
+			path = "Wait Screen";
+			sourceTree = "<group>";
+		};
+		426F924B2130F8FF00F7C53A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				426F924E2130F9A600F7C53A /* GalleryColletionCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		9B1989822130773500DABE6E /* CustomViews */ = {
@@ -377,6 +428,8 @@
 		9BFD709B21305FB0000443F7 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				426F92482130EA5200F7C53A /* Wait Screen */,
+				426F92472130E9F800F7C53A /* Next Appointment */,
 				9BFD709D2130600A000443F7 /* Profile */,
 				9BFD709C21305FF5000443F7 /* Appointments */,
 			);
@@ -386,8 +439,8 @@
 		9BFD709C21305FF5000443F7 /* Appointments */ = {
 			isa = PBXGroup;
 			children = (
-				9BFD70582130555B000443F7 /* ViewController.swift */,
-				426F922E213081BB00F7C53A /* KerningLabel.swift */,
+				426F923B2130BA7E00F7C53A /* HomeScreenController.swift */,
+				426F923F2130CC3B00F7C53A /* Cells */,
 				9BFD705A2130555B000443F7 /* Main.storyboard */,
 			);
 			path = Appointments;
@@ -543,7 +596,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BFD70612130555C000443F7 /* LaunchScreen.storyboard in Resources */,
+				426F92462130E9F100F7C53A /* NextAppointment.storyboard in Resources */,
 				9BFD705E2130555C000443F7 /* Assets.xcassets in Resources */,
+				426F92382130B81400F7C53A /* Wait.storyboard in Resources */,
 				426F922921307E6300F7C53A /* Poppins-SemiBold.otf in Resources */,
 				B1212C492130785900771370 /* GoogleService-Info.plist in Resources */,
 				9BFD709F21306013000443F7 /* Profile.storyboard in Resources */,
@@ -673,8 +728,12 @@
 				CB91ECD721305ECA0077C913 /* FirebaseMechanism.swift in Sources */,
 				9BFD70592130555B000443F7 /* ViewController.swift in Sources */,
 				9BFD708121305660000443F7 /* Pacient.swift in Sources */,
+				426F923C2130BA7E00F7C53A /* HomeScreenController.swift in Sources */,
+				426F924F2130F9A600F7C53A /* GalleryColletionCell.swift in Sources */,
+				426F92412130CE8900F7C53A /* AppointmentCollectionCell.swift in Sources */,
 				9BFD70862130590D000443F7 /* DataLog.swift in Sources */,
 				9BFD708821305916000443F7 /* Appointment.swift in Sources */,
+				426F923E2130CC3700F7C53A /* HomeScreenTableCell.swift in Sources */,
 				426F922F213081BB00F7C53A /* KerningLabel.swift in Sources */,
 				B1212C412130684F00771370 /* AppointmentMechanismFirebase.swift in Sources */,
 				B1212C3F2130638300771370 /* PacientMechanismFirebase.swift in Sources */,
@@ -685,6 +744,7 @@
 				CBD890382130F0C000F247A9 /* LagTimeService.swift in Sources */,
 				426F92312130889D00F7C53A /* CardView.swift in Sources */,
 				CBD890342130EF6400F247A9 /* LagTime.swift in Sources */,
+				426F924A2130EABE00F7C53A /* NextAppointmentController.swift in Sources */,
 				9BB86FEF21309F4C001966CC /* AppointmentService.swift in Sources */,
 				9BFD709521305EDE000443F7 /* DataMock.swift in Sources */,
 				426F9234213093F800F7C53A /* ProfileController.swift in Sources */,
