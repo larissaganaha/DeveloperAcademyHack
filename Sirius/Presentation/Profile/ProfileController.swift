@@ -26,6 +26,9 @@ class ProfileController: UIViewController {
     @IBOutlet weak var familyDisease1Label: UILabel!
     @IBOutlet weak var familyDisease2Label: UILabel!
     
+    @IBOutlet weak var checkBoxDrink: UIImageView!
+    @IBOutlet weak var checkBoxSmoking: UIImageView!
+    
     var pacient: Pacient?
     
     override func viewDidLoad() {
@@ -63,7 +66,8 @@ class ProfileController: UIViewController {
         if let pacient = self.pacient {
             self.nameLabel.text = pacient.name
             self.idLabel.text = pacient.ID
-            self.bornDateLabel.text = "\(pacient.bornDate)"
+            self.bornDateLabel.text = "\(pacient.bornDate.toString(dateFormat: "dd/MM/yyyy"))"
+            self.telephoneLabel.text = "\(pacient.telephone)"
             self.addressLabel.text = "\(pacient.address)"
             self.weightLabel.text = "Peso: \(pacient.weight) kg"
             self.heightLabel.text = "Altura: \(pacient.height) m"
@@ -73,7 +77,8 @@ class ProfileController: UIViewController {
             self.familyDisease1Label.text = familyDiseases[0]
             self.familyDisease2Label.text = familyDiseases[1]
             
-            
+            self.checkBoxDrink.image = pacient.drink ? #imageLiteral(resourceName: "checked box") :  #imageLiteral(resourceName: "unchecked box")
+            self.checkBoxSmoking.image = pacient.smoking ? #imageLiteral(resourceName: "checked box") : #imageLiteral(resourceName: "unchecked box")
         }
     }
 }
