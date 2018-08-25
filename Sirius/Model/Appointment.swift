@@ -124,7 +124,9 @@ class Appointment: PersistenceObject {
                 self.reportLog = DataLog(date: dateReport, images: imagesReport, texts: textsReport)
             }
             
-            self.isActive = true
+            if let isActive = dictionary["isActive"] as? Bool {
+                self.isActive = isActive
+            }
             
             self.dictInfo = dictionary
         } else {
