@@ -48,16 +48,28 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fila de Atendimento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5m-vj-5kH">
-                                                    <rect key="frame" x="282" y="31" width="204.5" height="21"/>
+                                                    <rect key="frame" x="282.5" y="31" width="204.5" height="21"/>
                                                     <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJ9-88-kiV">
+                                                    <rect key="frame" x="718" y="0.0" width="30" height="54"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                    <state key="normal" title="+">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="createAppointment:" destination="gpm-Ld-mcq" eventType="touchUpInside" id="tmq-oJ-dOo"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="p5m-vj-5kH" firstAttribute="top" secondItem="PfE-HF-LaV" secondAttribute="topMargin" constant="20" id="BGM-Da-Wth"/>
+                                                <constraint firstItem="cJ9-88-kiV" firstAttribute="top" secondItem="PfE-HF-LaV" secondAttribute="top" id="OXZ-V7-d6i"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="p5m-vj-5kH" secondAttribute="bottom" constant="20" id="PZz-10-f9Z"/>
                                                 <constraint firstItem="p5m-vj-5kH" firstAttribute="centerX" secondItem="PfE-HF-LaV" secondAttribute="centerX" id="PbK-dz-1oa"/>
+                                                <constraint firstAttribute="trailing" secondItem="cJ9-88-kiV" secondAttribute="trailing" constant="20" id="u6f-WV-hDJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -179,6 +191,7 @@
                         <outlet property="activity" destination="s7z-bx-xTQ" id="3HU-jd-RiT"/>
                         <outlet property="tableView" destination="me5-B2-vJj" id="Eva-Wj-aOB"/>
                         <segue destination="QNg-uE-4oa" kind="show" identifier="appointmentSegue" id="GJP-fy-Cuc"/>
+                        <segue destination="LrZ-Df-ecI" kind="show" identifier="createAppointment" id="xHq-lk-efP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sPx-aX-hMj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -191,7 +204,15 @@
                 <viewControllerPlaceholder storyboardName="Appointment" id="QNg-uE-4oa" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KfO-Sz-sGG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="596" y="238"/>
+            <point key="canvasLocation" x="596" y="196"/>
+        </scene>
+        <!--NewAppointment-->
+        <scene sceneID="VIj-va-jjI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NewAppointment" id="LrZ-Df-ecI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4uS-gY-OsI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="606" y="234"/>
         </scene>
     </scenes>
     <resources>

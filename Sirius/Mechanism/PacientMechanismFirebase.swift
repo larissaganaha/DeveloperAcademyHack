@@ -26,6 +26,7 @@ class PacientFirebaseMechanism: FirebaseMechanism {
         self.retrieve(dump: Pacient.self, path: "\(path)/\(id)") { (pacient) in
             completionHandler(pacient?.first)
         }
+        
 //        ref?.child("Pacients/\(id)").observeSingleEvent(of: .value, with: { (snapshot) in
 //            let pacient = snapshot.value as? NSDictionary
 //
@@ -38,6 +39,13 @@ class PacientFirebaseMechanism: FirebaseMechanism {
 //            }
 //        })
     }
+    
+    func retrieveAllPacients(completionHandler: @escaping ([Pacient]?) -> Void) {
+        self.retrieve(dump: Pacient.self, path: "\(path)") { (pacient) in
+            completionHandler(pacient)
+        }
+    }
+    
     
     func uploadImage(profileImage: UIImage, pacientID: String, completionHandler: @escaping (String?) -> Void) {
         
