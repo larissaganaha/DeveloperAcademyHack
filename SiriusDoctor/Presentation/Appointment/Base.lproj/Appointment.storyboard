@@ -386,7 +386,7 @@
                                             <outlet property="collectionView" destination="IIr-yc-HPD" id="wIc-NY-YLS"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="sinptomReportCell" rowHeight="150" id="36B-yy-Jg3" customClass="ReportedSinptomsTableViewCell" customModule="SiriusDoctor" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="sinptomReportCell" rowHeight="150" id="36B-yy-Jg3" customClass="ReportedSinptomsTableViewCell" customModule="SiriusDoctor" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="938" width="768" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="36B-yy-Jg3" id="nOk-ho-NqF">
@@ -447,6 +447,14 @@
                                         <connections>
                                             <outlet property="endButton" destination="Ypx-l7-tOa" id="4aZ-xd-NAZ"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="emptyCell" rowHeight="0.0" id="qis-hB-nTj">
+                                        <rect key="frame" x="0.0" y="1207" width="768" height="0.0"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qis-hB-nTj" id="FgI-Bq-4TG">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="0.0"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
