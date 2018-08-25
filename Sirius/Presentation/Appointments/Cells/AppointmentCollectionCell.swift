@@ -9,5 +9,7 @@
 import UIKit
 
 class AppointmentCollectionCell: UICollectionViewCell {
-    
+    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var time: UILabel!
+    @IBOutlet weak var place: UILabel!
 }

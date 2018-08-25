@@ -16,6 +16,7 @@ class HomeScreenController: UIViewController {
     var activeAppoints:[Appointment] = []
     var unactiveAppoints:[Appointment] = []
     
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var lagTimeLabel: UILabel!
 
     override func viewDidLoad() {
@@ -33,6 +34,9 @@ class HomeScreenController: UIViewController {
                         self.unactiveAppoints = appointments.filter{ !$0.isActive }.sorted(by: { (app1, app2) -> Bool in
                             return app1.scheduledTime.compare(app2.scheduledTime) == ComparisonResult.orderedAscending
                         })
+                        DispatchQueue.main.async {
+                            self.tableView.reloadData()
+                        }
                         
                         LagTimeService.getLagTime(completion: { (lagtime) in
                             let hours = lagtime!/60
@@ -64,10 +68,6 @@ class HomeScreenController: UIViewController {
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
     @IBAction func unwindToHomeScreen(segue:UIStoryboardSegue) { }
 
     @IBAction func checkInPressed(_ sender: Any) {
@@ -91,6 +91,8 @@ extension HomeScreenController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as? HomeScreenTableCell {
+            if indexPath.row == 0 { cell.appoints = self.activeAppoints }
+            else { cell.appoints = self.unactiveAppoints }
             return cell
         }
         return HomeScreenTableCell()
@@ -103,7 +105,6 @@ extension HomeScreenController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 130
     }
-
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
@@ -120,6 +121,5 @@ extension HomeScreenController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 35
     }
-
 
 }

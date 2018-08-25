@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -13,6 +14,9 @@
     <customFonts key="customFonts">
         <array key="Poppins-Medium.otf">
             <string>Poppins-Medium</string>
+        </array>
+        <array key="Poppins-Regular.otf">
+            <string>Poppins-Regular</string>
         </array>
         <array key="Poppins-SemiBold.otf">
             <string>Poppins-SemiBold</string>
@@ -188,7 +192,38 @@
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EYu-wT-Ct3" customClass="CardView" customModule="Sirius" customModuleProvider="target">
                                                                         <rect key="frame" x="5" y="10" width="148" height="103"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bH0-j4-5V4">
+                                                                                <rect key="frame" x="8" y="8" width="132" height="24"/>
+                                                                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="17"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hora" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySH-r4-TTj">
+                                                                                <rect key="frame" x="8" y="34" width="132" height="21"/>
+                                                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hospital Sírio Libanes" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7l-ag-Ofw">
+                                                                                <rect key="frame" x="8" y="57" width="132" height="42"/>
+                                                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
                                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstItem="bH0-j4-5V4" firstAttribute="leading" secondItem="EYu-wT-Ct3" secondAttribute="leading" constant="8" id="Cn9-fz-JLW"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="bH0-j4-5V4" secondAttribute="trailing" constant="8" id="Fz8-kN-AIC"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="i7l-ag-Ofw" secondAttribute="trailing" constant="8" id="aYN-DZ-V54"/>
+                                                                            <constraint firstItem="i7l-ag-Ofw" firstAttribute="leading" secondItem="EYu-wT-Ct3" secondAttribute="leading" constant="8" id="c3c-26-DEL"/>
+                                                                            <constraint firstItem="ySH-r4-TTj" firstAttribute="top" secondItem="bH0-j4-5V4" secondAttribute="bottom" constant="2" id="cU8-TY-wc7"/>
+                                                                            <constraint firstItem="i7l-ag-Ofw" firstAttribute="top" secondItem="ySH-r4-TTj" secondAttribute="bottom" constant="2" id="gE0-xY-npb"/>
+                                                                            <constraint firstItem="ySH-r4-TTj" firstAttribute="leading" secondItem="EYu-wT-Ct3" secondAttribute="leading" constant="8" id="gjF-zG-XPq"/>
+                                                                            <constraint firstItem="bH0-j4-5V4" firstAttribute="top" secondItem="EYu-wT-Ct3" secondAttribute="top" constant="8" id="gt3-mH-gOK"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="ySH-r4-TTj" secondAttribute="trailing" constant="8" id="lLo-dr-kBI"/>
+                                                                        </constraints>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="color" keyPath="startColor">
                                                                                 <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -207,6 +242,11 @@
                                                                 <constraint firstItem="EYu-wT-Ct3" firstAttribute="leading" secondItem="hcz-Ga-zCn" secondAttribute="leading" constant="5" id="yyd-AV-QwA"/>
                                                             </constraints>
                                                             <size key="customSize" width="158" height="128"/>
+                                                            <connections>
+                                                                <outlet property="date" destination="bH0-j4-5V4" id="Akr-cd-Bcw"/>
+                                                                <outlet property="place" destination="i7l-ag-Ofw" id="e4C-MP-bdd"/>
+                                                                <outlet property="time" destination="ySH-r4-TTj" id="AA3-Jx-1tx"/>
+                                                            </connections>
                                                         </collectionViewCell>
                                                     </cells>
                                                 </collectionView>
@@ -241,6 +281,7 @@
                     </view>
                     <connections>
                         <outlet property="lagTimeLabel" destination="MhG-qy-K5n" id="LZ2-4c-rbE"/>
+                        <outlet property="tableView" destination="nSD-5S-ZOC" id="w3f-hc-8go"/>
                         <segue destination="yNU-uG-YQl" kind="show" identifier="showWaitScreen" id="ZFp-Ms-XgC"/>
                     </connections>
                 </viewController>

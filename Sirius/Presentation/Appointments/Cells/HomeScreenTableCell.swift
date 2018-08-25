@@ -11,6 +11,8 @@ import UIKit
 class HomeScreenTableCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    var appoints: [Appointment] = []
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,11 +35,17 @@ class HomeScreenTableCell: UITableViewCell {
 
 extension HomeScreenTableCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return self.appoints.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as? AppointmentCollectionCell {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd/MM/yyy"
+            let timeFormatter = DateFormatter()
+            timeFormatter.dateFormat = "hh:mm"
+            cell.date.text = dateFormatter.string(from: appoints[indexPath.row].scheduledTime)
+            cell.time.text = timeFormatter.string(from: appoints[indexPath.row].scheduledTime)
             return cell
         }
         return AppointmentCollectionCell()
