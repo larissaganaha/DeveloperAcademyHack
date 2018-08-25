@@ -39,7 +39,8 @@ class NextAppointmentController: UIViewController {
     
     var wasPhotosPressed: Bool = true
     
-    var arrayURLs: [String] = []
+    var arrayURLsSinp: [String] = []
+    var arrayURLsReport: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,6 +78,7 @@ class NextAppointmentController: UIViewController {
     }
     
     func updateAppointment() {
+        // sinptoms
         var sinpLog: DataLog
         if let log = self.appointment.sinptomLog {
             sinpLog = log
@@ -87,13 +89,31 @@ class NextAppointmentController: UIViewController {
         guard let info = sinptomsLabel.text?.components(separatedBy: ",") else { return }
         sinpLog.texts = info
         
-        sinpLog.images = self.arrayURLs
+        sinpLog.images = self.arrayURLsSinp
         
         self.appointment.sinptomLog = sinpLog
         
-        self.appointment.dictInfo["imagesSinp"] = self.arrayURLs
+        self.appointment.dictInfo["imagesSinp"] = self.arrayURLsSinp
         self.appointment.dictInfo["textsSinp"] = info
         self.appointment.dictInfo["dateSinp"] = Date().toString(dateFormat: "dd-MM-yyyy hh:mm")
+        
+        // reports
+        var reportLog: DataLog
+        if let log = self.appointment.reportLog {
+            reportLog = log
+        } else {
+            reportLog = DataLog(date: Date(), images: [], texts: [])
+        }
+    
+        reportLog.texts = ["Exames"]
+        
+        reportLog.images = self.arrayURLsReport
+        
+        self.appointment.sinptomLog = sinpLog
+        
+        self.appointment.dictInfo["imagesReport"] = self.arrayURLsReport
+        self.appointment.dictInfo["textsReport"] = ["Exames"]
+        self.appointment.dictInfo["dateReport"] = Date().toString(dateFormat: "dd-MM-yyyy hh:mm")
         
         AppointmentService().saveAppointment(appointment)
     }
@@ -158,16 +178,17 @@ extension NextAppointmentController: UIImagePickerControllerDelegate, UINavigati
             if self.wasPhotosPressed {
                 self.photos.append(selectedImage)
                 collectionViewPhotos.reloadData()
+                
+                PacientFirebaseMechanism.shared.uploadImage(profileImage: selectedImage, pacientID: self.pacient?.ID ?? "") { (url) in
+                    self.arrayURLsSinp.append(url!) }
             } else {
                 self.exams.append(selectedImage)
                 collectionViewExams.reloadData()
+                
+                PacientFirebaseMechanism.shared.uploadImage(profileImage: selectedImage, pacientID: self.pacient?.ID ?? "") { (url) in
+                    self.arrayURLsReport.append(url!) }
             }
-            
-            PacientFirebaseMechanism.shared.uploadImage(profileImage: selectedImage, pacientID: self.pacient?.ID ?? "") { (url) in
-                self.arrayURLs.append(url!) }
         }
-        
-        
             
         dismiss(animated: true, completion: nil)
     }
