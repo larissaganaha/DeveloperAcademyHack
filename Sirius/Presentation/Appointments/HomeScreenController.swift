@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class HomeScreenController: UIViewController {
 
@@ -34,6 +35,16 @@ class HomeScreenController: UIViewController {
                 })
             }
         }
+        //Coordenadas do Elds
+        let geofenceRegionCenter = CLLocationCoordinate2DMake(-22.812454, -47.061487)
+        
+        let geofenceRegion = CLCircularRegion(center: geofenceRegionCenter, radius: 100, identifier: "identifier")
+        
+        geofenceRegion.notifyOnEntry = true
+        geofenceRegion.notifyOnExit = false
+        
+        let locationManager = CLLocationManager()
+        locationManager.startMonitoring(for: geofenceRegion)
     }
     
     func updateLagTimeIfNecessary(){
