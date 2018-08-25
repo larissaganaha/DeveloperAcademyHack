@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -50,11 +51,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="btn-Uv-fHZ">
-                                <rect key="frame" x="0.0" y="214" width="768" height="280"/>
+                                <rect key="frame" x="0.0" y="214" width="768" height="307"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="280" id="rxM-gb-4IS"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="pacientCell" rowHeight="68" id="NE5-b3-DIs" customClass="PacientNewAppointmentTableViewCell" customModule="SiriusDoctor" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="768" height="68"/>
@@ -114,20 +112,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="png-gg-0xN">
-                                <rect key="frame" x="20" y="515" width="38" height="21"/>
+                                <rect key="frame" x="20" y="542" width="38" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="3gz-Ea-3DQ">
-                                <rect key="frame" x="0.0" y="544" width="768" height="216"/>
+                                <rect key="frame" x="0.0" y="571" width="768" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="556863195.08977103">
                                     <!--2018-08-25 04:13:15 +0000-->
                                 </date>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lh8-6l-zjn">
-                                <rect key="frame" x="331" y="964" width="107" height="30"/>
-                                <state key="normal" title="Salvar Consulta"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lh8-6l-zjn">
+                                <rect key="frame" x="269" y="950" width="231" height="44"/>
+                                <state key="normal" image="saveAppointment"/>
                                 <connections>
                                     <action selector="saveAppointment:" destination="0Ff-ve-dz9" eventType="touchUpInside" id="wAK-1M-7e2"/>
                                 </connections>
@@ -144,6 +142,7 @@
                             <constraint firstItem="gJ3-Ek-X2T" firstAttribute="leading" secondItem="HcR-dJ-MSD" secondAttribute="leading" constant="20" id="GDk-x1-PXn"/>
                             <constraint firstItem="Rqp-e3-RJB" firstAttribute="top" secondItem="nAN-As-e3E" secondAttribute="bottom" constant="85" id="HHF-Hx-jec"/>
                             <constraint firstItem="3gz-Ea-3DQ" firstAttribute="leading" secondItem="HcR-dJ-MSD" secondAttribute="leading" id="LbC-99-sJd"/>
+                            <constraint firstItem="btn-Uv-fHZ" firstAttribute="height" secondItem="cnV-5d-VDh" secondAttribute="height" multiplier="0.3" id="LsE-v4-PFf"/>
                             <constraint firstItem="gJ3-Ek-X2T" firstAttribute="top" secondItem="HcR-dJ-MSD" secondAttribute="top" id="OrT-fj-8UR"/>
                             <constraint firstItem="lAk-ZE-Vmd" firstAttribute="top" secondItem="HcR-dJ-MSD" secondAttribute="top" constant="52" id="Ptz-66-Szm"/>
                             <constraint firstItem="btn-Uv-fHZ" firstAttribute="leading" secondItem="HcR-dJ-MSD" secondAttribute="leading" id="Pwi-Am-EtB"/>
@@ -169,5 +168,6 @@
     </scenes>
     <resources>
         <image name="adorno01" width="768" height="228"/>
+        <image name="saveAppointment" width="231" height="44"/>
     </resources>
 </document>
