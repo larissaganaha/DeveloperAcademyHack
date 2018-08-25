@@ -11,13 +11,17 @@ import UIKit
 class HomeScreenController: UIViewController {
 
     var categories = ["Consultas futuras", "Consultas passadas"]
-    var pacient:Pacient?
+    var pacient: Pacient?
 
-    var activeAppoints:[Appointment] = []
-    var unactiveAppoints:[Appointment] = []
+    var activeAppoints: [Appointment] = []
+    var unactiveAppoints: [Appointment] = []
     
+    @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var lagTimeLabel: UILabel!
-
+    @IBOutlet weak var lagTimeTitleLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,6 +47,8 @@ class HomeScreenController: UIViewController {
                             }
                         })
                         
+                        self.reloadNextAppointmentLabels()
+                        
                         self.updateLagTimeIfNecessary()
                     }
                 })
@@ -52,7 +58,30 @@ class HomeScreenController: UIViewController {
         lagTimeLabel.clipsToBounds = true
     }
     
-    func updateLagTimeIfNecessary(){
+    private func reloadNextAppointmentLabels() {
+        if let pacient = self.pacient, let firstAppoint = self.activeAppoints.first {
+            self.welcomeLabel.text = "Olá, \(pacient.name.components(separatedBy: " ").first ?? pacient.name). Sua próxima consulta é:"
+            self.dateLabel.text = "Data: \(firstAppoint.scheduledTime.toString(dateFormat: "dd/MM/yyyy"))"
+            let hour = Calendar.current.component(.hour, from: firstAppoint.scheduledTime)
+            let minute = Calendar.current.component(.minute, from: firstAppoint.scheduledTime)
+            self.timeLabel.text = "Horário: \(hour)h\(minute)min"
+            
+            let order = Calendar.current.compare(Date(), to: firstAppoint.scheduledTime, toGranularity: .day)
+            switch order {
+            case .orderedSame:
+                lagTimeLabel.isHidden = false
+                lagTimeTitleLabel.isHidden = false
+            case .orderedAscending:
+                lagTimeLabel.isHidden = true
+                lagTimeTitleLabel.isHidden = true
+            case .orderedDescending:
+                lagTimeLabel.isHidden = true
+                lagTimeTitleLabel.isHidden = true
+            }
+        }
+    }
+    
+    func updateLagTimeIfNecessary() {
         let dayOfNextAppoint = Calendar.current.component(.day, from: (self.activeAppoints.first?.scheduledTime)!)
         let currDay = Calendar.current.component(.day, from: Date())
         
@@ -104,7 +133,6 @@ extension HomeScreenController: UITableViewDelegate, UITableViewDataSource {
         return 130
     }
 
-
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
         let titleLabel = UILabel()
@@ -120,6 +148,4 @@ extension HomeScreenController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 35
     }
-
-
 }
