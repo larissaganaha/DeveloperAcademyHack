@@ -117,7 +117,6 @@ extension ProfileController: UIImagePickerControllerDelegate, UINavigationContro
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
         var selectedImageFromPicker: UIImage?
-//        let userID = Auth.auth().currentUser?.uid
         
         if let editedImage = info["UIImagePickerControllerEditedImage"] as? UIImage {
             selectedImageFromPicker = editedImage

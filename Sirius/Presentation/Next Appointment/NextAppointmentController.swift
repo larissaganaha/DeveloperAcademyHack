@@ -32,6 +32,8 @@ class NextAppointmentController: UIViewController {
     var pacient: Pacient?
     
     var appointment: Appointment!
+    
+    var arrayURLs: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,8 +80,15 @@ class NextAppointmentController: UIViewController {
         guard let info = sinptomsLabel.text?.components(separatedBy: ",") else { return }
         sinpLog.texts = info
         
+        sinpLog.images = self.arrayURLs
+        
         self.appointment.sinptomLog = sinpLog
-//        AppointmentService().saveAppointment(appointment)
+        
+        self.appointment.dictInfo["imagesSinp"] = self.arrayURLs
+        self.appointment.dictInfo["textsSinp"] = info
+        self.appointment.dictInfo["dateSinp"] = Date().toString(dateFormat: "dd-MM-yyyy hh:mm")
+        
+        AppointmentService().saveAppointment(appointment)
     }
 }
 
@@ -131,6 +140,10 @@ extension NextAppointmentController: UIImagePickerControllerDelegate, UINavigati
         if let selectedImage = selectedImageFromPicker {
             self.images.append(selectedImage)
             collectionView.reloadData()
+            
+            PacientFirebaseMechanism.shared.uploadImage(profileImage: selectedImage, pacientID: self.pacient?.ID ?? "") { (url) in
+                self.arrayURLs.append(url!)
+            }
         }
         dismiss(animated: true, completion: nil)
     }

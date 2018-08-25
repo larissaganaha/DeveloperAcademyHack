@@ -69,31 +69,31 @@
                                             <rect key="frame" x="20" y="73" width="335" height="215.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olá, &lt;Nome do paciente&gt;. Sua Próxima consulta é:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6N-qD-V6J">
-                                                    <rect key="frame" x="15" y="25" width="305" height="42"/>
+                                                    <rect key="frame" x="15" y="25" width="305" height="35"/>
                                                     <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                                     <color key="textColor" white="0.20352285880000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data: 14/07" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKm-4l-egp">
-                                                    <rect key="frame" x="15" y="78.5" width="305" height="25.5"/>
+                                                    <rect key="frame" x="15" y="71.5" width="305" height="21"/>
                                                     <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
                                                     <color key="textColor" white="0.20352285880000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horário: 14:50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAh-jv-BCW">
-                                                    <rect key="frame" x="15" y="104" width="305" height="25.5"/>
+                                                    <rect key="frame" x="15" y="92.5" width="305" height="21"/>
                                                     <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
                                                     <color key="textColor" white="0.20352285880000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="O tempo estimado de atraso é:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Qk-Aq-1mN">
-                                                    <rect key="frame" x="14" y="129.5" width="169.5" height="66"/>
+                                                    <rect key="frame" x="14" y="113.5" width="150.5" height="82"/>
                                                     <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                                     <color key="textColor" white="0.20352285880000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0h00min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MhG-qy-K5n">
-                                                    <rect key="frame" x="218.5" y="145.5" width="95.5" height="35"/>
+                                                    <rect key="frame" x="199.5" y="137.5" width="114.5" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="kbP-MC-Z71"/>
                                                     </constraints>
@@ -186,19 +186,19 @@
                                                                         <rect key="frame" x="5" y="10" width="148" height="103"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bH0-j4-5V4">
-                                                                                <rect key="frame" x="8" y="8" width="132" height="24"/>
+                                                                                <rect key="frame" x="8" y="8" width="132" height="20"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="17"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hora" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySH-r4-TTj">
-                                                                                <rect key="frame" x="8" y="34" width="132" height="21"/>
+                                                                                <rect key="frame" x="8" y="30" width="132" height="17.5"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hospital Sírio Libanes" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7l-ag-Ofw">
-                                                                                <rect key="frame" x="8" y="57" width="132" height="42"/>
+                                                                                <rect key="frame" x="8" y="49.5" width="132" height="35"/>
                                                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
