@@ -86,10 +86,12 @@ class NextAppointmentController: UIViewController {
 extension NextAppointmentController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if let text = textField.text {
-            self.sinptomsLabel.text?.append(", ")
+            if text == "" { return false }
             self.sinptomsLabel.text?.append(text)
+            self.sinptomsLabel.text?.append(", ")
         }
         self.view.endEditing(true)
+        textField.text = ""
         return false
     }
 }
