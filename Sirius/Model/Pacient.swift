@@ -141,7 +141,7 @@ class Pacient: NSObject, PersistenceObject {
     
     func formatDate(date: String) -> Date? {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy/MM/dd HH:mm"
+        dateFormatter.dateFormat = "yyyy/MM/dd"
         
         if let formattedDate = dateFormatter.date(from: date) {
             return formattedDate

@@ -54,12 +54,7 @@ class HomeScreenController: UIViewController {
                         }
                         
                         LagTimeService.getLagTime(completion: { (lagtime) in
-                            let hours = lagtime!/60
-                            if  hours > 0 {
-                                self.lagTimeLabel.text = "+\(hours)h\(lagtime!%60)min"
-                            } else {
-                                self.lagTimeLabel.text = "+00h\(lagtime!) min"
-                            }
+                            self.updateLagTimeLabel(lagtime: lagtime)
                         })
                         
                         self.reloadNextAppointmentLabels()
@@ -105,14 +100,28 @@ class HomeScreenController: UIViewController {
         }
     }
     
+    fileprivate func updateLagTimeLabel(lagtime: Int?) {
+        if lagtime != nil {
+            let hours = lagtime!/60
+            if lagtime == 0 {
+                self.lagTimeLabel.text = "Sem espera"
+            } else {
+                if  hours > 0 {
+                    self.lagTimeLabel.text = "+\(hours)h\(lagtime!%60)min"
+                } else {
+                    self.lagTimeLabel.text = "\(lagtime!) min"
+                }
+            }
+        }
+    }
+    
     func updateLagTimeIfNecessary() {
         let dayOfNextAppoint = Calendar.current.component(.day, from: (self.activeAppoints.first?.scheduledTime)!)
         let currDay = Calendar.current.component(.day, from: Date())
         
         if dayOfNextAppoint == currDay {
             LagTimeMechanismFirebase.shared.addObserverEventAdded { (lagTime) in
-                self.lagTimeLabel.text = String(lagTime!)
-                print(lagTime ?? -999)
+                self.updateLagTimeLabel(lagtime: lagTime)
             }
         }
     }

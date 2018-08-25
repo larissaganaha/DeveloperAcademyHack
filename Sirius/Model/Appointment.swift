@@ -88,7 +88,7 @@ class Appointment: PersistenceObject {
             
             guard let bDateString = dictionary["bornDate"] as? String  else { return }
             
-            if let bDateDate = self.formatDate(date: bDateString) {
+            if let bDateDate = self.formatBornDate(date: bDateString) {
                 self.pacient.bornDate = bDateDate
             } else {
                 self.pacient.bornDate = Date()
@@ -142,6 +142,17 @@ class Appointment: PersistenceObject {
     func formatDate(date: String) -> Date? {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy/MM/dd HH:mm"
+        
+        if let formattedDate = dateFormatter.date(from: date) {
+            return formattedDate
+        } else {
+            return nil
+        }
+    }
+    
+    func formatBornDate(date: String) -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd"
         
         if let formattedDate = dateFormatter.date(from: date) {
             return formattedDate

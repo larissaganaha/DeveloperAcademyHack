@@ -37,6 +37,8 @@ class LineViewController: UIViewController {
                 })
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
+                    self.updateLagTime()
+
                     self.activity.stopAnimating()
                 }
             }
@@ -73,6 +75,9 @@ class LineViewController: UIViewController {
         //Se possibleLag > 0, há atraso
         if possibleLag > 0 {
             let lagTime = LagTime(lagTime: possibleLag)
+            LagTimeService.updateLagTime(lagTime: lagTime)
+        } else {
+            let lagTime = LagTime(lagTime: 0)
             LagTimeService.updateLagTime(lagTime: lagTime)
         }
     }
