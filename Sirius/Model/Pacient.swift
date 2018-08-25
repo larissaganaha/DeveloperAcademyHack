@@ -31,7 +31,7 @@ class Pacient: NSObject, PersistenceObject {
     
     var personalInfo: String {
         return "Peso: \(weight)\t| Altura: \(height)\nIdade: \(Int(age))\n" +
-        "\(drink ? "Alcolismo \n" : "")" +
+        "\(drink ? "Alcoolismo \n" : "")" +
         "\(smoking ? "Tabagismo \n" : "")" +
         "\(diabetes ? "Diabético \n" : "")"
     }

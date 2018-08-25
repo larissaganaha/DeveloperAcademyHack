@@ -270,7 +270,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="164" height="117"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenGradient" translatesAutoresizingMaskIntoConstraints="NO" id="l93-JV-kNk">
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenGradient" translatesAutoresizingMaskIntoConstraints="NO" id="l93-JV-kNk">
                                                                         <rect key="frame" x="0.0" y="0.0" width="164" height="117"/>
                                                                     </imageView>
                                                                 </subviews>

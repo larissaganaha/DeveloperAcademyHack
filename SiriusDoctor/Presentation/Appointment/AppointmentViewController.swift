@@ -70,6 +70,7 @@ extension AppointmentViewController: UITableViewDelegate, UITableViewDataSource 
         case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "relevantImagesCell") as? RelevantImagesTableViewCell else { return UITableViewCell() }
             cell.title.text = "Imagens Relevantes"
+            cell.delegate = self
             if let log = appointment.sinptomLog?.images {
                 cell.images = log.map { URL(string: $0)!}
             }

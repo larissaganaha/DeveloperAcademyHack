@@ -39,8 +39,8 @@
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="J5H-el-249" firstAttribute="top" secondItem="7cu-9P-rje" secondAttribute="bottom" constant="5" id="Yb7-JF-sly"/>
                                         <constraint firstItem="J5H-el-249" firstAttribute="leading" secondItem="z3U-RX-39X" secondAttribute="leading" constant="50" id="b9f-OC-tnl"/>
+                                        <constraint firstItem="J5H-el-249" firstAttribute="top" secondItem="z3U-RX-39X" secondAttribute="top" constant="79" id="ket-wR-Ehn"/>
                                         <constraint firstAttribute="trailing" secondItem="J5H-el-249" secondAttribute="trailing" constant="50" id="nke-cx-Wvc"/>
                                         <constraint firstAttribute="bottom" secondItem="J5H-el-249" secondAttribute="bottom" constant="50" id="tBV-Wd-uzH"/>
                                         <constraint firstItem="7cu-9P-rje" firstAttribute="top" secondItem="z3U-RX-39X" secondAttribute="top" constant="30" id="wY0-pU-Wt9"/>
