@@ -1,5 +1,5 @@
 //
-//  EndTableViewCell.swift
+//  ReportedSinptomsTableViewCell.swift
 //  SiriusDoctor
 //
 //  Created by Giovani Nascimento Pereira on 24/08/18.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-class EndTableViewCell: UITableViewCell {
+class ReportedSinptomsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var endButton: UIButton!
-    weak var delegate: EndCellDelegate?
+    @IBOutlet weak var label: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,12 +22,5 @@ class EndTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    @IBAction func endButtonPressed(_ sender: Any) {
-        delegate?.endButtonPressed()
-    }
-    
-}
 
-protocol EndCellDelegate: NSObjectProtocol {
-    func endButtonPressed()
 }

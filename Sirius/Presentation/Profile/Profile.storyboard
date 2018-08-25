@@ -476,6 +476,7 @@
                     </view>
                     <size key="freeformSize" width="375" height="1050"/>
                     <connections>
+                        <outlet property="pacientImage" destination="aZ9-4q-r9x" id="V4R-wd-JmL"/>
                         <outletCollection property="editButtons" destination="8jR-oF-oOW" collectionClass="NSMutableArray" id="m8L-rO-QTz"/>
                         <outletCollection property="editButtons" destination="hDS-gd-mVu" collectionClass="NSMutableArray" id="opx-hm-pU3"/>
                         <outletCollection property="editButtons" destination="r4v-E4-1W8" collectionClass="NSMutableArray" id="ziD-to-K8u"/>

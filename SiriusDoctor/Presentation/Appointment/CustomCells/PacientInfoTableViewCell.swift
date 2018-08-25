@@ -18,6 +18,7 @@ class PacientInfoTableViewCell: UITableViewCell {
     var isRecording: Bool = false
     var transcript: String = ""
     var voiceRecognitionMechanism: VoiceRecognition?
+    weak var delegate: TranscriptCellProtocol?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,7 +38,10 @@ class PacientInfoTableViewCell: UITableViewCell {
             voiceRecognitionMechanism?.stopRecording()
         }
     }
-
+    
+    @IBAction func transcriptButtonPressed(_ sender: Any) {
+        delegate?.transcriptButtonPressed()
+    }
 }
 
 extension PacientInfoTableViewCell: VoiceRecognitioniewDelegate {
@@ -66,6 +70,11 @@ extension PacientInfoTableViewCell: VoiceRecognitioniewDelegate {
         medicineTextField.text = VoiceRecognitionReference.identifyMedicines(from: transcript).reduce("", { (result, text) -> String in
             result + "\n" + text
         })
-        
+        delegate?.updateTranscript(to: transcript)
     }
+}
+
+protocol TranscriptCellProtocol: NSObjectProtocol {
+    func updateTranscript(to text: String)
+    func transcriptButtonPressed()
 }

@@ -41,14 +41,18 @@ class Appointment: PersistenceObject {
             "isActive": true
         ]
         
+        if pacient.imageURL != nil {
+            self.dictInfo["imageURL"] = pacient.imageURL
+        }
+        
         if let sinptomLog = sinptomLog {
-            self.dictInfo["dateSinp"] = sinptomLog.date
+            self.dictInfo["dateSinp"] = sinptomLog.date.toString(dateFormat: "dd-MM-yyyy")
             self.dictInfo["imagesSinp"] = sinptomLog.images
             self.dictInfo["textsSinp"] = sinptomLog.texts
         }
         
         if let reportLog = reportLog {
-            self.dictInfo["dateReport"] = reportLog.date
+            self.dictInfo["dateReport"] = reportLog.date.toString(dateFormat: "dd-MM-yyyy")
             self.dictInfo["imagesReport"] = reportLog.images
             self.dictInfo["textsReport"] = reportLog.texts
         }
@@ -75,26 +79,42 @@ class Appointment: PersistenceObject {
                 }
             }
             
-            guard let bornDate = dictionary["bornDate"] as? String  else { return }
+            guard let bDateString = dictionary["bornDate"] as? String  else { return }
             
-            if let bDate = self.formatDate(date: bornDate) {
-                self.pacient.bornDate = bDate
+            if let bDateDate = self.formatDate(date: bDateString) {
+                self.pacient.bornDate = bDateDate
             } else {
                 self.pacient.bornDate = Date()
             }
             
             self.transcript = transcript
             
-            self.pacient = Pacient(ID: pacientID, name: name, address: address, telephone: telephone, bornDate: self.pacient.bornDate, height: height, weight: weight, drink: drink, hipertension: hipertension, diabetes: diabetes, smoking: smoking)
+            self.pacient = Pacient(ID: pacientID, name: name, address: address, telephone: telephone, imageURL: nil, bornDate: self.pacient.bornDate, height: height, weight: weight, drink: drink, hipertension: hipertension, diabetes: diabetes, smoking: smoking)
             
-            if let dateSinp = dictionary["dateSinp"] as? Date,
-                let imagesSinp = dictionary["imagesSinp"] as? [String],
-                let textsSinp = dictionary["textsSinp"] as? [String]{
+            if let imageURL = dictionary["imageURL"] as? String {
+                self.pacient.imageURL = imageURL
+            }
+            
+            guard let dSinpString = dictionary["dateSinp"] as? String else { return }
+            var dateSinp: Date = Date()
+            
+            if let dSinpDate = self.formatDate(date: dSinpString) {
+                 dateSinp = dSinpDate
+            }
+            
+            if let imagesSinp = dictionary["imagesSinp"] as? [String],
+                let textsSinp = dictionary["textsSinp"] as? [String] {
                 self.sinptomLog = DataLog(date: dateSinp, images: imagesSinp, texts: textsSinp)
             }
             
-            if let dateReport = dictionary["dateReport"] as? Date,
-                let imagesReport = dictionary["imagesReport"] as? [String],
+            guard let dReportString = dictionary["dateReport"] as? String else { return }
+            var dateReport: Date = Date()
+            
+            if let dReportDate = self.formatDate(date: dReportString) {
+                dateReport = dReportDate
+            }
+            
+            if let imagesReport = dictionary["imagesReport"] as? [String],
                 let textsReport = dictionary["textsReport"] as? [String] {
                 self.reportLog = DataLog(date: dateReport, images: imagesReport, texts: textsReport)
             }

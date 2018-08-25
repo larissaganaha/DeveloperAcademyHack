@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import UIKit
+import Firebase
 
 class PacientFirebaseMechanism: FirebaseMechanism {
     static let shared = PacientFirebaseMechanism()
@@ -37,5 +39,27 @@ class PacientFirebaseMechanism: FirebaseMechanism {
 //                completionHandler(nil)
 //            }
 //        })
+    }
+    
+    func uploadImage(profileImage: UIImage, pacientID: String, completionHandler: @escaping (String?) -> Void) {
+        
+        let imageName = NSUUID.init()
+        let storageRef = Storage.storage().reference().child("\(imageName).png")
+        
+        if let uploadData = UIImagePNGRepresentation(profileImage) {
+            storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
+                if error == nil {
+                    
+                    storageRef.downloadURL(completion: { (url, error) in
+                        guard let downloadURL = url else {
+                            return
+                        }
+                        completionHandler(downloadURL.absoluteString)
+                    })
+                } else {
+                    print(error.debugDescription)
+                }
+            })
+        }
     }
 }
