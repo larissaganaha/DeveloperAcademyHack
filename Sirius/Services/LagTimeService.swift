@@ -12,4 +12,8 @@ class LagTimeService {
     static func updateLagTime(lagTime: LagTime){
         LagTimeMechanismFirebase.shared.updateLagTime(newLagTime: lagTime)
     }
+    
+    static func getLagTime(completion: @escaping (Int?) -> Void){
+        LagTimeMechanismFirebase.shared.getLagTime(completion: completion)
+    }
 }

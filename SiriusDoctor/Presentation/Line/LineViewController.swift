@@ -42,7 +42,7 @@ class LineViewController: UIViewController {
             }
         }
         //Atualizar o lag time a cada 5 minutos
-        timer = Timer.scheduledTimer(timeInterval: 300, target: self,
+        timer = Timer.scheduledTimer(timeInterval: 30, target: self,
                                      selector: #selector(updateLagTime),
                                      userInfo: nil, repeats: true)
     }
