@@ -25,7 +25,8 @@ class NextAppointmentController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var noImageLabel: UILabel!
     @IBOutlet weak var finishButton: UIButton!
-
+    @IBOutlet weak var sinptomsLabel: UILabel!
+    
     var images: [UIImage] = []
 
     var pacient: Pacient?
@@ -39,14 +40,19 @@ class NextAppointmentController: UIViewController {
         symptomsTextField.delegate = self
         noImageLabel.isHidden = true
         
+        if let textsLog = appointment.sinptomLog?.texts {
+            self.sinptomsLabel.text = textsLog.reduce("", { (result, string) -> String in
+                return result + ", \(string)"
+            })
+        } else {
+            self.sinptomsLabel.text = ""
+        }
+        
         reloadLabels()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
     @IBAction func finishedPressed(_ sender: Any) {
+        updateAppointment()
         performSegue(withIdentifier: "unwindToHomeScreen", sender: nil)
     }
     
@@ -60,10 +66,29 @@ class NextAppointmentController: UIViewController {
             self.timeLabel.text = "Horário da consulta: \(hour)h\(minute)min"
         }
     }
+    
+    func updateAppointment() {
+        var sinpLog: DataLog
+        if let log = self.appointment.sinptomLog {
+            sinpLog = log
+        } else {
+            sinpLog = DataLog(date: Date(), images: [], texts: [])
+        }
+        
+        guard let info = sinptomsLabel.text?.components(separatedBy: ",") else { return }
+        sinpLog.texts = info
+        
+        self.appointment.sinptomLog = sinpLog
+//        AppointmentService().saveAppointment(appointment)
+    }
 }
 
 extension NextAppointmentController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let text = textField.text {
+            self.sinptomsLabel.text?.append(", ")
+            self.sinptomsLabel.text?.append(text)
+        }
         self.view.endEditing(true)
         return false
     }

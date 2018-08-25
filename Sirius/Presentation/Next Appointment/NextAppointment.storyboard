@@ -253,6 +253,7 @@
                         <outlet property="nameLabel" destination="C7I-qa-e5d" id="7Bg-7T-lep"/>
                         <outlet property="noImageLabel" destination="Ste-Y5-eEh" id="sOM-9k-eiO"/>
                         <outlet property="pacientImage" destination="kBv-FK-Doe" id="fyU-Cw-gVT"/>
+                        <outlet property="sinptomsLabel" destination="b8S-tc-FSG" id="XL2-GK-TF4"/>
                         <outlet property="symptomsTextField" destination="wZz-wG-Xtf" id="hje-tk-aZr"/>
                         <outlet property="timeLabel" destination="a5c-Ee-dif" id="ETA-sp-M3m"/>
                         <segue destination="UfG-el-sLp" kind="unwind" identifier="unwindToHomeScreen" unwindAction="unwindToHomeScreenWithSegue:" id="Ou2-Ds-42C"/>
