@@ -24,9 +24,6 @@ class HomeScreenTableCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        self.collectionView.delegate = self
-        self.collectionView.dataSource = self
-
         // Initialization code
     }
 
