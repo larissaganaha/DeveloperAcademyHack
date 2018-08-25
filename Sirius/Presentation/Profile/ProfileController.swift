@@ -39,11 +39,11 @@ class ProfileController: UIViewController {
 
     func setupButtons() {
         for element in editButtons {
-            element.layer.cornerRadius = 10
+            element.layer.cornerRadius = 15
         }
     }
     @IBAction func doneButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "unwindToWaitScreen", sender: nil)
+        performSegue(withIdentifier: "unwindToHome", sender: nil)
     }
 
 }

@@ -11,9 +11,11 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var updateDataButton: UIButton!
+    @IBOutlet weak var goBackButton: UIButton!
 
     override func viewDidLoad() {
         updateDataButton.layer.cornerRadius = 23
+        goBackButton.layer.cornerRadius = 12
         super.viewDidLoad()
     }
 
@@ -22,6 +24,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func goBackPressed(_ sender: Any) {
+        performSegue(withIdentifier: "unwindToHomeScreen", sender: nil)
+    }
     @IBAction func unwindToWaitScreen(segue:UIStoryboardSegue) { }
 
 }
