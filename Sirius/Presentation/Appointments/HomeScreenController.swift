@@ -38,6 +38,8 @@ class HomeScreenController: UIViewController {
                         self.unactiveAppoints = appointments.filter{ !$0.isActive }.sorted(by: { (app1, app2) -> Bool in
                             return app1.scheduledTime.compare(app2.scheduledTime) == ComparisonResult.orderedAscending
                         })
+                        print(self.activeAppoints)
+                        print(self.unactiveAppoints)
                         DispatchQueue.main.async {
                             self.tableView.reloadData()
                         }
@@ -45,9 +47,9 @@ class HomeScreenController: UIViewController {
                         LagTimeService.getLagTime(completion: { (lagtime) in
                             let hours = lagtime!/60
                             if  hours > 0 {
-                                self.lagTimeLabel.text = "\(hours)h\(lagtime!%60)min"
+                                self.lagTimeLabel.text = "+\(hours)h\(lagtime!%60)min"
                             } else {
-                                self.lagTimeLabel.text = "00h\(lagtime!) min"
+                                self.lagTimeLabel.text = "+00h\(lagtime!) min"
                             }
                         })
                         
@@ -120,7 +122,7 @@ extension HomeScreenController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell", for: indexPath) as? HomeScreenTableCell {
-            if indexPath.row == 0 { cell.appoints = self.activeAppoints }
+            if indexPath.section == 0 { cell.appoints = self.activeAppoints }
             else { cell.appoints = self.unactiveAppoints }
             return cell
         }

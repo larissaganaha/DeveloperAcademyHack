@@ -10,9 +10,16 @@ import UIKit
 
 class HomeScreenTableCell: UITableViewCell {
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView! {
+        didSet {
+            collectionView.delegate = self
+            collectionView.dataSource = self
+        }
+    }
     
-    var appoints: [Appointment] = []
+    var appoints: [Appointment] = [] {
+        didSet { self.collectionView.reloadData() }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
