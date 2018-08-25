@@ -21,10 +21,14 @@ class ViewController: UIViewController {
         LagTimeService.getLagTime(completion: { (lagtime) in
             if lagtime != nil {
                 let hours = lagtime!/60
-                if  hours > 0 {
-                    self.lagTime.text = "+\(hours)h\(lagtime!%60)min"
+                if lagtime == 0 {
+                    self.lagTime.text = "Sem espera"
                 } else {
-                    self.lagTime.text = "\(lagtime!) min"
+                    if  hours > 0 {
+                        self.lagTime.text = "+\(hours)h\(lagtime!%60)min"
+                    } else {
+                        self.lagTime.text = "\(lagtime!) min"
+                    }
                 }
             }
         })
