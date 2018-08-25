@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 class LagTimeMechanismFirebase: FirebaseMechanism {
     static let shared = LagTimeMechanismFirebase()
@@ -17,7 +18,13 @@ class LagTimeMechanismFirebase: FirebaseMechanism {
     }
     
     func updateLagTime(newLagTime: LagTime) {
-        var dict = newLagTime.getDictInfo()
+        let dict = newLagTime.getDictInfo()
         ref?.child(path).setValue(dict)
+    }
+    
+    func addObserverEventAdded(completion: @escaping (Int?) -> Void){
+        self.ref?.child("LagTime").observe(.childChanged, with: { (snapshot) in
+            completion(snapshot.value as? Int)
+        })
     }
 }
