@@ -445,6 +445,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ypx-l7-tOa">
                                                     <rect key="frame" x="268.5" y="38" width="231" height="44"/>
+                                                    <color key="tintColor" red="0.50588235294117645" green="0.69411764705882351" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" image="finishAppointment"/>
                                                     <connections>
                                                         <action selector="endButtonPressed:" destination="oAn-vh-9Nt" eventType="touchUpInside" id="CpZ-cg-s9A"/>

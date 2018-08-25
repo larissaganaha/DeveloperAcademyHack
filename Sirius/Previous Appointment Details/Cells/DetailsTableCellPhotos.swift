@@ -11,11 +11,19 @@ import UIKit
 class DetailsTableCellPhotos: UITableViewCell {
 
     @IBOutlet weak var photoCollectionView: UICollectionView!
+    var images =  ["amigdalite1", "amigdalite2"]
+    var finalImages: [UIImage] = []
 
     override func awakeFromNib() {
         super.awakeFromNib()
         photoCollectionView.delegate = self
         photoCollectionView.dataSource = self
+        setupImages()
+    }
+
+    func setupImages(){
+        finalImages.append(UIImage(named: images[0])!)
+        finalImages.append(UIImage(named: images[1])!)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,12 +36,13 @@ class DetailsTableCellPhotos: UITableViewCell {
 
 extension DetailsTableCellPhotos: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return finalImages.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCollectionCell", for: indexPath) as? PhotosCollectionCell {
-            cell.photoImage.image = UIImage(named: "test")
+            print("INDEXPATH \(indexPath)")
+            cell.photoImage.image = finalImages[indexPath.row]
             return cell
         }
         return PhotosCollectionCell()
