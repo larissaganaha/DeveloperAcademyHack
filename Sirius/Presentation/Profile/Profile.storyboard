@@ -30,11 +30,11 @@
             <objects>
                 <viewController id="w38-gK-WkP" customClass="ProfileController" customModule="Sirius" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wjg-om-4Hc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qYF-Yp-Cyu">
-                                <rect key="frame" x="0.0" y="20" width="375" height="1980"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KBu-B0-xjb">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
@@ -354,7 +354,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Aly-Ah-BYk"/>
                     </view>
-                    <size key="freeformSize" width="375" height="2000"/>
                     <connections>
                         <outlet property="addressLabel" destination="iCt-am-MjP" id="rjJ-51-Bls"/>
                         <outlet property="bornDateLabel" destination="gqG-yH-hgU" id="GRE-rG-4Td"/>

@@ -48,7 +48,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEMPO DE ESPERA PREVISTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUb-i9-eq4" customClass="KerningLabel" customModule="Sirius" customModuleProvider="target">
-                                                <rect key="frame" x="74" y="270" width="227" height="18.5"/>
+                                                <rect key="frame" x="95" y="270" width="185.5" height="15.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="13"/>
                                                 <color key="textColor" red="0.2268310016" green="0.22315456980000001" blue="0.2292668269" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -59,13 +59,13 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="42 min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISz-ZN-8gy">
-                                                <rect key="frame" x="20" y="289" width="335" height="77"/>
+                                                <rect key="frame" x="20" y="286" width="335" height="64.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="55"/>
-                                                <color key="textColor" red="0.3294117647" green="0.45715493369999999" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.37254901959999998" green="0.68235294120000001" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEU LUGAR NA FILA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAd-2k-4ji" customClass="KerningLabel" customModule="Sirius" customModuleProvider="target">
-                                                <rect key="frame" x="110.5" y="402.5" width="154.5" height="18.5"/>
+                                                <rect key="frame" x="125.5" y="385.5" width="125" height="15.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="13"/>
                                                 <color key="textColor" red="0.2268310016" green="0.22315456980000001" blue="0.2292668269" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -76,9 +76,9 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVF-gm-hmQ">
-                                                <rect key="frame" x="20" y="420.5" width="335" height="77"/>
+                                                <rect key="frame" x="20" y="400.5" width="335" height="64.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="55"/>
-                                                <color key="textColor" red="0.3294117647" green="0.45715493369999999" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.37254901959999998" green="0.68235294120000001" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ATUALIZAR DADOS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBn-D7-wRG">
@@ -93,30 +93,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGS-eD-Gcj">
-                                                <rect key="frame" x="62" y="537.5" width="250" height="46"/>
-                                                <color key="backgroundColor" red="0.40784313729999999" green="0.55294117649999996" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="46" id="Ix3-X5-Hbr"/>
-                                                    <constraint firstAttribute="width" secondItem="VGS-eD-Gcj" secondAttribute="height" multiplier="125:23" id="R5g-jO-1JN"/>
-                                                </constraints>
-                                                <connections>
-                                                    <segue destination="uG5-co-lrh" kind="show" id="US5-8D-cLJ"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATUALIZAR CONSULTA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bm3-GH-Xoz">
-                                                <rect key="frame" x="62" y="550.5" width="250" height="20"/>
-                                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="kerning">
-                                                        <real key="value" value="2"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6w-gS-7QI">
-                                                <rect key="frame" x="20" y="30" width="70" height="29"/>
+                                                <rect key="frame" x="20" y="30" width="70" height="26"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="70" id="nG4-Mw-Pwt"/>
@@ -132,25 +110,19 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="VGS-eD-Gcj" firstAttribute="width" secondItem="VGS-eD-Gcj" secondAttribute="height" multiplier="125:23" id="6lU-1B-aP3"/>
-                                            <constraint firstItem="Bm3-GH-Xoz" firstAttribute="centerY" secondItem="VGS-eD-Gcj" secondAttribute="centerY" id="7hV-EN-PAz"/>
                                             <constraint firstItem="EUb-i9-eq4" firstAttribute="centerX" secondItem="Bx8-kS-t4e" secondAttribute="centerX" id="8Q6-CH-GL4"/>
                                             <constraint firstItem="CnI-7F-EBp" firstAttribute="leading" secondItem="Bx8-kS-t4e" secondAttribute="leading" id="8uf-4i-0U1"/>
-                                            <constraint firstItem="VGS-eD-Gcj" firstAttribute="centerX" secondItem="Bx8-kS-t4e" secondAttribute="centerX" id="9HN-cW-pIx"/>
                                             <constraint firstAttribute="height" constant="667" id="ACm-3U-bcZ"/>
                                             <constraint firstAttribute="trailing" secondItem="CnI-7F-EBp" secondAttribute="trailing" id="DmI-x5-sKA"/>
                                             <constraint firstItem="f6w-gS-7QI" firstAttribute="top" secondItem="Bx8-kS-t4e" secondAttribute="top" constant="30" id="G6Z-hb-MYm"/>
                                             <constraint firstItem="HAd-2k-4ji" firstAttribute="top" secondItem="ISz-ZN-8gy" secondAttribute="bottom" multiplier="1.1" id="Hvq-E6-2Do"/>
-                                            <constraint firstItem="Bm3-GH-Xoz" firstAttribute="width" secondItem="VGS-eD-Gcj" secondAttribute="width" id="Lls-yp-7i1"/>
                                             <constraint firstItem="EUb-i9-eq4" firstAttribute="top" secondItem="CnI-7F-EBp" secondAttribute="bottom" multiplier="1.35" id="Rd0-rx-xxQ"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="f6w-gS-7QI" secondAttribute="trailing" constant="280" id="RsX-wF-jK9"/>
                                             <constraint firstItem="ISz-ZN-8gy" firstAttribute="top" secondItem="EUb-i9-eq4" secondAttribute="bottom" id="SZM-Ml-8M6"/>
                                             <constraint firstItem="yVF-gm-hmQ" firstAttribute="centerX" secondItem="Bx8-kS-t4e" secondAttribute="centerX" id="Sf3-Qi-ago"/>
                                             <constraint firstItem="CnI-7F-EBp" firstAttribute="height" secondItem="Bx8-kS-t4e" secondAttribute="height" multiplier="0.3" id="Vpa-sY-dvc"/>
                                             <constraint firstItem="ISz-ZN-8gy" firstAttribute="centerX" secondItem="Bx8-kS-t4e" secondAttribute="centerX" id="brg-nV-ymO"/>
-                                            <constraint firstItem="Bm3-GH-Xoz" firstAttribute="centerX" secondItem="VGS-eD-Gcj" secondAttribute="centerX" id="bs2-u4-ITO"/>
                                             <constraint firstItem="CnI-7F-EBp" firstAttribute="top" secondItem="Bx8-kS-t4e" secondAttribute="top" id="cXQ-iz-eSX"/>
-                                            <constraint firstItem="VGS-eD-Gcj" firstAttribute="top" secondItem="yVF-gm-hmQ" secondAttribute="bottom" multiplier="1.08" id="fBh-4X-ucV"/>
                                             <constraint firstItem="CTW-KH-HSy" firstAttribute="centerY" secondItem="CnI-7F-EBp" secondAttribute="centerY" id="hYY-FE-ncc"/>
                                             <constraint firstItem="f6w-gS-7QI" firstAttribute="leading" secondItem="Bx8-kS-t4e" secondAttribute="leading" constant="20" id="iav-R8-oie"/>
                                             <constraint firstAttribute="trailing" secondItem="yVF-gm-hmQ" secondAttribute="trailing" constant="20" id="kS7-qp-AWX"/>
@@ -184,7 +156,6 @@
                     </view>
                     <connections>
                         <outlet property="goBackButton" destination="f6w-gS-7QI" id="nHg-ur-GCK"/>
-                        <outlet property="updateDataButton" destination="VGS-eD-Gcj" id="gSW-ff-N4q"/>
                         <segue destination="COA-9T-w7C" kind="unwind" identifier="unwindToHomeScreen" unwindAction="unwindToHomeScreenWithSegue:" id="kg5-ml-Owg"/>
                     </connections>
                 </viewController>
@@ -196,8 +167,8 @@
         <!--NextAppointment-->
         <scene sceneID="mCc-ex-3mc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rue-57-5bv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="NextAppointment" id="uG5-co-lrh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rue-57-5bv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="382" y="125"/>
         </scene>

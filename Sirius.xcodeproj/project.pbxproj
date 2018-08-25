@@ -242,6 +242,16 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		426F92502131157F00F7C53A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				426F922B21307E8100F7C53A /* Poppins-Regular.otf */,
+				426F922521307E4F00F7C53A /* Poppins-Medium.otf */,
+				426F922821307E6200F7C53A /* Poppins-SemiBold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		9B1989822130773500DABE6E /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -352,9 +362,7 @@
 				9BFD70562130555B000443F7 /* AppDelegate.swift */,
 				9BFD705D2130555C000443F7 /* Assets.xcassets */,
 				9BFD705F2130555C000443F7 /* LaunchScreen.storyboard */,
-				426F922521307E4F00F7C53A /* Poppins-Medium.otf */,
-				426F922B21307E8100F7C53A /* Poppins-Regular.otf */,
-				426F922821307E6200F7C53A /* Poppins-SemiBold.otf */,
+				426F92502131157F00F7C53A /* Fonts */,
 				9BFD70622130555C000443F7 /* Info.plist */,
 			);
 			path = Sirius;
