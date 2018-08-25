@@ -13,8 +13,23 @@ class ProfileController: UIViewController {
 
     @IBOutlet weak var pacientImage: UIImageView!
     @IBOutlet var editButtons: [UIButton]!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var idLabel: UILabel!
+    @IBOutlet weak var bornDateLabel: UILabel!
+    @IBOutlet weak var telephoneLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
 
-    var pacient:Pacient?
+    @IBOutlet weak var weightLabel: UILabel!
+    @IBOutlet weak var heightLabel: UILabel!
+    
+    @IBOutlet weak var familyDisease1Label: UILabel!
+    @IBOutlet weak var familyDisease2Label: UILabel!
+    
+    @IBOutlet weak var checkBoxDrink: UIImageView!
+    @IBOutlet weak var checkBoxSmoking: UIImageView!
+    
+    var pacient: Pacient?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,25 +42,45 @@ class ProfileController: UIViewController {
         PacientFirebaseMechanism.shared.retrievePacient(id: "164923") { (pacient) in
             if let pacient = pacient {
                 self.pacient = pacient
+                self.reloadLabels()
             }
         }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
     func setupButtons() {
         for element in editButtons {
-            element.layer.cornerRadius = 15
+            element.layer.cornerRadius = 4
         }
     }
+    
     @IBAction func doneButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "unwindToHome", sender: nil)
     }
-
+    
+    private func reloadLabels() {
+        if let pacient = self.pacient {
+            self.nameLabel.text = pacient.name
+            self.idLabel.text = pacient.ID
+            self.bornDateLabel.text = "\(pacient.bornDate.toString(dateFormat: "dd/MM/yyyy"))"
+            self.telephoneLabel.text = "\(pacient.telephone)"
+            self.addressLabel.text = "\(pacient.address)"
+            self.weightLabel.text = "Peso: \(pacient.weight) kg"
+            self.heightLabel.text = "Altura: \(pacient.height) m"
+            
+            var familyDiseases: [String] = [pacient.diabetes ? "Diabetes" : "",
+                                          pacient.hipertension ? "Hipertensão" : ""]
+            self.familyDisease1Label.text = familyDiseases[0]
+            self.familyDisease2Label.text = familyDiseases[1]
+            
+            self.checkBoxDrink.image = pacient.drink ? #imageLiteral(resourceName: "checked box") :  #imageLiteral(resourceName: "unchecked box")
+            self.checkBoxSmoking.image = pacient.smoking ? #imageLiteral(resourceName: "checked box") : #imageLiteral(resourceName: "unchecked box")
+        }
+    }
 }
 
 //Pick user image handlers

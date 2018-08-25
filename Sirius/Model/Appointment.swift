@@ -32,14 +32,14 @@ class Appointment: PersistenceObject {
             "name": pacient.name,
             "address": pacient.address,
             "telephone": pacient.telephone,
-            "bornDate": pacient.bornDate.toString(dateFormat: "dd-MM-yyyy"),
+            "bornDate": pacient.bornDate.toString(dateFormat: "dd-MM-yyyy hh:mm"),
             "height": pacient.height,
             "weight": pacient.weight,
             "drink": pacient.drink,
             "hipertension": pacient.hipertension,
             "diabetes": pacient.diabetes,
             "smoking": pacient.smoking,
-            "scheduledTime": scheduledTime.toString(dateFormat: "dd-MM-yyyy"),
+            "scheduledTime": scheduledTime.toString(dateFormat: "dd-MM-yyyy hh:mm"),
             "transcript": transcript,
             "isActive": self.isActive
         ]
@@ -49,13 +49,13 @@ class Appointment: PersistenceObject {
         }
         
         if let sinptomLog = sinptomLog {
-            self.dictInfo["dateSinp"] = sinptomLog.date.toString(dateFormat: "dd-MM-yyyy")
+            self.dictInfo["dateSinp"] = sinptomLog.date.toString(dateFormat: "dd-MM-yyyy hh:mm")
             self.dictInfo["imagesSinp"] = sinptomLog.images
             self.dictInfo["textsSinp"] = sinptomLog.texts
         }
         
         if let reportLog = reportLog {
-            self.dictInfo["dateReport"] = reportLog.date.toString(dateFormat: "dd-MM-yyyy")
+            self.dictInfo["dateReport"] = reportLog.date.toString(dateFormat: "dd-MM-yyyy hh:mm")
             self.dictInfo["imagesReport"] = reportLog.images
             self.dictInfo["textsReport"] = reportLog.texts
         }
@@ -141,7 +141,7 @@ class Appointment: PersistenceObject {
     
     func formatDate(date: String) -> Date? {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yyyy"
+        dateFormatter.dateFormat = "dd-MM-yyyy hh:mm"
         
         if let formattedDate = dateFormatter.date(from: date) {
             return formattedDate

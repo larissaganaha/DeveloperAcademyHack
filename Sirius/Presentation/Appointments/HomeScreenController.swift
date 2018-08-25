@@ -11,13 +11,44 @@ import UIKit
 class HomeScreenController: UIViewController {
 
     var categories = ["Consultas futuras", "Consultas passadas"]
+    var pacient:Pacient?
 
+    var activeAppoints:[Appointment] = []
+    var unactiveAppoints:[Appointment] = []
+    
     @IBOutlet weak var lagTimeLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        PacientFirebaseMechanism.shared.retrievePacient(id: "164923") { (pacient) in
+            if let pacient = pacient {
+                self.pacient = pacient
+                
+                AppointmentMechanismFirebase.shared.retrieveAppointments(from: pacient.ID, completionHandler: { (appointments) in
+                    if let appointments = appointments {
+                        self.activeAppoints = appointments.filter{ $0.isActive }
+                        self.unactiveAppoints = appointments.filter{ !$0.isActive}
+                        
+                        self.updateLagTimeIfNecessary()
+                    }
+                })
+            }
+        }
         lagTimeLabel.layer.cornerRadius = 17
         lagTimeLabel.clipsToBounds = true
+    }
+    
+    func updateLagTimeIfNecessary(){
+        let dayOfNextAppoint = Calendar.current.component(.day, from: (self.activeAppoints.first?.scheduledTime)!)
+        let currDay = Calendar.current.component(.day, from: Date())
+        
+        if dayOfNextAppoint == currDay {
+            LagTimeMechanismFirebase.shared.addObserverEventAdded { (lagTime) in
+                self.lagTimeLabel.text = String(lagTime!)
+                print(lagTime ?? -999)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

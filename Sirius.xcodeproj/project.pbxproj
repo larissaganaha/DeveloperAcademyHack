@@ -35,6 +35,9 @@
 		9B7507F12130C8F1009232FA /* Image.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B7507F02130C8F1009232FA /* Image.storyboard */; };
 		9B7507F32130C901009232FA /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7507F22130C901009232FA /* ImageViewController.swift */; };
 		9B7507F52130DC54009232FA /* ReportedSinptomsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7507F42130DC54009232FA /* ReportedSinptomsTableViewCell.swift */; };
+		9B7507FB213108EF009232FA /* NewAppointment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B7507FA213108EF009232FA /* NewAppointment.storyboard */; };
+		9B7507FD2131099B009232FA /* NewAppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7507FC2131099B009232FA /* NewAppointmentViewController.swift */; };
+		9B7507FF21310BF2009232FA /* PacientNewAppointmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7507FE21310BF2009232FA /* PacientNewAppointmentTableViewCell.swift */; };
 		9BB86FE321308C1E001966CC /* RelevantImagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB86FE221308C1E001966CC /* RelevantImagesTableViewCell.swift */; };
 		9BB86FE521308CF3001966CC /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB86FE421308CF3001966CC /* ImageCollectionViewCell.swift */; };
 		9BB86FE821308F24001966CC /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB86FE721308F24001966CC /* InfoTableViewCell.swift */; };
@@ -85,6 +88,12 @@
 		B1212C4F213078B000771370 /* PacientServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFD7082213058A4000443F7 /* PacientServiceProtocol.swift */; };
 		CB91ECD721305ECA0077C913 /* FirebaseMechanism.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB91ECD621305ECA0077C913 /* FirebaseMechanism.swift */; };
 		CB91ECD9213086F30077C913 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB91ECD8213086F20077C913 /* GoogleService-Info.plist */; };
+		CBD890342130EF6400F247A9 /* LagTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD890332130EF6400F247A9 /* LagTime.swift */; };
+		CBD890362130F01B00F247A9 /* LagTimeMechanismFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD890352130F01B00F247A9 /* LagTimeMechanismFirebase.swift */; };
+		CBD890382130F0C000F247A9 /* LagTimeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD890372130F0C000F247A9 /* LagTimeService.swift */; };
+		CBD890392130F25000F247A9 /* LagTimeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD890372130F0C000F247A9 /* LagTimeService.swift */; };
+		CBD8903A2130F25F00F247A9 /* LagTimeMechanismFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD890352130F01B00F247A9 /* LagTimeMechanismFirebase.swift */; };
+		CBD8903B2130F2FD00F247A9 /* LagTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD890332130EF6400F247A9 /* LagTime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +124,9 @@
 		9B7507F02130C8F1009232FA /* Image.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Image.storyboard; sourceTree = "<group>"; };
 		9B7507F22130C901009232FA /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		9B7507F42130DC54009232FA /* ReportedSinptomsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportedSinptomsTableViewCell.swift; sourceTree = "<group>"; };
+		9B7507FA213108EF009232FA /* NewAppointment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewAppointment.storyboard; sourceTree = "<group>"; };
+		9B7507FC2131099B009232FA /* NewAppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAppointmentViewController.swift; sourceTree = "<group>"; };
+		9B7507FE21310BF2009232FA /* PacientNewAppointmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacientNewAppointmentTableViewCell.swift; sourceTree = "<group>"; };
 		9BB86FE221308C1E001966CC /* RelevantImagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelevantImagesTableViewCell.swift; sourceTree = "<group>"; };
 		9BB86FE421308CF3001966CC /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		9BB86FE721308F24001966CC /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -160,6 +172,9 @@
 		BF69C464E089AF600107AC8C /* Pods_Sirius.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sirius.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB91ECD621305ECA0077C913 /* FirebaseMechanism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMechanism.swift; sourceTree = "<group>"; };
 		CB91ECD8213086F20077C913 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CBD890332130EF6400F247A9 /* LagTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LagTime.swift; sourceTree = "<group>"; };
+		CBD890352130F01B00F247A9 /* LagTimeMechanismFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LagTimeMechanismFirebase.swift; sourceTree = "<group>"; };
+		CBD890372130F0C000F247A9 /* LagTimeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LagTimeService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,6 +300,16 @@
 			path = Image;
 			sourceTree = "<group>";
 		};
+		9B7507F9213108DD009232FA /* NewAppointment */ = {
+			isa = PBXGroup;
+			children = (
+				9B7507FA213108EF009232FA /* NewAppointment.storyboard */,
+				9B7507FC2131099B009232FA /* NewAppointmentViewController.swift */,
+				9B7507FE21310BF2009232FA /* PacientNewAppointmentTableViewCell.swift */,
+			);
+			path = NewAppointment;
+			sourceTree = "<group>";
+		};
 		9BB86FE621308D30001966CC /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -365,6 +390,7 @@
 				9BFD708021305660000443F7 /* Pacient.swift */,
 				9BFD70852130590D000443F7 /* DataLog.swift */,
 				9BFD708721305916000443F7 /* Appointment.swift */,
+				CBD890332130EF6400F247A9 /* LagTime.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -375,6 +401,7 @@
 				9BB86FEE21309F42001966CC /* AppointmentService.swift */,
 				9BFD7082213058A4000443F7 /* PacientServiceProtocol.swift */,
 				9BFD708D21305A6C000443F7 /* PacientService.swift */,
+				CBD890372130F0C000F247A9 /* LagTimeService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -400,6 +427,7 @@
 		9BFD709921305F8B000443F7 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				9B7507F9213108DD009232FA /* NewAppointment */,
 				9B7507EF2130C8E4009232FA /* Image */,
 				9B7507EA2130C353009232FA /* Transcript */,
 				9BB86FF12130A08C001966CC /* Line */,
@@ -504,6 +532,7 @@
 				CB91ECD621305ECA0077C913 /* FirebaseMechanism.swift */,
 				B1212C3E2130638300771370 /* PacientMechanismFirebase.swift */,
 				B1212C402130684F00771370 /* AppointmentMechanismFirebase.swift */,
+				CBD890352130F01B00F247A9 /* LagTimeMechanismFirebase.swift */,
 			);
 			path = Mechanism;
 			sourceTree = "<group>";
@@ -611,6 +640,7 @@
 				9BFD7079213055A6000443F7 /* LaunchScreen.storyboard in Resources */,
 				9BFD70A8213065C4000443F7 /* VoiceRecognitionTest.storyboard in Resources */,
 				9B7507F12130C8F1009232FA /* Image.storyboard in Resources */,
+				9B7507FB213108EF009232FA /* NewAppointment.storyboard in Resources */,
 				9B7507EC2130C367009232FA /* Transcript.storyboard in Resources */,
 				B1212C432130730F00771370 /* TestFirebase.storyboard in Resources */,
 				426F922A21307E6300F7C53A /* Poppins-SemiBold.otf in Resources */,
@@ -736,7 +766,10 @@
 				9BFD7083213058A4000443F7 /* PacientServiceProtocol.swift in Sources */,
 				9BFD708E21305A6C000443F7 /* PacientService.swift in Sources */,
 				9BFD70572130555B000443F7 /* AppDelegate.swift in Sources */,
+				CBD890362130F01B00F247A9 /* LagTimeMechanismFirebase.swift in Sources */,
+				CBD890382130F0C000F247A9 /* LagTimeService.swift in Sources */,
 				426F92312130889D00F7C53A /* CardView.swift in Sources */,
+				CBD890342130EF6400F247A9 /* LagTime.swift in Sources */,
 				426F924A2130EABE00F7C53A /* NextAppointmentController.swift in Sources */,
 				9BB86FEF21309F4C001966CC /* AppointmentService.swift in Sources */,
 				9BFD709521305EDE000443F7 /* DataMock.swift in Sources */,
@@ -748,19 +781,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBD8903A2130F25F00F247A9 /* LagTimeMechanismFirebase.swift in Sources */,
 				9BFD70AC213069C0000443F7 /* VoiceRecognitionReference.swift in Sources */,
+				9B7507FD2131099B009232FA /* NewAppointmentViewController.swift in Sources */,
 				9BB86FE821308F24001966CC /* InfoTableViewCell.swift in Sources */,
 				9B1989852130775100DABE6E /* ProfileTableViewCell.swift in Sources */,
 				9BFD70A5213063BA000443F7 /* VoiceRecognition.swift in Sources */,
 				9BFD708C213059E7000443F7 /* DoctorServiceProtocol.swift in Sources */,
 				B1212C4C213078A100771370 /* PacientMechanismFirebase.swift in Sources */,
 				9BB86FED21309747001966CC /* AppointmentViewController.swift in Sources */,
+				9B7507FF21310BF2009232FA /* PacientNewAppointmentTableViewCell.swift in Sources */,
 				9B7507E62130A0D6009232FA /* LineViewController.swift in Sources */,
 				9BFD709721305F27000443F7 /* DataLog.swift in Sources */,
 				9BFD709021305AF0000443F7 /* DoctorService.swift in Sources */,
 				B1212C4E213078A700771370 /* PacientMechanismMock.swift in Sources */,
 				9BFD709821305F2B000443F7 /* Appointment.swift in Sources */,
 				9BB86FEA21309010001966CC /* InfoCollectionViewCell.swift in Sources */,
+				CBD890392130F25000F247A9 /* LagTimeService.swift in Sources */,
+				CBD8903B2130F2FD00F247A9 /* LagTime.swift in Sources */,
 				9BB86FE321308C1E001966CC /* RelevantImagesTableViewCell.swift in Sources */,
 				B1212C4F213078B000771370 /* PacientServiceProtocol.swift in Sources */,
 				9B7507E92130A33B009232FA /* LineTableViewCell.swift in Sources */,
@@ -980,7 +1018,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GJ5VL7QF9C;
+				DEVELOPMENT_TEAM = 2ECVV26Q6C;
 				INFOPLIST_FILE = SiriusDoctor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -999,7 +1037,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GJ5VL7QF9C;
+				DEVELOPMENT_TEAM = 2ECVV26Q6C;
 				INFOPLIST_FILE = SiriusDoctor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -15,6 +15,10 @@ class PacientService: PacientServiceProtocol {
         PacientFirebaseMechanism.shared.retrievePacient(id: id, completionHandler: completionHandler)
     }
     
+    func getAllPacients(completionHandler: @escaping ([Pacient]?) -> Void) {
+        PacientFirebaseMechanism.shared.retrieveAllPacients(completionHandler: completionHandler)
+    }
+    
     func savePacient(_ pacient: Pacient) {
         PacientFirebaseMechanism.shared.createPacient(pacient: pacient)
 //        PacientMechanisMock.savePacient(pacient)
