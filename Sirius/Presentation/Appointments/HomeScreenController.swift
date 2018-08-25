@@ -12,8 +12,12 @@ class HomeScreenController: UIViewController {
 
     var categories = ["Consultas futuras", "Consultas passadas"]
 
+    @IBOutlet weak var lagTimeLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        lagTimeLabel.layer.cornerRadius = 17
+        lagTimeLabel.clipsToBounds = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +25,19 @@ class HomeScreenController: UIViewController {
     }
 
     @IBAction func unwindToHomeScreen(segue:UIStoryboardSegue) { }
+
+    @IBAction func checkInPressed(_ sender: Any) {
+        displayAlert()
+    }
+
+    func displayAlert() {
+        let alertController = UIAlertController(title: "Check-in feito!", message: "Seu checkin foi realizado com sucesso", preferredStyle: .alert)
+        let settingsButton = UIAlertAction(title: "Ok", style: .default, handler: { action in
+            self.performSegue(withIdentifier: "showWaitScreen", sender: nil)
+        })
+        alertController.addAction(settingsButton)
+        self.present(alertController, animated: true, completion: nil)
+    }
 
 }
 extension HomeScreenController: UITableViewDelegate, UITableViewDataSource {

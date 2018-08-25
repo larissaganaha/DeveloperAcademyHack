@@ -24,7 +24,7 @@ class NextAppointmentController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addPhotoButton.layer.cornerRadius = 17
-        finishButton.layer.cornerRadius = 18
+        finishButton.layer.cornerRadius = 20
         symptomsTextField.delegate = self
         noImageLabel.isHidden = true
 
@@ -36,11 +36,11 @@ class NextAppointmentController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
-    @IBAction func goBackPressed(_ sender: Any) {
-        performSegue(withIdentifier: "unwindToWaitScreen", sender: nil)
-
+    @IBAction func finishedPressed(_ sender: Any) {
+        performSegue(withIdentifier: "unwindToHomeScreen", sender: nil)
     }
+
+
 
 }
 
