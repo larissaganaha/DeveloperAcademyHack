@@ -18,7 +18,7 @@ class AppointmentMechanismFirebase: FirebaseMechanism {
     func createAppointment(appointment: Appointment) {
         let path = "Appointments"
         
-        self.create(dump: Appointment.self, object: appointment, path: path, newObjectID: appointment.id)
+        self.create(dump: Appointment.self, object: appointment, path: path, newObjectID: nil)
     }
     
 //    func retrieveAppointment(id: String, completionHandler: @escaping (Appointment?) -> Void) {
