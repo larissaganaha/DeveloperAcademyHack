@@ -112,7 +112,7 @@ extension LineViewController: UITableViewDataSource, UITableViewDelegate {
         cell.profileImage.kf.setImage(with: app.pacient.realURL, placeholder: #imageLiteral(resourceName: "profilePicturePlaceholder"), options: nil, progressBlock: nil, completionHandler: nil)
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy hh:mm"
+        dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
         cell.time.text = "\(dateFormatter.string(from: app.scheduledTime))"
         
         return cell

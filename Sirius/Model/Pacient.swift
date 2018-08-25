@@ -74,7 +74,7 @@ class Pacient: NSObject, PersistenceObject {
             "name": name,
             "address": address,
             "telephone": telephone,
-            "bornDate": bornDate.toString(dateFormat: "dd-MM-yyyy"),
+            "bornDate": bornDate.toString(dateFormat: "yyyy/MM/dd"),
             "height": height,
             "weight": weight,
             "drink": drink,
@@ -141,7 +141,7 @@ class Pacient: NSObject, PersistenceObject {
     
     func formatDate(date: String) -> Date? {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yyyy"
+        dateFormatter.dateFormat = "yyyy/MM/dd HH:mm"
         
         if let formattedDate = dateFormatter.date(from: date) {
             return formattedDate
