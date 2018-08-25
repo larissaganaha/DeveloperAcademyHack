@@ -10,19 +10,20 @@ import UIKit
 
 class DataLog: PersistenceObject {
     var date: Date
-    var images: [URL]
+    var images: [String]
     var texts: [String]
     var dictInfo: [AnyHashable: Any] = [:]
     
     init (date: Date, images: [String], texts: [String]) {
         self.date = date
-        let imageUrls = images.map{URL(string: $0)!}
-        self.images = imageUrls
+//        let imageUrls = images.map{URL(string: $0)!}
+//        self.images = imageUrls
+        self.images = images
         self.texts = texts
         
         self.dictInfo = [
             "date": date,
-            "images": imageUrls,
+            "images": images,
             "texts": texts
         ]
     }
@@ -32,7 +33,8 @@ class DataLog: PersistenceObject {
             let images = dictionary["images"] as? [String],
             let texts = dictionary["texts"] as? [String] {
             self.date = date
-            self.images = images.map{URL(string: $0)!}
+//            self.images = images.map{URL(string: $0)!}
+            self.images = images
             self.texts = texts
             self.dictInfo = dictionary
         } else {

@@ -21,18 +21,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vmQ-uc-Pix">
-                                <rect key="frame" x="20" y="20" width="728" height="1980"/>
+                                <rect key="frame" x="0.0" y="20" width="768" height="1980"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="profileCell" rowHeight="210" id="5A3-i6-oUg" customClass="ProfileTableViewCell" customModule="SiriusDoctor" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="728" height="210"/>
+                                        <rect key="frame" x="0.0" y="28" width="768" height="210"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5A3-i6-oUg" id="voh-o8-Hfq">
-                                            <rect key="frame" x="0.0" y="0.0" width="728" height="210"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="210"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9GL-Bt-Abc">
-                                                    <rect key="frame" x="15" y="11" width="698" height="188"/>
+                                                    <rect key="frame" x="15" y="11" width="738" height="188"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePicturePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="7un-4M-gxF">
                                                             <rect key="frame" x="20" y="44" width="100" height="100"/>
@@ -42,25 +42,25 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pacient Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6c-7A-pDq">
-                                                            <rect key="frame" x="130" y="50" width="558" height="24"/>
+                                                            <rect key="frame" x="130" y="50" width="598" height="24"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YYr-tV-Wmf">
-                                                            <rect key="frame" x="130" y="140" width="558" height="21"/>
+                                                            <rect key="frame" x="130" y="140" width="598" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWx-H1-A31">
-                                                            <rect key="frame" x="130" y="82" width="288" height="21"/>
+                                                            <rect key="frame" x="130" y="82" width="328" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telefone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWY-To-GkB">
-                                                            <rect key="frame" x="438" y="82" width="250" height="21"/>
+                                                            <rect key="frame" x="478" y="82" width="250" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="250" id="Z5b-FE-IoN"/>
                                                             </constraints>
@@ -75,13 +75,13 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="En8-bV-kIi">
-                                                            <rect key="frame" x="438" y="111" width="250" height="21"/>
+                                                            <rect key="frame" x="478" y="111" width="250" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYG-i8-kCJ">
-                                                            <rect key="frame" x="5" y="5" width="41" height="30"/>
+                                                            <rect key="frame" x="0.0" y="5" width="41" height="30"/>
                                                             <state key="normal" title="Voltar"/>
                                                             <connections>
                                                                 <action selector="backButtonPressed:" destination="5A3-i6-oUg" eventType="touchUpInside" id="2wZ-8Y-Rjh"/>
@@ -100,7 +100,7 @@
                                                         <constraint firstItem="JWx-H1-A31" firstAttribute="top" secondItem="z6c-7A-pDq" secondAttribute="bottom" constant="8" id="LHW-iA-6oU"/>
                                                         <constraint firstItem="nWY-To-GkB" firstAttribute="leading" secondItem="JWx-H1-A31" secondAttribute="trailing" constant="20" id="QjJ-bk-S8f"/>
                                                         <constraint firstAttribute="trailing" secondItem="nWY-To-GkB" secondAttribute="trailing" constant="10" id="Rbf-X9-QHz"/>
-                                                        <constraint firstItem="GYG-i8-kCJ" firstAttribute="leading" secondItem="9GL-Bt-Abc" secondAttribute="leading" constant="5" id="Yof-nI-MBO"/>
+                                                        <constraint firstItem="GYG-i8-kCJ" firstAttribute="leading" secondItem="9GL-Bt-Abc" secondAttribute="leading" id="Yof-nI-MBO"/>
                                                         <constraint firstAttribute="trailing" secondItem="YYr-tV-Wmf" secondAttribute="trailing" constant="10" id="ZMt-6T-S1i"/>
                                                         <constraint firstItem="GZd-Li-9RY" firstAttribute="leading" secondItem="JWx-H1-A31" secondAttribute="leading" id="ZT5-t0-XFe"/>
                                                         <constraint firstItem="YYr-tV-Wmf" firstAttribute="leading" secondItem="GZd-Li-9RY" secondAttribute="leading" id="aQQ-sU-eIr"/>
@@ -134,10 +134,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="appointmentInfoCell" rowHeight="250" id="WcS-DB-f3M" customClass="PacientInfoTableViewCell" customModule="SiriusDoctor" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="238" width="728" height="250"/>
+                                        <rect key="frame" x="0.0" y="238" width="768" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WcS-DB-f3M" id="0Uj-NS-vI7">
-                                            <rect key="frame" x="0.0" y="0.0" width="728" height="250"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="250"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informações da Consulta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LuD-Ad-2qi">
@@ -154,7 +154,7 @@
                                                     </connections>
                                                 </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XZy-TD-8es" customClass="CardView" customModule="SiriusDoctor" customModuleProvider="target">
-                                                    <rect key="frame" x="15" y="46" width="318" height="185"/>
+                                                    <rect key="frame" x="15" y="46" width="338" height="185"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sintomas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vn1-Qg-4b8">
                                                             <rect key="frame" x="8" y="8" width="75" height="21"/>
@@ -163,7 +163,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ReL-57-lJ6">
-                                                            <rect key="frame" x="8" y="39" width="302" height="136"/>
+                                                            <rect key="frame" x="8" y="39" width="322" height="136"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -181,7 +181,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lky-m9-Z6Z" customClass="CardView" customModule="SiriusDoctor" customModuleProvider="target">
-                                                    <rect key="frame" x="380" y="46" width="318" height="185"/>
+                                                    <rect key="frame" x="400" y="46" width="338" height="185"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medicamentos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ft6-Z9-rCY">
                                                             <rect key="frame" x="8" y="8" width="118" height="21"/>
@@ -190,7 +190,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Uiz-TK-fkd">
-                                                            <rect key="frame" x="8" y="37" width="302" height="136"/>
+                                                            <rect key="frame" x="8" y="37" width="322" height="136"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -207,7 +207,7 @@
                                                     </constraints>
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSJ-6u-758">
-                                                    <rect key="frame" x="606" y="7" width="107" height="30"/>
+                                                    <rect key="frame" x="646" y="7" width="107" height="30"/>
                                                     <state key="normal" title="Ver Transcrição"/>
                                                     <connections>
                                                         <action selector="transcriptButtonPressed:" destination="WcS-DB-f3M" eventType="touchUpInside" id="VP3-5H-5tR"/>
@@ -238,10 +238,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="relevantImagesCell" rowHeight="200" id="A1a-WO-FNJ" customClass="RelevantImagesTableViewCell" customModule="SiriusDoctor" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="488" width="728" height="200"/>
+                                        <rect key="frame" x="0.0" y="488" width="768" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A1a-WO-FNJ" id="wE0-7O-Z5y">
-                                            <rect key="frame" x="0.0" y="0.0" width="728" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imagens Relevantes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avC-tX-4fD">
@@ -251,7 +251,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="a4E-F2-Yoa">
-                                                    <rect key="frame" x="15" y="43" width="698" height="146"/>
+                                                    <rect key="frame" x="15" y="43" width="738" height="146"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="146" id="y7m-B8-gVe"/>
@@ -270,7 +270,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="164" height="117"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenGradient" translatesAutoresizingMaskIntoConstraints="NO" id="l93-JV-kNk">
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenGradient" translatesAutoresizingMaskIntoConstraints="NO" id="l93-JV-kNk">
                                                                         <rect key="frame" x="0.0" y="0.0" width="164" height="117"/>
                                                                     </imageView>
                                                                 </subviews>
@@ -303,10 +303,10 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="pInfoCell" rowHeight="250" id="Ib2-fR-aey" customClass="InfoTableViewCell" customModule="SiriusDoctor" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="688" width="728" height="250"/>
+                                        <rect key="frame" x="0.0" y="688" width="768" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ib2-fR-aey" id="QgP-ek-A94">
-                                            <rect key="frame" x="0.0" y="0.0" width="728" height="250"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="250"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informações do Paciente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OmV-VY-oQ5">
@@ -316,7 +316,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IIr-yc-HPD">
-                                                    <rect key="frame" x="15" y="43" width="698" height="196"/>
+                                                    <rect key="frame" x="15" y="43" width="738" height="196"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="196" id="DKe-JJ-bq8"/>
@@ -386,15 +386,52 @@
                                             <outlet property="collectionView" destination="IIr-yc-HPD" id="wIc-NY-YLS"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="sinptomReportCell" rowHeight="150" id="36B-yy-Jg3" customClass="ReportedSinptomsTableViewCell" customModule="SiriusDoctor" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="938" width="768" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="36B-yy-Jg3" id="nOk-ho-NqF">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sintomas Reportados" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KwX-tj-vHQ">
+                                                    <rect key="frame" x="15" y="11" width="728" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jsx-rb-mB7">
+                                                    <rect key="frame" x="15" y="43" width="728" height="96"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="96" id="h9E-fV-e2J"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="KwX-tj-vHQ" firstAttribute="top" secondItem="nOk-ho-NqF" secondAttribute="topMargin" id="5CI-vK-C6B"/>
+                                                <constraint firstItem="Jsx-rb-mB7" firstAttribute="top" secondItem="KwX-tj-vHQ" secondAttribute="bottom" constant="8" id="A7c-Xb-daJ"/>
+                                                <constraint firstItem="Jsx-rb-mB7" firstAttribute="bottom" secondItem="nOk-ho-NqF" secondAttribute="bottomMargin" id="RD6-RP-mBF"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Jsx-rb-mB7" secondAttribute="trailing" constant="10" id="grO-gN-YiG"/>
+                                                <constraint firstItem="KwX-tj-vHQ" firstAttribute="leading" secondItem="nOk-ho-NqF" secondAttribute="leadingMargin" id="hP0-dj-Pue"/>
+                                                <constraint firstItem="Jsx-rb-mB7" firstAttribute="leading" secondItem="nOk-ho-NqF" secondAttribute="leadingMargin" id="sNO-K3-Ab5"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="KwX-tj-vHQ" secondAttribute="trailing" constant="10" id="zi5-hJ-2Qf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="Jsx-rb-mB7" id="mjH-5r-cG6"/>
+                                        </connections>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="endCell" rowHeight="119" id="oAn-vh-9Nt" customClass="EndTableViewCell" customModule="SiriusDoctor" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="938" width="728" height="119"/>
+                                        <rect key="frame" x="0.0" y="1088" width="768" height="119"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oAn-vh-9Nt" id="Hw4-xa-mJy">
-                                            <rect key="frame" x="0.0" y="0.0" width="728" height="119"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="119"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ypx-l7-tOa">
-                                                    <rect key="frame" x="249" y="38" width="231" height="44"/>
+                                                    <rect key="frame" x="268.5" y="38" width="231" height="44"/>
                                                     <state key="normal" image="finishAppointment"/>
                                                     <connections>
                                                         <action selector="endButtonPressed:" destination="oAn-vh-9Nt" eventType="touchUpInside" id="CpZ-cg-s9A"/>
@@ -411,6 +448,14 @@
                                             <outlet property="endButton" destination="Ypx-l7-tOa" id="4aZ-xd-NAZ"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="emptyCell" rowHeight="0.0" id="qis-hB-nTj">
+                                        <rect key="frame" x="0.0" y="1207" width="768" height="0.0"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qis-hB-nTj" id="FgI-Bq-4TG">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="0.0"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="YAW-Wo-amm" id="zrd-jG-mYW"/>
@@ -420,16 +465,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="vmQ-uc-Pix" secondAttribute="trailing" id="9jy-0A-V8L"/>
+                            <constraint firstItem="vmQ-uc-Pix" firstAttribute="leading" secondItem="Srt-iQ-EId" secondAttribute="leading" id="OQA-kE-1yb"/>
+                            <constraint firstItem="vmQ-uc-Pix" firstAttribute="trailing" secondItem="Srt-iQ-EId" secondAttribute="trailing" id="X4y-eE-XjQ"/>
                             <constraint firstItem="vmQ-uc-Pix" firstAttribute="top" secondItem="phx-ho-aoF" secondAttribute="topMargin" id="XbR-aE-jJA"/>
                             <constraint firstAttribute="bottomMargin" secondItem="vmQ-uc-Pix" secondAttribute="bottom" id="pcQ-Z0-0uE"/>
-                            <constraint firstItem="vmQ-uc-Pix" firstAttribute="leading" secondItem="phx-ho-aoF" secondAttribute="leadingMargin" id="qJK-aK-eMY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Srt-iQ-EId"/>
                     </view>
                     <size key="freeformSize" width="768" height="2000"/>
                     <connections>
                         <segue destination="Z6H-lC-kAQ" kind="presentation" identifier="showTranscript" modalPresentationStyle="overFullScreen" id="bqp-29-RaC"/>
+                        <segue destination="tV7-m3-UWQ" kind="presentation" identifier="showImage" modalPresentationStyle="overFullScreen" id="kGW-JM-cUr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wmU-ni-RIw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -443,6 +489,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E2A-ko-ObI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="958" y="311"/>
+        </scene>
+        <!--Image-->
+        <scene sceneID="rJo-5a-zVs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Image" id="tV7-m3-UWQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eCd-Ba-ncd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="947" y="339"/>
         </scene>
     </scenes>
     <resources>
