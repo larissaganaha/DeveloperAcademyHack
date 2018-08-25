@@ -21,9 +21,16 @@ class LineViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        reloadData()
+    }
+    
+    func reloadData() {
         activity.startAnimating()
-        AppointmentService().getAllAppointments { (appointments) in
+        AppointmentService().getAllActiveAppointments { (appointments) in
             if let app = appointments {
                 self.appointments = app
                 DispatchQueue.main.async {

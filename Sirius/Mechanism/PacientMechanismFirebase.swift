@@ -40,7 +40,9 @@ class PacientFirebaseMechanism: FirebaseMechanism {
     }
     
     func uploadImage(profileImage: UIImage, pacientID: String, completionHandler: @escaping (String?) -> Void) {
-        let storageRef = Storage.storage().reference().child(pacientID)
+        
+        let imageName = NSUUID.init()
+        let storageRef = Storage.storage().reference().child("\(imageName).png")
         
         if let uploadData = UIImagePNGRepresentation(profileImage) {
             storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
