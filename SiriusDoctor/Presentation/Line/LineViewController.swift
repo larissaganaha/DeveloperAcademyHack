@@ -8,13 +8,16 @@
 
 import UIKit
 import Kingfisher
+import Foundation
 
 class LineViewController: UIViewController {
     
     var appointments: [Appointment] = []
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activity: UIActivityIndicatorView!
-    
+    var timer: Timer = Timer()
+
+    var lagTime = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +39,10 @@ class LineViewController: UIViewController {
                 }
             }
         }
+        //Atualizar o lag time a cada 5 minutos
+        timer = Timer.scheduledTimer(timeInterval: 300, target: self,
+                                     selector: #selector(updateLagTime),
+                                     userInfo: nil, repeats: true)
     }
     
     @IBAction func createAppointment(_ sender: Any) {
@@ -50,6 +57,35 @@ class LineViewController: UIViewController {
             viewController.appointment = appointment
             viewController.pacient = appointment.pacient
         }
+    }
+    
+    @objc func updateLagTime(){
+        //Possible lag será horário atual - (horário final da primeira consulta da fila + 20 minutos)
+        var possibleLag = 0
+        
+        if self.appointments.count > 0{
+            //Date() - scheduledTime
+            possibleLag = Date().minutes(from: self.appointments[0].scheduledTime)
+        }
+        
+        //Se possibleLag > 0, há atraso
+        if possibleLag > 0 {
+            let lagTime = LagTime(lagTime: possibleLag)
+            LagTimeService.updateLagTime(lagTime: lagTime)
+        }
+    }
+}
+
+extension Date {
+    /// Returns the amount of minutes from another date
+    func minutes(from date: Date) -> Int {
+        return Calendar.current.dateComponents([.minute], from: date, to: self).minute ?? 0
+    }
+
+    /// Returns the a custom time interval description from another date
+    func offset(from date: Date) -> String {
+        if minutes(from: date) > 0 { return "\(minutes(from: date))m" }
+        return ""
     }
 }
 
