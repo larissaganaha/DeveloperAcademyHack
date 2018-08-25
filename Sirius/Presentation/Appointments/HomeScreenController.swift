@@ -27,8 +27,21 @@ class HomeScreenController: UIViewController {
                 
                 AppointmentMechanismFirebase.shared.retrieveAppointments(from: pacient.ID, completionHandler: { (appointments) in
                     if let appointments = appointments {
-                        self.activeAppoints = appointments.filter{ $0.isActive }
-                        self.unactiveAppoints = appointments.filter{ !$0.isActive}
+                        self.activeAppoints = appointments.filter{ $0.isActive }.sorted(by: { (app1, app2) -> Bool in
+                            return app1.scheduledTime.compare(app2.scheduledTime) == ComparisonResult.orderedAscending
+                        })
+                        self.unactiveAppoints = appointments.filter{ !$0.isActive }.sorted(by: { (app1, app2) -> Bool in
+                            return app1.scheduledTime.compare(app2.scheduledTime) == ComparisonResult.orderedAscending
+                        })
+                        
+                        LagTimeService.getLagTime(completion: { (lagtime) in
+                            let hours = lagtime!/60
+                            if  hours > 0 {
+                                self.lagTimeLabel.text = "\(hours)h \(lagtime!%60) min"
+                            } else {
+                                self.lagTimeLabel.text = "00h\(lagtime!) min"
+                            }
+                        })
                         
                         self.updateLagTimeIfNecessary()
                     }

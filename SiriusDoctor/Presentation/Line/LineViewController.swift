@@ -33,7 +33,7 @@ class LineViewController: UIViewController {
         AppointmentService().getAllActiveAppointments { (appointments) in
             if let app = appointments {
                 self.appointments = app.sorted(by: { (app1, app2) -> Bool in
-                    return app1.scheduledTime.compare(app2.scheduledTime) == ComparisonResult.orderedDescending
+                    return app1.scheduledTime.compare(app2.scheduledTime) == ComparisonResult.orderedAscending
                 })
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
@@ -42,7 +42,7 @@ class LineViewController: UIViewController {
             }
         }
         //Atualizar o lag time a cada 5 minutos
-        timer = Timer.scheduledTimer(timeInterval: 300, target: self,
+        timer = Timer.scheduledTimer(timeInterval: 30, target: self,
                                      selector: #selector(updateLagTime),
                                      userInfo: nil, repeats: true)
     }
@@ -112,8 +112,8 @@ extension LineViewController: UITableViewDataSource, UITableViewDelegate {
         cell.profileImage.kf.setImage(with: app.pacient.realURL, placeholder: #imageLiteral(resourceName: "profilePicturePlaceholder"), options: nil, progressBlock: nil, completionHandler: nil)
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM hh:mm"
-        cell.time.text = "Horário: \(dateFormatter.string(from: app.scheduledTime))"
+        dateFormatter.dateFormat = "dd/MM/yyyy hh:mm"
+        cell.time.text = "\(dateFormatter.string(from: app.scheduledTime))"
         
         return cell
     }
