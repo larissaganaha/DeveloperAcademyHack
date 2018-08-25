@@ -32,14 +32,14 @@ class NextAppointmentController: UIViewController {
     @IBOutlet weak var collectionViewExams: UICollectionView!
     
     var photos: [UIImage] = []
-    
     var exams: [UIImage] = []
 
     var pacient: Pacient?
-    
     var appointment: Appointment!
     
     var wasPhotosPressed: Bool = true
+    
+    var arrayURLs: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,18 +87,27 @@ class NextAppointmentController: UIViewController {
         guard let info = sinptomsLabel.text?.components(separatedBy: ",") else { return }
         sinpLog.texts = info
         
+        sinpLog.images = self.arrayURLs
+        
         self.appointment.sinptomLog = sinpLog
-//        AppointmentService().saveAppointment(appointment)
+        
+        self.appointment.dictInfo["imagesSinp"] = self.arrayURLs
+        self.appointment.dictInfo["textsSinp"] = info
+        self.appointment.dictInfo["dateSinp"] = Date().toString(dateFormat: "dd-MM-yyyy hh:mm")
+        
+        AppointmentService().saveAppointment(appointment)
     }
 }
 
 extension NextAppointmentController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if let text = textField.text {
-            self.sinptomsLabel.text?.append(", ")
+            if text == "" { return false }
             self.sinptomsLabel.text?.append(text)
+            self.sinptomsLabel.text?.append(", ")
         }
         self.view.endEditing(true)
+        textField.text = ""
         return false
     }
 }
@@ -153,7 +162,13 @@ extension NextAppointmentController: UIImagePickerControllerDelegate, UINavigati
                 self.exams.append(selectedImage)
                 collectionViewExams.reloadData()
             }
+            
+            PacientFirebaseMechanism.shared.uploadImage(profileImage: selectedImage, pacientID: self.pacient?.ID ?? "") { (url) in
+                self.arrayURLs.append(url!) }
         }
+        
+        
+            
         dismiss(animated: true, completion: nil)
     }
 }

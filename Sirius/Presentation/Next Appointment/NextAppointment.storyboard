@@ -35,16 +35,16 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="816"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wait bar" translatesAutoresizingMaskIntoConstraints="NO" id="ZSG-do-fhN">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="259"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="259.5"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Editar informações de atendimento" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8L-FA-zzH">
-                                                <rect key="frame" x="34" y="65" width="307.5" height="24"/>
+                                                <rect key="frame" x="34.5" y="65" width="307.5" height="24"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="17"/>
                                                 <color key="textColor" white="0.20352285880000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gSs-G0-mwF" userLabel="View Pacient">
-                                                <rect key="frame" x="34" y="104" width="307.5" height="85"/>
+                                                <rect key="frame" x="34.5" y="104" width="307.5" height="85"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="kBv-FK-Doe">
                                                         <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
