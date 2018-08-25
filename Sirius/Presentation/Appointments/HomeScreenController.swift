@@ -161,6 +161,7 @@ extension HomeScreenController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
         let titleLabel = UILabel()
+        
         titleLabel.textAlignment = .left
         titleLabel.font = UIFont(name: "Poppins-SemiBold", size: 19)
         titleLabel.text = self.categories[section]
