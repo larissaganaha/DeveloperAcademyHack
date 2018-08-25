@@ -391,8 +391,8 @@
 				9BFD709B21305FB0000443F7 /* Presentation */,
 				9BFD70562130555B000443F7 /* AppDelegate.swift */,
 				426F9254213153E400F7C53A /* Previous Appointment Details */,
-				9BFD705D2130555C000443F7 /* Assets.xcassets */,
 				9BFD705F2130555C000443F7 /* LaunchScreen.storyboard */,
+				9BFD705D2130555C000443F7 /* Assets.xcassets */,
 				426F92502131157F00F7C53A /* Fonts */,
 				9BFD70622130555C000443F7 /* Info.plist */,
 			);
@@ -1018,7 +1018,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 32P3VH37WD;
+				DEVELOPMENT_TEAM = 7W6V69HBWC;
 				INFOPLIST_FILE = Sirius/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1037,7 +1037,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 32P3VH37WD;
+				DEVELOPMENT_TEAM = 7W6V69HBWC;
 				INFOPLIST_FILE = Sirius/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
