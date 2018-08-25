@@ -104,7 +104,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apU-tO-i9I">
                                                     <rect key="frame" x="0.0" y="0.0" width="335" height="215.5"/>
                                                     <connections>
-                                                        <segue destination="Vq4-bg-Jjr" kind="show" id="syI-jg-Bx0"/>
+                                                        <segue destination="Vq4-bg-Jjr" kind="show" identifier="NextAppointmentSegue" id="syI-jg-Bx0"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -292,13 +292,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9uL-ub-Z13" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="474" y="30"/>
-        </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="qOr-nN-fhU">
-            <objects>
-                <viewControllerPlaceholder id="wre-WY-5bG" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0ea-8o-2z8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>

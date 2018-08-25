@@ -64,6 +64,13 @@ class HomeScreenController: UIViewController {
         lagTimeLabel.clipsToBounds = true
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destiny = segue.destination as? NextAppointmentController {
+            destiny.pacient = self.pacient
+            destiny.appointment = self.activeAppoints.first
+        }
+    }
+    
     private func reloadNextAppointmentLabels() {
         if let pacient = self.pacient, let firstAppoint = self.activeAppoints.first {
             self.welcomeLabel.text = "Olá, \(pacient.name.components(separatedBy: " ").first ?? pacient.name). Sua próxima consulta é:"

@@ -124,7 +124,7 @@
                                 </date>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lh8-6l-zjn">
-                                <rect key="frame" x="269" y="950" width="231" height="44"/>
+                                <rect key="frame" x="268.5" y="950" width="231" height="44"/>
                                 <state key="normal" image="saveAppointment"/>
                                 <connections>
                                     <action selector="saveAppointment:" destination="0Ff-ve-dz9" eventType="touchUpInside" id="wAK-1M-7e2"/>
