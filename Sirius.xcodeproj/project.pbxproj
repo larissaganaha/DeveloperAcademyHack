@@ -23,6 +23,11 @@
 		426F92462130E9F100F7C53A /* NextAppointment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 426F92452130E9F100F7C53A /* NextAppointment.storyboard */; };
 		426F924A2130EABE00F7C53A /* NextAppointmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426F92492130EABE00F7C53A /* NextAppointmentController.swift */; };
 		426F924F2130F9A600F7C53A /* GalleryColletionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426F924E2130F9A600F7C53A /* GalleryColletionCell.swift */; };
+		426F9253213153E000F7C53A /* PreviousAppointmentDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426F9252213153E000F7C53A /* PreviousAppointmentDetail.swift */; };
+		426F92562131540000F7C53A /* PreviousAppointmentDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 426F92552131540000F7C53A /* PreviousAppointmentDetail.storyboard */; };
+		426F92582131563700F7C53A /* CardViewGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426F92572131563700F7C53A /* CardViewGradient.swift */; };
+		426F925D2131607E00F7C53A /* DetailsTableCellPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426F925C2131607E00F7C53A /* DetailsTableCellPhotos.swift */; };
+		426F92612131638900F7C53A /* PhotosCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426F92602131638900F7C53A /* PhotosCollectionCell.swift */; };
 		59F03164602557F35BD1A839 /* Pods_Sirius.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF69C464E089AF600107AC8C /* Pods_Sirius.framework */; };
 		5C5607BF91995186AC6AD4C8 /* Pods_SiriusDoctor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D9C979657F4AD92FDFCF04 /* Pods_SiriusDoctor.framework */; };
 		9B1989852130775100DABE6E /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1989842130775100DABE6E /* ProfileTableViewCell.swift */; };
@@ -112,6 +117,11 @@
 		426F92452130E9F100F7C53A /* NextAppointment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NextAppointment.storyboard; sourceTree = "<group>"; };
 		426F92492130EABE00F7C53A /* NextAppointmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextAppointmentController.swift; sourceTree = "<group>"; };
 		426F924E2130F9A600F7C53A /* GalleryColletionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryColletionCell.swift; sourceTree = "<group>"; };
+		426F9252213153E000F7C53A /* PreviousAppointmentDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousAppointmentDetail.swift; sourceTree = "<group>"; };
+		426F92552131540000F7C53A /* PreviousAppointmentDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PreviousAppointmentDetail.storyboard; sourceTree = "<group>"; };
+		426F92572131563700F7C53A /* CardViewGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewGradient.swift; sourceTree = "<group>"; };
+		426F925C2131607E00F7C53A /* DetailsTableCellPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTableCellPhotos.swift; sourceTree = "<group>"; };
+		426F92602131638900F7C53A /* PhotosCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionCell.swift; sourceTree = "<group>"; };
 		92D9C979657F4AD92FDFCF04 /* Pods_SiriusDoctor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SiriusDoctor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9672AEF76EAAB636636814B2 /* Pods-SiriusDoctor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SiriusDoctor.release.xcconfig"; path = "Pods/Target Support Files/Pods-SiriusDoctor/Pods-SiriusDoctor.release.xcconfig"; sourceTree = "<group>"; };
 		9B1989842130775100DABE6E /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
@@ -202,6 +212,7 @@
 			children = (
 				426F922E213081BB00F7C53A /* KerningLabel.swift */,
 				426F92302130889D00F7C53A /* CardView.swift */,
+				426F92572131563700F7C53A /* CardViewGradient.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -250,6 +261,25 @@
 				426F922821307E6200F7C53A /* Poppins-SemiBold.otf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		426F9254213153E400F7C53A /* Previous Appointment Details */ = {
+			isa = PBXGroup;
+			children = (
+				426F9252213153E000F7C53A /* PreviousAppointmentDetail.swift */,
+				426F92552131540000F7C53A /* PreviousAppointmentDetail.storyboard */,
+				426F925B21315DCD00F7C53A /* Cells */,
+			);
+			path = "Previous Appointment Details";
+			sourceTree = "<group>";
+		};
+		426F925B21315DCD00F7C53A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				426F925C2131607E00F7C53A /* DetailsTableCellPhotos.swift */,
+				426F92602131638900F7C53A /* PhotosCollectionCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		9B1989822130773500DABE6E /* CustomViews */ = {
@@ -360,6 +390,7 @@
 				9BFD707F21305652000443F7 /* Services */,
 				9BFD709B21305FB0000443F7 /* Presentation */,
 				9BFD70562130555B000443F7 /* AppDelegate.swift */,
+				426F9254213153E400F7C53A /* Previous Appointment Details */,
 				9BFD705D2130555C000443F7 /* Assets.xcassets */,
 				9BFD705F2130555C000443F7 /* LaunchScreen.storyboard */,
 				426F92502131157F00F7C53A /* Fonts */,
@@ -621,6 +652,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BFD70612130555C000443F7 /* LaunchScreen.storyboard in Resources */,
+				426F92562131540000F7C53A /* PreviousAppointmentDetail.storyboard in Resources */,
 				426F92462130E9F100F7C53A /* NextAppointment.storyboard in Resources */,
 				9BFD705E2130555C000443F7 /* Assets.xcassets in Resources */,
 				426F92382130B81400F7C53A /* Wait.storyboard in Resources */,
@@ -756,6 +788,7 @@
 				CB91ECD721305ECA0077C913 /* FirebaseMechanism.swift in Sources */,
 				9BFD70592130555B000443F7 /* ViewController.swift in Sources */,
 				9BFD708121305660000443F7 /* Pacient.swift in Sources */,
+				426F92582131563700F7C53A /* CardViewGradient.swift in Sources */,
 				426F923C2130BA7E00F7C53A /* HomeScreenController.swift in Sources */,
 				426F924F2130F9A600F7C53A /* GalleryColletionCell.swift in Sources */,
 				426F92412130CE8900F7C53A /* AppointmentCollectionCell.swift in Sources */,
@@ -764,7 +797,9 @@
 				426F923E2130CC3700F7C53A /* HomeScreenTableCell.swift in Sources */,
 				426F922F213081BB00F7C53A /* KerningLabel.swift in Sources */,
 				B1212C412130684F00771370 /* AppointmentMechanismFirebase.swift in Sources */,
+				426F92612131638900F7C53A /* PhotosCollectionCell.swift in Sources */,
 				B1212C3F2130638300771370 /* PacientMechanismFirebase.swift in Sources */,
+				426F925D2131607E00F7C53A /* DetailsTableCellPhotos.swift in Sources */,
 				9BFD7083213058A4000443F7 /* PacientServiceProtocol.swift in Sources */,
 				9BFD708E21305A6C000443F7 /* PacientService.swift in Sources */,
 				9BFD70572130555B000443F7 /* AppDelegate.swift in Sources */,
@@ -772,6 +807,7 @@
 				CBD890382130F0C000F247A9 /* LagTimeService.swift in Sources */,
 				426F92312130889D00F7C53A /* CardView.swift in Sources */,
 				CBD890342130EF6400F247A9 /* LagTime.swift in Sources */,
+				426F9253213153E000F7C53A /* PreviousAppointmentDetail.swift in Sources */,
 				426F924A2130EABE00F7C53A /* NextAppointmentController.swift in Sources */,
 				9BB86FEF21309F4C001966CC /* AppointmentService.swift in Sources */,
 				9BFD709521305EDE000443F7 /* DataMock.swift in Sources */,
@@ -982,7 +1018,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2ECVV26Q6C;
+				DEVELOPMENT_TEAM = 7W6V69HBWC;
 				INFOPLIST_FILE = Sirius/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1001,7 +1037,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2ECVV26Q6C;
+				DEVELOPMENT_TEAM = 7W6V69HBWC;
 				INFOPLIST_FILE = Sirius/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

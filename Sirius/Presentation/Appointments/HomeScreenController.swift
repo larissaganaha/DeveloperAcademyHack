@@ -8,7 +8,11 @@
 
 import UIKit
 
+
+
 class HomeScreenController: UIViewController {
+
+    var tableViewIndex: Int = 0
 
     var categories = ["Consultas futuras", "Consultas passadas"]
     var pacient: Pacient?
@@ -22,9 +26,14 @@ class HomeScreenController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var lagTimeLabel: UILabel!
     @IBOutlet weak var lagTimeTitleLabel: UILabel!
-    
+    @IBOutlet weak var activityIndication: UIActivityIndicatorView!
+    @IBOutlet weak var loadingView: UIView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.activityIndication.hidesWhenStopped = true
+        self.activityIndication.startAnimating()
         
         PacientFirebaseMechanism.shared.retrievePacient(id: "164923") { (pacient) in
             if let pacient = pacient {
@@ -91,6 +100,8 @@ class HomeScreenController: UIViewController {
                 lagTimeLabel.isHidden = true
                 lagTimeTitleLabel.isHidden = true
             }
+            self.activityIndication.stopAnimating()
+            self.loadingView.isHidden = true
         }
     }
     
@@ -123,6 +134,7 @@ class HomeScreenController: UIViewController {
 
 }
 extension HomeScreenController: UITableViewDelegate, UITableViewDataSource {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
@@ -139,6 +151,8 @@ extension HomeScreenController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return categories.count
     }
+
+
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 130
@@ -159,4 +173,5 @@ extension HomeScreenController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 35
     }
+
 }

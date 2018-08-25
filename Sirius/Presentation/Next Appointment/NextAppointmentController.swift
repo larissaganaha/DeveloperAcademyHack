@@ -60,7 +60,7 @@ class NextAppointmentController: UIViewController {
         if let pacient = self.pacient, let app = self.appointment {
             self.nameLabel.text = pacient.name
             self.pacientImage.kf.setImage(with: pacient.realURL)
-            self.idLabel.text = pacient.ID
+            self.idLabel.text = "Medical ID: \(pacient.ID)"
             let hour = Calendar.current.component(.hour, from: app.scheduledTime)
             let minute = Calendar.current.component(.minute, from: app.scheduledTime)
             self.timeLabel.text = "Horário da consulta: \(hour)h\(minute)min"

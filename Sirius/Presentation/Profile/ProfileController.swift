@@ -72,7 +72,7 @@ class ProfileController: UIViewController {
         if let pacient = self.pacient {
             self.pacientImage.kf.setImage(with: pacient.realURL)
             self.nameLabel.text = pacient.name
-            self.idLabel.text = pacient.ID
+            self.idLabel.text = "Medical ID: \(pacient.ID)"
             self.bornDateLabel.text = "\(pacient.bornDate.toString(dateFormat: "dd/MM/yyyy"))"
             self.telephoneLabel.text = "\(pacient.telephone)"
             self.addressLabel.text = "\(pacient.address)"

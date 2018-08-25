@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol HomeScreenTableViewCellDelegate: NSObjectProtocol {
+    func getTableViewSectionIndex() -> Int
+}
+
 class HomeScreenTableCell: UITableViewCell {
+
+    weak var delegate: HomeScreenTableViewCellDelegate?
 
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
@@ -23,7 +29,7 @@ class HomeScreenTableCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        
         // Initialization code
     }
 
@@ -42,6 +48,10 @@ extension HomeScreenTableCell: UICollectionViewDelegate, UICollectionViewDataSou
         return self.appoints.count
     }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("SELECTED: \(indexPath)")
+    }
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as? AppointmentCollectionCell {
             let dateFormatter = DateFormatter()
@@ -54,5 +64,7 @@ extension HomeScreenTableCell: UICollectionViewDelegate, UICollectionViewDataSou
         }
         return AppointmentCollectionCell()
     }
+
+
 
 }
