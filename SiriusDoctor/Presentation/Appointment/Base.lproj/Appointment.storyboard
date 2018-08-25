@@ -270,7 +270,7 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="164" height="117"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenGradient" translatesAutoresizingMaskIntoConstraints="NO" id="l93-JV-kNk">
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenGradient" translatesAutoresizingMaskIntoConstraints="NO" id="l93-JV-kNk">
                                                                         <rect key="frame" x="0.0" y="0.0" width="164" height="117"/>
                                                                     </imageView>
                                                                 </subviews>
@@ -386,8 +386,45 @@
                                             <outlet property="collectionView" destination="IIr-yc-HPD" id="wIc-NY-YLS"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="sinptomReportCell" rowHeight="150" id="36B-yy-Jg3" customClass="ReportedSinptomsTableViewCell" customModule="SiriusDoctor" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="938" width="768" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="36B-yy-Jg3" id="nOk-ho-NqF">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sintomas Reportados" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KwX-tj-vHQ">
+                                                    <rect key="frame" x="15" y="11" width="728" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jsx-rb-mB7">
+                                                    <rect key="frame" x="15" y="43" width="728" height="96"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="96" id="h9E-fV-e2J"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="KwX-tj-vHQ" firstAttribute="top" secondItem="nOk-ho-NqF" secondAttribute="topMargin" id="5CI-vK-C6B"/>
+                                                <constraint firstItem="Jsx-rb-mB7" firstAttribute="top" secondItem="KwX-tj-vHQ" secondAttribute="bottom" constant="8" id="A7c-Xb-daJ"/>
+                                                <constraint firstItem="Jsx-rb-mB7" firstAttribute="bottom" secondItem="nOk-ho-NqF" secondAttribute="bottomMargin" id="RD6-RP-mBF"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Jsx-rb-mB7" secondAttribute="trailing" constant="10" id="grO-gN-YiG"/>
+                                                <constraint firstItem="KwX-tj-vHQ" firstAttribute="leading" secondItem="nOk-ho-NqF" secondAttribute="leadingMargin" id="hP0-dj-Pue"/>
+                                                <constraint firstItem="Jsx-rb-mB7" firstAttribute="leading" secondItem="nOk-ho-NqF" secondAttribute="leadingMargin" id="sNO-K3-Ab5"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="KwX-tj-vHQ" secondAttribute="trailing" constant="10" id="zi5-hJ-2Qf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="Jsx-rb-mB7" id="mjH-5r-cG6"/>
+                                        </connections>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="endCell" rowHeight="119" id="oAn-vh-9Nt" customClass="EndTableViewCell" customModule="SiriusDoctor" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="938" width="768" height="119"/>
+                                        <rect key="frame" x="0.0" y="1088" width="768" height="119"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oAn-vh-9Nt" id="Hw4-xa-mJy">
                                             <rect key="frame" x="0.0" y="0.0" width="768" height="119"/>
@@ -410,6 +447,14 @@
                                         <connections>
                                             <outlet property="endButton" destination="Ypx-l7-tOa" id="4aZ-xd-NAZ"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="emptyCell" rowHeight="0.0" id="qis-hB-nTj">
+                                        <rect key="frame" x="0.0" y="1207" width="768" height="0.0"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qis-hB-nTj" id="FgI-Bq-4TG">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="0.0"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

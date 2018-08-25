@@ -27,6 +27,7 @@
 		9B7507EE2130C3B1009232FA /* TranscriptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7507ED2130C3B1009232FA /* TranscriptViewController.swift */; };
 		9B7507F12130C8F1009232FA /* Image.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B7507F02130C8F1009232FA /* Image.storyboard */; };
 		9B7507F32130C901009232FA /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7507F22130C901009232FA /* ImageViewController.swift */; };
+		9B7507F52130DC54009232FA /* ReportedSinptomsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7507F42130DC54009232FA /* ReportedSinptomsTableViewCell.swift */; };
 		9BB86FE321308C1E001966CC /* RelevantImagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB86FE221308C1E001966CC /* RelevantImagesTableViewCell.swift */; };
 		9BB86FE521308CF3001966CC /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB86FE421308CF3001966CC /* ImageCollectionViewCell.swift */; };
 		9BB86FE821308F24001966CC /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB86FE721308F24001966CC /* InfoTableViewCell.swift */; };
@@ -99,6 +100,7 @@
 		9B7507ED2130C3B1009232FA /* TranscriptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptViewController.swift; sourceTree = "<group>"; };
 		9B7507F02130C8F1009232FA /* Image.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Image.storyboard; sourceTree = "<group>"; };
 		9B7507F22130C901009232FA /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		9B7507F42130DC54009232FA /* ReportedSinptomsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportedSinptomsTableViewCell.swift; sourceTree = "<group>"; };
 		9BB86FE221308C1E001966CC /* RelevantImagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelevantImagesTableViewCell.swift; sourceTree = "<group>"; };
 		9BB86FE421308CF3001966CC /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		9BB86FE721308F24001966CC /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				9BB86FE221308C1E001966CC /* RelevantImagesTableViewCell.swift */,
 				9BB86FE721308F24001966CC /* InfoTableViewCell.swift */,
 				9BB86FEB21309464001966CC /* EndTableViewCell.swift */,
+				9B7507F42130DC54009232FA /* ReportedSinptomsTableViewCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -702,6 +705,7 @@
 				9B7507F32130C901009232FA /* ImageViewController.swift in Sources */,
 				9BFD70AA21306601000443F7 /* VoiceRecognitionTestViewController.swift in Sources */,
 				B1212C47213073C600771370 /* PacientService.swift in Sources */,
+				9B7507F52130DC54009232FA /* ReportedSinptomsTableViewCell.swift in Sources */,
 				9B7507EE2130C3B1009232FA /* TranscriptViewController.swift in Sources */,
 				9B19898721307A6100DABE6E /* PacientInfoTableViewCell.swift in Sources */,
 				9BB86FF021309F5D001966CC /* AppointmentService.swift in Sources */,
@@ -870,7 +874,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 32P3VH37WD;
+				DEVELOPMENT_TEAM = 2ECVV26Q6C;
 				INFOPLIST_FILE = Sirius/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -889,7 +893,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 32P3VH37WD;
+				DEVELOPMENT_TEAM = 2ECVV26Q6C;
 				INFOPLIST_FILE = Sirius/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -908,7 +912,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 32P3VH37WD;
+				DEVELOPMENT_TEAM = 2ECVV26Q6C;
 				INFOPLIST_FILE = SiriusDoctor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -927,7 +931,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 32P3VH37WD;
+				DEVELOPMENT_TEAM = 2ECVV26Q6C;
 				INFOPLIST_FILE = SiriusDoctor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
