@@ -61,7 +61,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="42 min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISz-ZN-8gy">
                                                 <rect key="frame" x="20" y="289" width="335" height="77"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="55"/>
-                                                <color key="textColor" red="0.3294117647" green="0.45715493369999999" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.37254901959999998" green="0.68235294120000001" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEU LUGAR NA FILA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAd-2k-4ji" customClass="KerningLabel" customModule="Sirius" customModuleProvider="target">
@@ -78,7 +78,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVF-gm-hmQ">
                                                 <rect key="frame" x="20" y="420.5" width="335" height="77"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="55"/>
-                                                <color key="textColor" red="0.3294117647" green="0.45715493369999999" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.37254901959999998" green="0.68235294120000001" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ATUALIZAR DADOS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBn-D7-wRG">
@@ -95,7 +95,7 @@
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGS-eD-Gcj">
                                                 <rect key="frame" x="62" y="537.5" width="250" height="46"/>
-                                                <color key="backgroundColor" red="0.40784313729999999" green="0.55294117649999996" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.37254901959999998" green="0.68235294120000001" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="46" id="Ix3-X5-Hbr"/>
                                                     <constraint firstAttribute="width" secondItem="VGS-eD-Gcj" secondAttribute="height" multiplier="125:23" id="R5g-jO-1JN"/>
@@ -196,8 +196,8 @@
         <!--NextAppointment-->
         <scene sceneID="mCc-ex-3mc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rue-57-5bv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="NextAppointment" id="uG5-co-lrh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rue-57-5bv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="382" y="125"/>
         </scene>
