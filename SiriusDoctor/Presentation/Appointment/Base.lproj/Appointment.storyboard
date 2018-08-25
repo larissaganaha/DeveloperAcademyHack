@@ -11,6 +11,17 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.otf">
+            <string>Poppins-Medium</string>
+        </array>
+        <array key="Poppins-Regular.otf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="Poppins-SemiBold.otf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Appointment View Controller-->
         <scene sceneID="GbR-63-qMP">
@@ -35,53 +46,54 @@
                                                     <rect key="frame" x="15" y="11" width="738" height="188"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profilePicturePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="7un-4M-gxF">
-                                                            <rect key="frame" x="20" y="44" width="100" height="100"/>
+                                                            <rect key="frame" x="20" y="44" width="120" height="120"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="100" id="Hxd-ch-2Re"/>
+                                                                <constraint firstAttribute="width" constant="120" id="Hxd-ch-2Re"/>
                                                                 <constraint firstAttribute="width" secondItem="7un-4M-gxF" secondAttribute="height" multiplier="1:1" id="QDW-e9-vQt"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pacient Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6c-7A-pDq">
-                                                            <rect key="frame" x="130" y="50" width="598" height="24"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                            <rect key="frame" x="150" y="50" width="578" height="28"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YYr-tV-Wmf">
-                                                            <rect key="frame" x="130" y="140" width="598" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="150" y="144" width="578" height="24"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JWx-H1-A31">
-                                                            <rect key="frame" x="130" y="82" width="328" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="150" y="80" width="308" height="24"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telefone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWY-To-GkB">
-                                                            <rect key="frame" x="478" y="82" width="250" height="21"/>
+                                                            <rect key="frame" x="478" y="80" width="250" height="24"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="250" id="Z5b-FE-IoN"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horário" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZd-Li-9RY">
-                                                            <rect key="frame" x="130" y="111" width="56.5" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="150" y="112" width="62" height="24"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="En8-bV-kIi">
-                                                            <rect key="frame" x="478" y="111" width="250" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="478" y="112" width="250" height="24"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYG-i8-kCJ">
-                                                            <rect key="frame" x="0.0" y="5" width="41" height="30"/>
+                                                            <rect key="frame" x="0.0" y="5" width="45" height="33"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                                             <state key="normal" title="Voltar"/>
                                                             <connections>
                                                                 <action selector="backButtonPressed:" destination="5A3-i6-oUg" eventType="touchUpInside" id="2wZ-8Y-Rjh"/>
@@ -97,7 +109,7 @@
                                                         <constraint firstItem="JWx-H1-A31" firstAttribute="leading" secondItem="z6c-7A-pDq" secondAttribute="leading" id="E1S-Ou-vgl"/>
                                                         <constraint firstItem="z6c-7A-pDq" firstAttribute="leading" secondItem="7un-4M-gxF" secondAttribute="trailing" constant="10" id="EQ1-Hh-03P"/>
                                                         <constraint firstItem="GZd-Li-9RY" firstAttribute="top" secondItem="JWx-H1-A31" secondAttribute="bottom" constant="8" id="Ehf-BL-R8n"/>
-                                                        <constraint firstItem="JWx-H1-A31" firstAttribute="top" secondItem="z6c-7A-pDq" secondAttribute="bottom" constant="8" id="LHW-iA-6oU"/>
+                                                        <constraint firstItem="JWx-H1-A31" firstAttribute="top" secondItem="z6c-7A-pDq" secondAttribute="bottom" constant="2" id="LHW-iA-6oU"/>
                                                         <constraint firstItem="nWY-To-GkB" firstAttribute="leading" secondItem="JWx-H1-A31" secondAttribute="trailing" constant="20" id="QjJ-bk-S8f"/>
                                                         <constraint firstAttribute="trailing" secondItem="nWY-To-GkB" secondAttribute="trailing" constant="10" id="Rbf-X9-QHz"/>
                                                         <constraint firstItem="GYG-i8-kCJ" firstAttribute="leading" secondItem="9GL-Bt-Abc" secondAttribute="leading" id="Yof-nI-MBO"/>
@@ -109,7 +121,7 @@
                                                         <constraint firstItem="7un-4M-gxF" firstAttribute="leading" secondItem="9GL-Bt-Abc" secondAttribute="leading" constant="20" id="fWp-GU-BfI"/>
                                                         <constraint firstItem="z6c-7A-pDq" firstAttribute="top" secondItem="9GL-Bt-Abc" secondAttribute="top" constant="50" id="gZt-zb-F0B"/>
                                                         <constraint firstAttribute="trailing" secondItem="En8-bV-kIi" secondAttribute="trailing" constant="10" id="hEZ-Dl-48J"/>
-                                                        <constraint firstAttribute="bottom" secondItem="7un-4M-gxF" secondAttribute="bottom" constant="44" id="r27-JZ-61h"/>
+                                                        <constraint firstAttribute="bottom" secondItem="7un-4M-gxF" secondAttribute="bottom" constant="24" id="s3W-Zf-CV9"/>
                                                         <constraint firstAttribute="trailing" secondItem="nWY-To-GkB" secondAttribute="trailing" constant="10" id="vuW-To-9n6"/>
                                                         <constraint firstItem="7un-4M-gxF" firstAttribute="top" secondItem="9GL-Bt-Abc" secondAttribute="top" constant="44" id="yid-LX-WO9"/>
                                                     </constraints>
@@ -141,13 +153,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informações da Consulta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LuD-Ad-2qi">
-                                                    <rect key="frame" x="15" y="11" width="229" height="23"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <rect key="frame" x="15" y="11" width="258.5" height="23"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pMI-hr-Z5P">
-                                                    <rect key="frame" x="270" y="8.5" width="131" height="28"/>
+                                                    <rect key="frame" x="299.5" y="8.5" width="131" height="28"/>
                                                     <state key="normal" image="transcribeButton"/>
                                                     <connections>
                                                         <action selector="recordButtonPressed:" destination="WcS-DB-f3M" eventType="touchUpInside" id="MZI-47-Ujz"/>
@@ -157,15 +169,15 @@
                                                     <rect key="frame" x="15" y="46" width="338" height="185"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sintomas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vn1-Qg-4b8">
-                                                            <rect key="frame" x="8" y="8" width="75" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                            <rect key="frame" x="8" y="8" width="81.5" height="24"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ReL-57-lJ6">
-                                                            <rect key="frame" x="8" y="39" width="322" height="136"/>
+                                                            <rect key="frame" x="8" y="42" width="322" height="133"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
                                                     </subviews>
@@ -184,15 +196,15 @@
                                                     <rect key="frame" x="400" y="46" width="338" height="185"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medicamentos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ft6-Z9-rCY">
-                                                            <rect key="frame" x="8" y="8" width="118" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                            <rect key="frame" x="8" y="8" width="129" height="24"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Uiz-TK-fkd">
-                                                            <rect key="frame" x="8" y="37" width="322" height="136"/>
+                                                            <rect key="frame" x="8" y="40" width="322" height="133"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
                                                     </subviews>
@@ -207,7 +219,8 @@
                                                     </constraints>
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XSJ-6u-758">
-                                                    <rect key="frame" x="646" y="7" width="107" height="30"/>
+                                                    <rect key="frame" x="635" y="5.5" width="118" height="33"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
                                                     <state key="normal" title="Ver Transcrição"/>
                                                     <connections>
                                                         <action selector="transcriptButtonPressed:" destination="WcS-DB-f3M" eventType="touchUpInside" id="VP3-5H-5tR"/>
@@ -245,8 +258,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imagens Relevantes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avC-tX-4fD">
-                                                    <rect key="frame" x="15" y="11" width="184" height="24"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <rect key="frame" x="15" y="11" width="208" height="24"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -310,8 +323,8 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informações do Paciente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OmV-VY-oQ5">
-                                                    <rect key="frame" x="15" y="11" width="226" height="24"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <rect key="frame" x="15" y="11" width="254" height="24"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -339,14 +352,14 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="268" height="164"/>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6bB-H2-TiI">
-                                                                        <rect key="frame" x="16" y="20" width="35.5" height="21"/>
-                                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                        <rect key="frame" x="16" y="20" width="34.5" height="24"/>
+                                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnA-FG-pBr">
-                                                                        <rect key="frame" x="16" y="46" width="236" height="108"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <rect key="frame" x="16" y="49" width="236" height="105"/>
+                                                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
@@ -395,7 +408,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sintomas Reportados" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KwX-tj-vHQ">
                                                     <rect key="frame" x="15" y="11" width="728" height="24"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -404,7 +417,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="96" id="h9E-fV-e2J"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
