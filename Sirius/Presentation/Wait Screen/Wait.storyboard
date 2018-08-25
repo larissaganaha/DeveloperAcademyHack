@@ -48,7 +48,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEMPO DE ESPERA PREVISTO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUb-i9-eq4" customClass="KerningLabel" customModule="Sirius" customModuleProvider="target">
-                                                <rect key="frame" x="71" y="270" width="233.5" height="15.5"/>
+                                                <rect key="frame" x="95" y="270" width="185.5" height="15.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="13"/>
                                                 <color key="textColor" red="0.2268310016" green="0.22315456980000001" blue="0.2292668269" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -65,7 +65,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEU LUGAR NA FILA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAd-2k-4ji" customClass="KerningLabel" customModule="Sirius" customModuleProvider="target">
-                                                <rect key="frame" x="108.5" y="385.5" width="159" height="15.5"/>
+                                                <rect key="frame" x="125.5" y="385.5" width="125" height="15.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="13"/>
                                                 <color key="textColor" red="0.2268310016" green="0.22315456980000001" blue="0.2292668269" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
