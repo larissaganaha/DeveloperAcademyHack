@@ -20,7 +20,8 @@ class HomeScreenController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var lagTimeLabel: UILabel!
-
+    @IBOutlet weak var lagTimeTitleLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,6 +55,21 @@ class HomeScreenController: UIViewController {
             let hour = Calendar.current.component(.hour, from: firstAppoint.scheduledTime)
             let minute = Calendar.current.component(.minute, from: firstAppoint.scheduledTime)
             self.timeLabel.text = "Horário: \(hour)h\(minute)min"
+            
+            let order = Calendar.current.compare(Date(), to: firstAppoint.scheduledTime, toGranularity: .day)
+            switch order {
+            case .orderedSame:
+                lagTimeLabel.isHidden = true
+                lagTimeTitleLabel.isHidden = true
+            case .orderedAscending:
+                print("orderedAscending")
+                // do nothing yet
+                return
+            case .orderedDescending:
+                print("orderedDescending")
+                // do nothing yet
+                return
+            }
         }
     }
     
