@@ -7,18 +7,19 @@
 //
 
 import Foundation
+import UIKit
+import FirebaseStorage
 
 class AppointmentMechanismFirebase: FirebaseMechanism {
     static let shared = AppointmentMechanismFirebase()
+    let path: String = "Appointments"
     
     private override init() {
         super.init()
     }
     
     func createAppointment(appointment: Appointment) {
-        let path = "Appointments"
-        
-        self.create(dump: Appointment.self, object: appointment, path: path, newObjectID: nil)
+        self.create(dump: Appointment.self, object: appointment, path: path, newObjectID: appointment.id)
     }
     
 //    func retrieveAppointment(id: String, completionHandler: @escaping (Appointment?) -> Void) {
@@ -40,7 +41,7 @@ class AppointmentMechanismFirebase: FirebaseMechanism {
 //    }
     
     func retrieveAppointments(from pacientID: String, completionHandler: @escaping ([Appointment]?) -> Void) {
-        self.retrieve(dump: Appointment.self, path: "Appointments") { (appointments) in
+        self.retrieve(dump: Appointment.self, path: path) { (appointments) in
             let pacientsAppoints = appointments?.filter{$0.pacient.ID == pacientID}
             
             completionHandler(pacientsAppoints)
@@ -48,7 +49,7 @@ class AppointmentMechanismFirebase: FirebaseMechanism {
     }
     
     func retrieveAllActiveAppointments(completionHandler: @escaping ([Appointment]?) -> Void) {
-        self.retrieve(dump: Appointment.self, path: "Appointments") { (appointments) in
+        self.retrieve(dump: Appointment.self, path: path) { (appointments) in
             let activeAppointments = appointments?.filter { $0.isActive }
             completionHandler(activeAppointments)
         }

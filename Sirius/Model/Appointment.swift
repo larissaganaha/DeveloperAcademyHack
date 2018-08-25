@@ -9,6 +9,7 @@
 import UIKit
 
 class Appointment: PersistenceObject {
+    var id: String = ""
     var pacient: Pacient = Pacient()
     var scheduledTime: Date = Date()
     var transcript: String = ""
@@ -17,7 +18,8 @@ class Appointment: PersistenceObject {
     var isActive: Bool = true
     var dictInfo: [AnyHashable: Any] = [:]
     
-    init (pacient: Pacient, scheduledTime: Date, transcript: String, sinptomLog: DataLog?, reportLog: DataLog?) {
+    init (id: String, pacient: Pacient, scheduledTime: Date, transcript: String, sinptomLog: DataLog?, reportLog: DataLog?) {
+        self.id = id
         self.pacient = pacient
         self.scheduledTime = scheduledTime
         self.transcript = transcript
@@ -26,6 +28,7 @@ class Appointment: PersistenceObject {
         
         self.dictInfo = [
             "ID": pacient.ID,
+            "id": id,
             "name": pacient.name,
             "address": pacient.address,
             "telephone": pacient.telephone,
@@ -38,7 +41,7 @@ class Appointment: PersistenceObject {
             "smoking": pacient.smoking,
             "scheduledTime": scheduledTime.toString(dateFormat: "dd-MM-yyyy"),
             "transcript": transcript,
-            "isActive": true
+            "isActive": self.isActive
         ]
         
         if pacient.imageURL != nil {
@@ -59,7 +62,8 @@ class Appointment: PersistenceObject {
     }
     
     required init?(dictionary: [AnyHashable : Any]) {
-        if let transcript = dictionary["transcript"] as? String,
+        if let id = dictionary["id"] as? String,
+            let transcript = dictionary["transcript"] as? String,
             let pacientID = dictionary["ID"] as? String,
             let name = dictionary["name"] as? String,
             let address = dictionary["address"] as? String,
@@ -70,6 +74,9 @@ class Appointment: PersistenceObject {
             let hipertension = dictionary["hipertension"] as? Bool,
             let diabetes = dictionary["diabetes"] as? Bool,
             let smoking = dictionary["smoking"] as? Bool {
+            
+            self.id = id
+            self.transcript = transcript
             
             if let sched = dictionary["scheduledTime"] as? String {
                 if let schedTime = self.formatDate(date: sched) {
@@ -86,8 +93,6 @@ class Appointment: PersistenceObject {
             } else {
                 self.pacient.bornDate = Date()
             }
-            
-            self.transcript = transcript
             
             self.pacient = Pacient(ID: pacientID, name: name, address: address, telephone: telephone, imageURL: nil, bornDate: self.pacient.bornDate, height: height, weight: weight, drink: drink, hipertension: hipertension, diabetes: diabetes, smoking: smoking)
             

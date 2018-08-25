@@ -33,6 +33,7 @@ class AppointmentViewController: UIViewController {
     
     func saveAppointment() {
         appointment.transcript = self.transcript
+        appointment.dictInfo["transcript"] = self.transcript
         AppointmentService().saveAppointment(appointment)
     }
     
@@ -102,6 +103,7 @@ extension AppointmentViewController: BackCellDelegate {
 extension AppointmentViewController: EndCellDelegate {
     func endButtonPressed() {
         self.appointment.isActive = false
+        self.appointment.dictInfo["isActive"] = false
         self.saveAppointment()
         self.dismiss(animated: true, completion: nil)
     }

@@ -12,20 +12,18 @@ import FirebaseStorage
 
 class PacientFirebaseMechanism: FirebaseMechanism {
     static let shared = PacientFirebaseMechanism()
+    let path: String = "Pacients"
     
     private override init() {
         super.init()
     }
     
     func createPacient(pacient: Pacient) {
-        
-        let path = "Pacients"
-        
         self.create(dump: Pacient.self, object: pacient, path: path, newObjectID: pacient.ID)
     }
     
     func retrievePacient(id: String, completionHandler: @escaping (Pacient?) -> Void) {
-        self.retrieve(dump: Pacient.self, path: "Pacients/\(id)") { (pacient) in
+        self.retrieve(dump: Pacient.self, path: "\(path)/\(id)") { (pacient) in
             completionHandler(pacient?.first)
         }
 //        ref?.child("Pacients/\(id)").observeSingleEvent(of: .value, with: { (snapshot) in
