@@ -32,7 +32,9 @@ class LineViewController: UIViewController {
         activity.startAnimating()
         AppointmentService().getAllActiveAppointments { (appointments) in
             if let app = appointments {
-                self.appointments = app
+                self.appointments = app.sorted(by: { (app1, app2) -> Bool in
+                    return app1.scheduledTime.compare(app2.scheduledTime) == ComparisonResult.orderedDescending
+                })
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                     self.activity.stopAnimating()
@@ -110,8 +112,8 @@ extension LineViewController: UITableViewDataSource, UITableViewDelegate {
         cell.profileImage.kf.setImage(with: app.pacient.realURL, placeholder: #imageLiteral(resourceName: "profilePicturePlaceholder"), options: nil, progressBlock: nil, completionHandler: nil)
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "HH:mm"
-        cell.time.text = "Horário da Consulta: \(dateFormatter.string(from: app.scheduledTime))"
+        dateFormatter.dateFormat = "dd/MM hh:mm"
+        cell.time.text = "Horário: \(dateFormatter.string(from: app.scheduledTime))"
         
         return cell
     }
